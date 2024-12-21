@@ -17,7 +17,7 @@
     <div class="grid grid-cols-6">
       <aside class="py-6 px-2 max-h-screen overflow-scroll col-span-1">
         <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
-          <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo">
+          <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo" />
         </a>
         <nav class="flex flex-col gap-6">
           <menu class="flex flex-col">
@@ -207,6 +207,232 @@
             </li>
           </menu>
         </nav>
+
+        <!-- MODAL FOR NOTIFICATIONS -->
+        <template id="notificationModal">
+          <div
+            class="w-screen max-w-[650px] absolute max-h-[calc(100vh-3rem)] flex flex-col bg-white top-6 right-6 p-6 rounded-xl z-[11]"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Notifications</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="overflow-y-scroll">
+              <div>
+                <div class="pt-6">
+                  <span class="text-gray-400 font-semibold"> New </span>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-11 h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/error.svg"
+                      class="w-11 h-11 self-start"
+                      alt="error icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Withdrawal Error
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          ❌ Withdrawal Failed. Please check your bank details
+                          or try again.
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-11 h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pt-6">
+                  <span class="text-gray-400 font-semibold"> Last 7 Days </span>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-11 h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-11 h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/error.svg"
+                      class="w-11 h-11 self-start"
+                      alt="error icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Withdrawal Error
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          ❌ Withdrawal Failed. Please check your bank details
+                          or try again.
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-11 h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-4">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Close
+              </span>
+              <div
+                class="p-2 flex justify-center gap-3 items-center bg-white border-2 border-violet-600 text-violet-600 rounded-2xl w-full text-sm text-center cursor-pointer"
+              >
+                <span> Mark all as read </span>
+                <img src="/mark.svg" class="w-5 h-5" alt="mark icon" />
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- END OF MODAL FOR NOTIFICATIONS -->
+
+
       </aside>
       <main class="col-span-5 h-screen overflow-y-scroll">
         <div class="border-[1px] border-gray-300 m-2 rounded-3xl">
@@ -215,8 +441,17 @@
           >
             <h1 class="text-lg font-bold overview">Overview</h1>
             <nav>
-              <menu>
-                <li></li>
+              <menu class="flex gap-3">
+                <li
+                  class="w-10 h-10 bg-gray-200 rounded-full flex justify-center items-center notificationButton"
+                >
+                  <img src="/bell.svg" class="w-5 h-5" alt="bell icon" />
+                </li>
+                <li
+                  class="w-10 h-10 rounded-full bg-violet-200 text-violet-600 flex justify-center items-center text-center"
+                >
+                  <span> EO </span>
+                </li>
               </menu>
             </nav>
           </header>
@@ -624,7 +859,12 @@
             <!-- TRANSACTION HISTORY SECTION -->
             <section>
               <div class="flex justify-between items-center">
-                <h2 class="font-bold text-md my-6">Transaction History</h2>
+                <div class="my-6">
+                  <h2 class="font-bold">Transaction History</h2>
+                  <span class="text-xs text-gray-400 pb-4">
+                    Lastly updated 12/12/2024, 8.00PM
+                  </span>
+                </div>
 
                 <a
                   href="/transactions.html"
@@ -636,15 +876,69 @@
 
               <div class="rounded-2xl overflow-hidden border border-gray-200">
                 <table class="w-full border-collapserounded-lg">
-                  <thead class="text-sm font-semibold bg-gray-200">
+                  <thead class="text-sm font-semibold bg-gray-100">
                     <!-- <th> -->
-                    <tr>
-                      <td class="p-3 text-center">USER</td>
-                      <td class="p-3 text-center">DATE AND TIME</td>
-                      <td class="p-3 text-center">TRANSACTION TYPE</td>
-                      <td class="p-3 text-center">AMOUNT</td>
-                      <td class="p-3 text-center">STATUS</td>
-                      <td class="p-3 text-center">ACTION</td>
+                    <tr class="py-3">
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/user.svg"
+                            class="w-5 h-5"
+                            alt="user icon"
+                          />
+                          <span> USER </span>
+                        </div>
+                      </td>
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/calendar.svg"
+                            class="w-5 h-5"
+                            alt="calendar icon"
+                          />
+                          <span> DATE AND TIME </span>
+                        </div>
+                      </td>
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/transaction.svg"
+                            class="w-5 h-5"
+                            alt="transaction icon"
+                          />
+                          <span> TRANSACTION TYPE </span>
+                        </div>
+                      </td>
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/money.svg"
+                            class="w-5 h-5"
+                            alt="money icon"
+                          />
+                          <span> AMOUNT </span>
+                        </div>
+                      </td>
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/status.svg"
+                            class="w-5 h-5"
+                            alt="status icon"
+                          />
+                          <span> STATUS </span>
+                        </div>
+                      </td>
+                      <td class="p-3 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                          <img
+                            src="/action.svg"
+                            class="w-5 h-5"
+                            alt="action icon"
+                          />
+                          <span> ACTION </span>
+                        </div>
+                      </td>
                     </tr>
                     <!-- </th> -->
                   </thead>
@@ -712,7 +1006,7 @@
                       <td class="p-3 py-5 text-center text-sm">
                         <div class="flex justify-center">
                           <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center text-violet-500 p-[.4rem] px-5"
+                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-violet-100 text-violet-500 p-[.4rem] px-5"
                           >
                             <span
                               class="w-2 h-2 rounded-full bg-violet-500"
@@ -835,12 +1129,12 @@
                       <td class="p-3 py-5 text-center text-sm">
                         <div class="flex justify-center">
                           <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-blue-100 text-blue-500 p-[.4rem] px-5"
                           >
                             <span
-                              class="w-2 h-2 rounded-full bg-red-500"
+                              class="w-2 h-2 rounded-full bg-blue-500"
                             ></span>
-                            <span>Failed</span>
+                            <span>Active</span>
                           </div>
                         </div>
                       </td>
@@ -979,13 +1273,9 @@
             id="backdrop"
             class="bg-black w-full h-full absolute bg-opacity-5 backdrop-blur-sm"
           ></div>
-          <div
-            class="bg-white min-w-24 min-h-24 rounded-lg z-[11] p-6"
-            id="modalContent"
-          >
-            
+
           <!-- MODAL CONTENT IS DISPLAYED HERE -->
-          </div>
+          <div class="bg-white rounded-lg z-[11]" id="modalContent"></div>
         </div>
         <!-- END OF BACKDROP AND MODAL -->
 
@@ -993,133 +1283,128 @@
 
         <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL  -->
         <template id="buyCoinsCustomInput">
-          <div
-            class="fixed z-10 w-screen h-screen top-0 left-0 justify-center items-center flex"
-            id="modal"
-          >
-            <div class="w-screen max-w-[550px]">
-              <div
-                class="flex py-3 items-center justify-between border-b border-gray-300"
-              >
-                <p class="font-semibold">Buy Coins</p>
-                <span class="w-8 h-8 closeModalButton">
-                  <img src="/closeButton.svg" alt="close button" />
-                </span>
-              </div>
+          <div class="w-screen max-w-[550px] p-6">
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
 
-              <div class="overflow-x-scroll">
-                <div class="flex gap-2">
-                  <div
-                    class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
-                  >
-                    <div class="flex gap-2">
-                      <div class="flex justify-start gap-2 items-center">
-                        <span class="w-8 h-8 rounded-full">
-                          <img src="/coin.svg" alt="coin svg" />
-                        </span>
-                        <span class="italic text-md font-semibold text-primary">
-                          50 coins
-                        </span>
-                      </div>
+            <div class="overflow-x-scroll">
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        50 coins
+                      </span>
                     </div>
-
-                    <span class="font-semibold text-sm"> $5 </span>
                   </div>
 
-                  <div
-                    class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
-                  >
-                    <div class="flex gap-2">
-                      <div class="flex justify-start gap-2 items-center">
-                        <span class="w-8 h-8 rounded-full">
-                          <img src="/coin.svg" alt="coin svg" />
-                        </span>
-                        <span class="italic text-md font-semibold text-primary">
-                          100 coins
-                        </span>
-                      </div>
+                  <span class="font-semibold text-sm"> $5 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        100 coins
+                      </span>
                     </div>
-
-                    <span class="font-semibold text-sm"> $10 </span>
                   </div>
 
-                  <div
-                    class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
-                  >
-                    <div class="flex gap-2">
-                      <div class="flex justify-start gap-2 items-center">
-                        <span class="w-8 h-8 rounded-full">
-                          <img src="/coin.svg" alt="coin svg" />
-                        </span>
-                        <span class="italic text-md font-semibold text-primary">
-                          500 coins
-                        </span>
-                      </div>
+                  <span class="font-semibold text-sm"> $10 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        500 coins
+                      </span>
                     </div>
-
-                    <span class="font-semibold text-sm"> $45 </span>
                   </div>
 
-                  <div
-                    class="flex gap-2 border-[1px] justify-center items-center border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
-                  >
-                    <img src="/customAdd.svg" class="w-5 h-5" alt="add icon" />
-                    <span class="text-sm">Custom</span>
-                  </div>
+                  <span class="font-semibold text-sm"> $45 </span>
+                </div>
+
+                <div
+                  class="flex gap-2 border-[1px] justify-center items-center border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <img src="/customAdd.svg" class="w-5 h-5" alt="add icon" />
+                  <span class="text-sm">Custom</span>
                 </div>
               </div>
+            </div>
 
-              <div class="flex gap-6 py-4 pt-6 outline-none">
-                <input
-                  type="text"
-                  class="w-full border border-gray-300 rounded-lg outline-none px-4"
+            <div class="flex gap-6 py-4 pt-6 outline-none">
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded-lg outline-none px-4"
+              />
+              <span class="w-14 h-14">
+                <img
+                  src="/conversion.svg"
+                  class="w-full h-full"
+                  alt="conversion icon"
                 />
-                <span class="w-14 h-14">
-                  <img
-                    src="/conversion.svg"
-                    class="w-full h-full"
-                    alt="conversion icon"
-                  />
-                </span>
-                <input
-                  type="text"
-                  class="w-full border border-gray-300 rounded-lg outline-none px-4"
-                />
-              </div>
+              </span>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded-lg outline-none px-4"
+              />
+            </div>
 
-              <p class="text-md my-4 mb-6">Total : <span>$0.00</span></p>
+            <p class="text-md my-4 mb-6">Total : <span>$0.00</span></p>
 
-              <p class="my-2 font-semibold">Choose A Payment Method</p>
-              <div class="flex gap-4 py-2">
-                <span
-                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
-                >
-                  Card
-                </span>
-                <span
-                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
-                >
-                  Paypal
-                </span>
-                <span
-                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
-                >
-                  Money Wallet
-                </span>
-              </div>
+            <p class="my-2 font-semibold">Choose A Payment Method</p>
+            <div class="flex gap-4 py-2">
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
+              >
+                Card
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Paypal
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Money Wallet
+              </span>
+            </div>
 
-              <div class="flex gap-4 py-2 mt-10">
-                <span
-                  class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
-                >
-                  Cancel
-                </span>
-                <span
-                  class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
-                >
-                  Continue
-                </span>
-              </div>
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
+              >
+                Continue
+              </span>
             </div>
           </div>
         </template>
@@ -1127,12 +1412,12 @@
 
         <!-- TEMPLATE FOR ADD COIN MODAL -->
         <template id="addCoinsModal">
-          <div class="w-screen max-w-[500px]">
+          <div class="w-screen max-w-[550px] p-6">
             <div
               class="flex py-3 items-center justify-between border-b border-gray-300"
             >
               <p class="font-semibold">Buy Coins</p>
-              <span class="w-8 h-8 closeModalButton">
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
               </span>
             </div>
@@ -1190,12 +1475,12 @@
 
         <!-- TEMPLATE FOR CHOOSE PAYEMENT METHOD -->
         <template id="choosePaymentMethod">
-          <div class="w-screen max-w-[500px]">
+          <div class="w-screen max-w-[550px] p-6">
             <div
               class="flex py-3 items-center justify-between border-b border-gray-300"
             >
               <p class="font-semibold">Buy Coins</p>
-              <span class="w-8 h-8 closeModalButton">
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
               </span>
             </div>
@@ -1281,14 +1566,14 @@
 
         <!-- TEMPLATE FOR REVIEW TANSACTION MODAL -->
         <template id="reviewTransaction">
-          <div class="w-screen max-w-[500px]">
+          <div class="w-screen max-w-[550px] p-6">
             <div
               class="flex py-3 items-center justify-between border-b border-gray-300"
             >
               <p class="font-semibold showTransactionErrorButton">
                 Review Transactions
               </p>
-              <span class="w-8 h-8 closeModalButton">
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
               </span>
             </div>
@@ -1343,9 +1628,9 @@
 
         <template id="spinnerModal">
           <div
-            class="w-full min-w-[200px] p-4 flex relative justify-center items-center showTransactionSuccessButton"
+            class="w-full min-w-[200px] p-10 flex relative justify-center items-center showTransactionSuccessButton"
           >
-          <span class="loader"></span>
+            <span class="loader"></span>
           </div>
         </template>
         <!-- END OF TEMPLATE FOR SPINNER MODAL -->
@@ -1377,12 +1662,12 @@
         <!-- TEMPLATE FOR BUY COIN ERROR MODAL WITH MULTIPLE COIN OPTIONS -->
 
         <template id="buyCoinsMultipleOptionsModal">
-          <div class="w-screen max-w-[550px]">
+          <div class="w-screen max-w-[550px] p-6">
             <div
               class="flex py-3 items-center justify-between border-b border-gray-300"
             >
               <p class="font-semibold">Buy Coins</p>
-              <span class="w-8 h-8 closeModalButton">
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
               </span>
             </div>
@@ -1490,12 +1775,12 @@
         <!-- TEMPLATE FOR BUY COIN (SELECT PAYMENT CARD) WITH MULTIPLE COIN OPTIONS -->
 
         <template id="payWithCardMultipleCoinOptionsModal">
-          <div class="w-screen max-w-[550px]">
+          <div class="w-screen max-w-[550px] p-6">
             <div
               class="flex py-3 items-center justify-between border-b border-gray-300"
             >
               <p class="font-semibold">Buy Coins</p>
-              <span class="w-8 h-8 closeModalButton">
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
               </span>
             </div>

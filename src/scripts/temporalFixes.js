@@ -1,11 +1,11 @@
 function switchContentOnElementClick(trigger,contentToBeReplaced,replacementcontent){
-    document.querySelector(trigger).addEventListener("click",()=>{
+    document.querySelector(trigger)&& document.querySelector(trigger).addEventListener("click",()=>{
         document.querySelector(contentToBeReplaced).classList.add("hidden") 
         document.querySelector(replacementcontent).classList.remove("hidden")
     })
 }
 function hideContentOnElementClick(trigger,contentToHide){
-    document.querySelector(trigger).addEventListener("click",()=>{
+    document.querySelector(trigger) && document.querySelector(trigger).addEventListener("click",()=>{
         document.querySelector(contentToHide).classList.add("hidden")
     })
 }

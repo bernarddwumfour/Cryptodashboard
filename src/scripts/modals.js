@@ -63,6 +63,10 @@ let elementsAndEvents = [
       },
     ],
   },
+  {
+    trigger : ".notificationButton",
+    target : "#notificationModal"
+  }
 ];
 
 const replaceInnerContent = (container, contentContainer) => {
@@ -107,7 +111,8 @@ let showModalOnTriggerClick = (elements) => {
 };
 
 //Closing modal by clicking on backdrop
-document.querySelector("#backdrop").addEventListener("click", (e) => {
+let backdrop = document.querySelector("#backdrop")
+backdrop && backdrop.addEventListener("click", (e) => {
   document.querySelector("#modal").classList.add("hidden");
 });
 
