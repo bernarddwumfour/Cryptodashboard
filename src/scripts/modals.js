@@ -64,10 +64,76 @@ let elementsAndEvents = [
     ],
   },
   {
-    trigger : ".notificationButton",
-    target : "#notificationModal"
-  }
+    //Notification modal
+    trigger: ".notificationButton",
+    target: "#notificationModal",
+  },
+  {
+    //Sidebar Modal
+    trigger : ".sidebarButton",
+    target : "#sidebar"
+  },
+  {
+    //Send Coins modals
+    trigger: ".sendCoinsButton",
+    target: "#sendCoinsSelectUserModal",
+    actions: [
+      {
+        trigger: ".sendCoinsContinueToReviewTransaction",
+        target: "#sendCoinsReviewTransaction",
+        actions: [
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
+            actions: [
+              {
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
+                actions: [
+                  {
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    //Withdraw coins Modals
+    trigger: ".withdrawCoinsButton",
+    target: "#withdrawCoinsEnterAmount",
+    actions: [
+      {
+        trigger: ".withdrawCoinsContinueToReviewTransaction",
+        target: "#withdrawCoinsReviewTransaction",
+        actions: [
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
+            actions: [
+              {
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
+                actions: [
+                  {
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
+
+
 
 const replaceInnerContent = (container, contentContainer) => {
   let contentToReplace = document.querySelector(contentContainer).innerHTML;
@@ -89,18 +155,20 @@ let showModalOnTriggerClick = (elements) => {
         let closeModalButton = document
           .querySelector("#modal")
           .querySelector(".closeModalButton");
-          closeModalButton && closeModalButton.addEventListener("click", () => {
-          document.querySelector("#modal").classList.remove("flex");
-          document.querySelector("#modal").classList.add("hidden");
-        });
+        closeModalButton &&
+          closeModalButton.addEventListener("click", () => {
+            document.querySelector("#modal").classList.remove("flex");
+            document.querySelector("#modal").classList.add("hidden");
+          });
 
         let cancelModalButton = document
           .querySelector("#modal")
           .querySelector(".cancelModalButton");
-          cancelModalButton && cancelModalButton.addEventListener("click", () => {
-          document.querySelector("#modal").classList.remove("flex");
-          document.querySelector("#modal").classList.add("hidden");
-        });
+        cancelModalButton &&
+          cancelModalButton.addEventListener("click", () => {
+            document.querySelector("#modal").classList.remove("flex");
+            document.querySelector("#modal").classList.add("hidden");
+          });
 
         //Handle all events("clicks") within the modal
         console.log(element.actions);
@@ -111,9 +179,10 @@ let showModalOnTriggerClick = (elements) => {
 };
 
 //Closing modal by clicking on backdrop
-let backdrop = document.querySelector("#backdrop")
-backdrop && backdrop.addEventListener("click", (e) => {
-  document.querySelector("#modal").classList.add("hidden");
-});
+let backdrop = document.querySelector("#backdrop");
+backdrop &&
+  backdrop.addEventListener("click", (e) => {
+    document.querySelector("#modal").classList.add("hidden");
+  });
 
 showModalOnTriggerClick(elementsAndEvents);

@@ -9,7 +9,8 @@ export default {
       colors : {
         primary : "#8837E9",
         coin : "#F59E0B"
-      }
+      },
+      
     },
   },
   plugins: [],

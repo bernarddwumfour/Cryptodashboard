@@ -15,7 +15,7 @@
   </head>
   <body class="">
     <div class="grid grid-cols-6">
-      <aside class="py-6 px-2 max-h-screen overflow-scroll col-span-1">
+      <aside class="pb-6 px-2 max-h-screen overflow-scroll col-span-1 hidden md:block">
         <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
           <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo" />
         </a>
@@ -447,16 +447,25 @@
         </div>
         <!-- END OF BACKDROP AND MODAL -->
       </aside>
-      <main class="col-span-5 h-screen overflow-y-scroll">
-        <div class="border-[1px] border-gray-300 m-2 rounded-3xl">
+      <main class="col-span-6 md:col-span-5 h-screen overflow-y-scroll">
+        <div class="md:border-[1px] border-gray-300 md:m-2 md:rounded-3xl">
           <header
-            class="flex justify-between border-b-[1px] border-gay-300 p-4"
+            class="flex justify-between border rounded-2xl md:rounded-none md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
-            <h1 class="text-lg font-bold overview">Overview</h1>
+            <div class="flex gap-4 items-center">
+              <span class="md:hidden w-5 h-5">
+                <img
+                  src="/navbars.svg"
+                  alt="nav bars icon"
+                  class="w-full h-full"
+                />
+              </span>
+              <h1 class="text-lg font-bold overview">Overview</h1>
+            </div>
             <nav>
               <menu class="flex gap-3">
                 <li
-                  class="w-10 h-10 bg-gray-200 rounded-full flex justify-center items-center notificationButton"
+                  class="w-10 h-10 md:bg-gray-200 rounded-full flex justify-center items-center notificationButton"
                 >
                   <img src="/bell.svg" class="w-5 h-5" alt="bell icon" />
                 </li>

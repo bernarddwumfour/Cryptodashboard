@@ -15,7 +15,9 @@
   </head>
   <body class="">
     <div class="grid grid-cols-6">
-      <aside class="py-6 px-2 max-h-screen overflow-scroll col-span-1">
+      <aside
+        class="pb-6 px-2 max-h-screen overflow-scroll col-span-1 hidden md:block"
+      >
         <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
           <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo" />
         </a>
@@ -431,21 +433,28 @@
           </div>
         </template>
         <!-- END OF MODAL FOR NOTIFICATIONS -->
-
-
       </aside>
-      <main class="col-span-5 h-screen overflow-y-scroll">
-        <div class="border-[1px] border-gray-300 m-2 rounded-3xl">
+      <main class="col-span-6 md:col-span-5 h-screen overflow-y-scroll">
+        <div class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl">
           <header
-            class="flex justify-between border-b-[1px] border-gay-300 p-4"
+            class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
-            <h1 class="text-lg font-bold overview">Overview</h1>
+            <div class="flex gap-4 items-center">
+              <span class="md:hidden w-5 h-5">
+                <img
+                  src="/navbars.svg"
+                  alt="nav bars icon"
+                  class="w-full h-full"
+                />
+              </span>
+              <h1 class="text-base md:text-lg font-bold overview">Overview</h1>
+            </div>
             <nav>
               <menu class="flex gap-3">
                 <li
-                  class="w-10 h-10 bg-gray-200 rounded-full flex justify-center items-center notificationButton"
+                  class="w-10 h-10 p-3 md:bg-gray-200 rounded-full flex justify-center items-center notificationButton"
                 >
-                  <img src="/bell.svg" class="w-5 h-5" alt="bell icon" />
+                  <img src="/bell.svg" alt="bell" class="w-full h-full">
                 </li>
                 <li
                   class="w-10 h-10 rounded-full bg-violet-200 text-violet-600 flex justify-center items-center text-center"
@@ -456,9 +465,9 @@
             </nav>
           </header>
 
-          <div class="p-4">
+          <div class="p-4 pt-0 md:pt-4">
             <h2 class="pb-3 font-bold continuetoerror">My Wallet Account</h2>
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div
                 class="rounded-lg bg-gradient-to-br from-[#FFA800] via-[#FFC838] to-[#FFC838] p-4"
               >
@@ -513,7 +522,7 @@
               </div>
 
               <div
-                class="rounded-lg bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard"
+                class="rounded-lg bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard hidden md:block"
               >
                 <div class="flex gap-3 items-center justify-between">
                   <span class="w-5 h-5">
@@ -582,7 +591,7 @@
                 </div>
               </div>
 
-              <div class="p-4 pb-0 withDrawalAmount">
+              <div class="p-4 pb-0 withDrawalAmount hidden md:block">
                 <p class="text-md font-semibold pb-3">
                   Enter Amount To withdraw
                 </p>
@@ -646,54 +655,64 @@
             <section>
               <h2 class="font-bold text-md my-6">Coin Packages</h2>
 
-              <div class="grid grid-cols-4 gap-4">
+              <div class="grid grid-cols-4 gap-1 md:gap-4">
                 <div
-                  class="flex flex-col gap-4 border-[1px] border-gray-200 rounded-md p-4 cursor-pointer addCoinsButton"
+                  class="flex flex-col gap-1 md:gap-4 border-[1px] border-gray-200 rounded-md p-2 md:p-4 cursor-pointer addCoinsButton"
                 >
                   <div class="flex justify-start gap-2 items-center">
-                    <span class="w-10 h-10 rounded-full">
+                    <span class="w-7 h-7 md:w-10 md:h-10 rounded-full">
                       <img src="/coin.svg" alt="coin svg" />
                     </span>
-                    <span class="italic text-lg font-semibold text-primary">
+                    <span
+                      class="italic text-[0.5rem] md:text-lg font-semibold text-primary"
+                    >
                       50 coins
                     </span>
                   </div>
-                  <span class="font-semibold"> $5 </span>
+                  <span class="font-semibold text-xs md:text-base"> $5 </span>
                 </div>
 
                 <div
-                  class="flex flex-col gap-4 border-[1px] border-gray-200 rounded-md p-4 cursor-pointer addCoinsButton"
+                  class="flex flex-col gap-1 md:gap-4 border-[1px] border-gray-200 rounded-md p-2 md:p-4 cursor-pointer addCoinsButton"
                 >
                   <div class="flex justify-start gap-2 items-center">
-                    <span class="w-10 h-10 rounded-full">
+                    <span class="w-7 h-7 md:w-10 md:h-10 rounded-full">
                       <img src="/coin.svg" alt="coin svg" />
                     </span>
-                    <span class="italic text-lg font-semibold text-primary">
+                    <span
+                      class="italic text-[0.5rem] md:text-lg font-semibold text-primary"
+                    >
                       100 coins
                     </span>
                   </div>
-                  <span class="font-semibold"> $10 </span>
+                  <span class="font-semibold text-xs md:text-base"> $10 </span>
                 </div>
 
                 <div
-                  class="flex flex-col gap-4 border-[1px] border-gray-200 rounded-md p-4 cursor-pointer addCoinsButton"
+                  class="flex flex-col gap-1 md:gap-4 border-[1px] border-gray-200 rounded-md p-2 md:p-4 cursor-pointer addCoinsButton"
                 >
                   <div class="flex justify-start gap-2 items-center">
-                    <span class="w-10 h-10 rounded-full">
+                    <span class="w-7 h-7 md:w-10 md:h-10 rounded-full">
                       <img src="/coin.svg" alt="coin svg" />
                     </span>
-                    <span class="italic text-lg font-semibold text-primary">
+                    <span
+                      class="italic text-[0.5rem] md:text-lg font-semibold text-primary"
+                    >
                       500 coins
                     </span>
                   </div>
-                  <span class="font-semibold"> $45 </span>
+                  <span class="font-semibold text-xs md:text-base"> $45 </span>
                 </div>
 
                 <div
-                  class="flex gap-4 justify-center items-center border-[1px] border-primary rounded-md p-4 text-xl text-primary font-semibold"
+                  class="flex gap-2 md:gap-4 justify-center items-center border-[1px] border-primary rounded-md p-2 md:p-4 text-xl text-primary font-semibold"
                 >
-                  <img src="/customAdd.svg" class="w-6 h-6" alt="add icon" />
-                  <span>Custom</span>
+                  <img
+                    src="/customAdd.svg"
+                    class="w-4 h-4 md:w-6 md:h-6"
+                    alt="add icon"
+                  />
+                  <span class="text-[0.6rem] md:text-base">Custom</span>
                 </div>
               </div>
             </section>
@@ -703,137 +722,163 @@
             <section>
               <h2 class="font-bold text-md my-6">Recent Transactions</h2>
 
-              <div class="flex gap-4 p-2 recenttransaction">
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+              <div class="overflow-x-scroll">
+                <div class="flex gap-4 p-2 recenttransaction">
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
-                </div>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
 
-                <div class="flex flex-col gap-1 items-center">
-                  <span class="w-12 h-12 rounded-full bg-gray-200">
-                    <img
-                      src="/person.svg"
-                      class="w-full h-full"
-                      alt="coin svg"
-                    />
-                  </span>
-                  <span class="text-xs">Faith</span>
+                  <div class="flex flex-col gap-1 items-center">
+                    <span
+                      class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200"
+                    >
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <span class="text-xs">Faith</span>
+                  </div>
                 </div>
               </div>
 
@@ -845,10 +890,10 @@
                 >
                   <img
                     src="/notransaction.svg"
-                    class="w-20 h-20"
+                    class="w-12 h-12 md:w-20 md:h-20"
                     alt="no transaction icon"
                   />
-                  <span class="italic text-sm text-gray-400">
+                  <span class="italic text-[0.7rem] md:text-sm text-gray-400">
                     No Transaction Yet
                   </span>
                 </div>
@@ -874,390 +919,394 @@
                 </a>
               </div>
 
-              <div class="rounded-2xl overflow-hidden border border-gray-200">
-                <table class="w-full border-collapserounded-lg">
-                  <thead class="text-sm font-semibold bg-gray-100">
-                    <!-- <th> -->
-                    <tr class="py-3">
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/user.svg"
-                            class="w-5 h-5"
-                            alt="user icon"
-                          />
-                          <span> USER </span>
-                        </div>
-                      </td>
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/calendar.svg"
-                            class="w-5 h-5"
-                            alt="calendar icon"
-                          />
-                          <span> DATE AND TIME </span>
-                        </div>
-                      </td>
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/transaction.svg"
-                            class="w-5 h-5"
-                            alt="transaction icon"
-                          />
-                          <span> TRANSACTION TYPE </span>
-                        </div>
-                      </td>
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/money.svg"
-                            class="w-5 h-5"
-                            alt="money icon"
-                          />
-                          <span> AMOUNT </span>
-                        </div>
-                      </td>
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/status.svg"
-                            class="w-5 h-5"
-                            alt="status icon"
-                          />
-                          <span> STATUS </span>
-                        </div>
-                      </td>
-                      <td class="p-3 text-center">
-                        <div class="flex items-center justify-center gap-2">
-                          <img
-                            src="/action.svg"
-                            class="w-5 h-5"
-                            alt="action icon"
-                          />
-                          <span> ACTION </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <!-- </th> -->
-                  </thead>
-
-                  <tbody class="border border-gray-200 recenttransactiontable">
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-red-500"
-                            ></span>
-                            <span>Failed</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-violet-100 text-violet-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-violet-500"
-                            ></span>
-                            <span>Pending</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-green-500"
-                            ></span>
-                            <span>Completed</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-red-500"
-                            ></span>
-                            <span>Failed</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-blue-100 text-blue-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-blue-500"
-                            ></span>
-                            <span>Active</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-red-500"
-                            ></span>
-                            <span>Failed</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b">
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex gap-3 items-center">
-                          <span
-                            class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
-                            >FM</span
-                          >
-                          <div class="flex flex-col">
-                            <span>Faith Mollins</span>
-                            <span class="text-gray-400 text-sm">@faith</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm font-semibold">
-                        03, Dec 2023 | 01:15 pm
-                      </td>
-                      <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                      <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                      <td class="p-3 py-5 text-center text-sm">
-                        <div class="flex justify-center">
-                          <div
-                            class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
-                          >
-                            <span
-                              class="w-2 h-2 rounded-full bg-green-500"
-                            ></span>
-                            <span>Completed</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="p-3 py-5 text-center text-sm flex justify-center"
-                      >
-                        <div
-                          class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
-                        >
-                          <img src="/eye.svg" alt="eye icon" />
-                          <span> View </span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-
-                  <tbody class="norecenttransactiontable hidden">
-                    <tr>
-                      <td colspan="6">
-                        <div
-                          class="flex justify-center items-center notransaction py-10"
-                        >
-                          <div
-                            class="flex flex-col justify-center items-center gap-3 p-6"
-                          >
+              <div class="overflow-x-scroll">
+                <div class="rounded-2xl overflow-hidden border border-gray-200">
+                  <table class="w-full border-collapserounded-lg">
+                    <thead class="text-sm font-semibold bg-gray-100">
+                      <!-- <th> -->
+                      <tr class="py-3">
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
                             <img
-                              src="/notransaction.svg"
-                              class="w-20 h-20"
-                              alt="no transaction icon"
+                              src="/user.svg"
+                              class="w-5 h-5"
+                              alt="user icon"
                             />
-                            <span
-                              class="italic text-sm text-gray-400 text-center"
-                            >
-                              No Transaction Yet
-                            </span>
+                            <span> USER </span>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        </td>
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
+                            <img
+                              src="/calendar.svg"
+                              class="w-5 h-5"
+                              alt="calendar icon"
+                            />
+                            <span> DATE AND TIME </span>
+                          </div>
+                        </td>
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
+                            <img
+                              src="/transaction.svg"
+                              class="w-5 h-5"
+                              alt="transaction icon"
+                            />
+                            <span> TRANSACTION TYPE </span>
+                          </div>
+                        </td>
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
+                            <img
+                              src="/money.svg"
+                              class="w-5 h-5"
+                              alt="money icon"
+                            />
+                            <span> AMOUNT </span>
+                          </div>
+                        </td>
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
+                            <img
+                              src="/status.svg"
+                              class="w-5 h-5"
+                              alt="status icon"
+                            />
+                            <span> STATUS </span>
+                          </div>
+                        </td>
+                        <td class="p-3 text-center">
+                          <div class="flex items-center justify-center gap-2">
+                            <img
+                              src="/action.svg"
+                              class="w-5 h-5"
+                              alt="action icon"
+                            />
+                            <span> ACTION </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- </th> -->
+                    </thead>
+
+                    <tbody
+                      class="border border-gray-200 recenttransactiontable"
+                    >
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-red-500"
+                              ></span>
+                              <span>Failed</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-violet-100 text-violet-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-violet-500"
+                              ></span>
+                              <span>Pending</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-green-500"
+                              ></span>
+                              <span>Completed</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-red-500"
+                              ></span>
+                              <span>Failed</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-blue-100 text-blue-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-blue-500"
+                              ></span>
+                              <span>Active</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-red-500"
+                              ></span>
+                              <span>Failed</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex gap-3 items-center">
+                            <span
+                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              >FM</span
+                            >
+                            <div class="flex flex-col">
+                              <span>Faith Mollins</span>
+                              <span class="text-gray-400 text-sm">@faith</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                          03, Dec 2023 | 01:15 pm
+                        </td>
+                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-sm">
+                          <div class="flex justify-center">
+                            <div
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
+                            >
+                              <span
+                                class="w-2 h-2 rounded-full bg-green-500"
+                              ></span>
+                              <span>Completed</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        >
+                          <div
+                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                          >
+                            <img src="/eye.svg" alt="eye icon" />
+                            <span> View </span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="norecenttransactiontable hidden">
+                      <tr>
+                        <td colspan="6">
+                          <div
+                            class="flex justify-center items-center notransaction py-10 w-[calc(100vw-32px)] md:w-full"
+                          >
+                            <div
+                              class="flex flex-col justify-center items-center gap-3 p-6"
+                            >
+                              <img
+                                src="/notransaction.svg"
+                                class="w-12 h-12 md:w-20 md:h-20"
+                                alt="no transaction icon"
+                              />
+                              <span
+                                class="italic text-[0.7rem] md:text-sm text-gray-400 text-center"
+                              >
+                                No Transaction Yet
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </section>
             <!-- END OF TRANSACTION HISTORY SECTION -->
