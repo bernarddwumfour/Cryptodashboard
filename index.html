@@ -440,7 +440,7 @@
             class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
             <div class="flex gap-4 items-center">
-              <span class="md:hidden w-5 h-5">
+              <span class="md:hidden w-5 h-5 sidebarButton">
                 <img
                   src="/navbars.svg"
                   alt="nav bars icon"
@@ -454,7 +454,7 @@
                 <li
                   class="w-10 h-10 p-3 md:bg-gray-200 rounded-full flex justify-center items-center notificationButton"
                 >
-                  <img src="/bell.svg" alt="bell" class="w-full h-full">
+                  <img src="/bell.svg" alt="bell" class="w-full h-full" />
                 </li>
                 <li
                   class="w-10 h-10 rounded-full bg-violet-200 text-violet-600 flex justify-center items-center text-center"
@@ -464,6 +464,230 @@
               </menu>
             </nav>
           </header>
+
+          <!-- SIDEBAR -->
+
+          <template id="sidebar">
+            <div
+              class="absolute overflow-y-scroll md:hidden top-0 left-0 w-5/6 max-w-[400px] h-full bg-gradient-to-tr from-[#DA4DAA] to-[#4D4BFE]"
+            >
+              <aside
+                class="pb-6 px-2 max-h-screen col-span-1 text-white relative"
+              >
+                <span class="closeModalButton relative block p-2 mx-2 mt-2"> 
+                  <img
+                    src="/closeButton.svg"
+                    class="w-7 h-7"
+                    alt="close button"
+                  />
+                </span>
+
+                <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
+                  <img
+                    src="/logowhite.svg"
+                    class="h-12 w-fit"
+                    alt="sizemug logo"
+                  />
+                </a>
+                <nav class="flex flex-col gap-6">
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      COINS
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Buy coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Send coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Receieve coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Withdraw coins </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      MONEY
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Send money </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Deposit money </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> withdraw money </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      ANALYTICS
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Transaction Volume </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Revenue Analysis </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Channel Effectiveness </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Visitor Flow & Behaviour </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      Manage
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Cards </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Bank Accounts </span>
+                      </a>
+                    </li>
+                  </menu>
+                </nav>
+              </aside>
+            </div>
+          </template>
+
+          <!-- END OF SIDEBAR -->
 
           <div class="p-4 pt-0 md:pt-4">
             <h2 class="pb-3 font-bold continuetoerror">My Wallet Account</h2>
@@ -920,8 +1144,8 @@
               </div>
 
               <div class="overflow-x-scroll">
-                <div class="rounded-2xl overflow-hidden border border-gray-200">
-                  <table class="w-full border-collapserounded-lg">
+                <div class="rounded-2xl overflow-scroll border border-gray-200">
+                  <table class="min-w-full border-collapserounded-lg">
                     <thead class="text-sm font-semibold bg-gray-100">
                       <!-- <th> -->
                       <tr class="py-3">
@@ -1000,12 +1224,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1041,12 +1267,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1082,12 +1310,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1123,12 +1353,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1164,12 +1396,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1205,12 +1439,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
@@ -1246,12 +1482,14 @@
                               >FM</span
                             >
                             <div class="flex flex-col">
-                              <span>Faith Mollins</span>
+                              <span class="text-nowrap">Faith Mollins</span>
                               <span class="text-gray-400 text-sm">@faith</span>
                             </div>
                           </div>
                         </td>
-                        <td class="p-3 py-5 text-center text-sm font-semibold">
+                        <td
+                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                        >
                           03, Dec 2023 | 01:15 pm
                         </td>
                         <td class="p-3 py-5 text-center text-sm">Send coins</td>
