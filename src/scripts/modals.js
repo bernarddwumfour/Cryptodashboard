@@ -70,8 +70,8 @@ let elementsAndEvents = [
   },
   {
     //Sidebar Modal
-    trigger : ".sidebarButton",
-    target : "#sidebar"
+    trigger: ".sidebarButton",
+    target: "#sidebar",
   },
   {
     //Send Coins modals
@@ -131,9 +131,70 @@ let elementsAndEvents = [
       },
     ],
   },
+
+  //MONEY MODALS
+  {
+    //withdraw Money modals
+    trigger: ".withdrawMoneyButton",
+    target: "#withdrawMoneyEnteramount",
+    actions: [
+      {
+        trigger: ".withdrawMoneyContinueToReviewTransaction",
+        target: "#withdrawMoneyReviewTransaction",
+        actions: [
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
+            actions: [
+              {
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
+                actions: [
+                  {
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    //Send money modals
+    trigger : ".sendMoneyButton",
+    target : "#sendMoneySelectUserModal",
+    actions : [{
+      trigger :".sendMoneyContinueToReviewTransaction",
+      target : "#sendCoinsReviewTransaction",
+      actions: [
+        {
+          trigger: ".continueToSpinner",
+          target: "#spinnerModal",
+          actions: [
+            {
+              trigger: ".showTransactionSuccessButton",
+              target: "#showTransactionSuccessModal",
+              actions: [
+                {
+                  trigger: ".sendCoinsShowTransactionDetailsButton",
+                  target: "#sendCoinsTransactionDetailsModal",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }]
+  },
+  {
+    //Deposite money
+    
+  }
 ];
-
-
 
 const replaceInnerContent = (container, contentContainer) => {
   let contentToReplace = document.querySelector(contentContainer).innerHTML;
