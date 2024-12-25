@@ -213,10 +213,10 @@
         <!-- MODAL FOR NOTIFICATIONS -->
         <template id="notificationModal">
           <div
-            class="w-screen max-w-[650px] absolute max-h-[calc(100vh-3rem)] flex flex-col bg-white top-6 right-6 p-6 rounded-xl z-[11]"
+            class="w-screen max-w-[650px] absolute h-full max-h-screen md:h-auto md:max-h-[calc(100vh-3rem)] flex flex-col bg-white top-0 md:top-6 right-0 md:right-6 p-6 rounded-xl z-[11]"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse justify-end gap-4 md:flex-row py-3 items-center md:justify-between md:border-b border-gray-300"
             >
               <p class="font-semibold">Notifications</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
@@ -232,7 +232,7 @@
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/success.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="success icon"
                     />
 
@@ -250,14 +250,14 @@
                         </span>
                       </div>
 
-                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                      <span class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"> </span>
                     </div>
                   </div>
 
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/error.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="error icon"
                     />
 
@@ -275,14 +275,14 @@
                         </span>
                       </div>
 
-                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                      <span class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"> </span>
                     </div>
                   </div>
 
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/success.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="success icon"
                     />
 
@@ -300,7 +300,7 @@
                         </span>
                       </div>
 
-                      <span class="w-3 h-3 bg-violet-600 rounded-full"> </span>
+                      <span class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"> </span>
                     </div>
                   </div>
                 </div>
@@ -313,7 +313,7 @@
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/success.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="success icon"
                     />
 
@@ -339,7 +339,7 @@
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/success.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="success icon"
                     />
 
@@ -365,7 +365,7 @@
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/error.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="error icon"
                     />
 
@@ -391,7 +391,7 @@
                   <div class="flex gap-5 py-4 items-center justify-start">
                     <img
                       src="/success.svg"
-                      class="w-11 h-11 self-start"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
                       alt="success icon"
                     />
 
@@ -1146,14 +1146,14 @@
               <div class="overflow-x-scroll">
                 <div class="rounded-2xl overflow-scroll border border-gray-200">
                   <table class="min-w-full border-collapserounded-lg">
-                    <thead class="text-sm font-semibold bg-gray-100">
+                    <thead class="text-[.7rem] md:text-sm font-semibold bg-gray-100">
                       <!-- <th> -->
                       <tr class="py-3">
                         <td class="p-3 text-center">
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/user.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="user icon"
                             />
                             <span> USER </span>
@@ -1163,7 +1163,7 @@
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/calendar.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="calendar icon"
                             />
                             <span> DATE AND TIME </span>
@@ -1173,17 +1173,17 @@
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/transaction.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="transaction icon"
                             />
-                            <span> TRANSACTION TYPE </span>
+                            <span class="text-nowrap"> TRANSACTION TYPE </span>
                           </div>
                         </td>
                         <td class="p-3 text-center">
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/money.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="money icon"
                             />
                             <span> AMOUNT </span>
@@ -1193,7 +1193,7 @@
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/status.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="status icon"
                             />
                             <span> STATUS </span>
@@ -1203,7 +1203,7 @@
                           <div class="flex items-center justify-center gap-2">
                             <img
                               src="/action.svg"
-                              class="w-5 h-5"
+                              class="w-3 h-3 md:w-5 md:h-5"
                               alt="action icon"
                             />
                             <span> ACTION </span>
@@ -1217,10 +1217,10 @@
                       class="border border-gray-200 recenttransactiontable"
                     >
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1230,16 +1230,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-red-500"
@@ -1248,22 +1248,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1273,16 +1275,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-violet-100 text-violet-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-violet-100 text-violet-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-violet-500"
@@ -1291,22 +1293,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1316,16 +1320,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-green-500"
@@ -1334,22 +1338,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1359,16 +1365,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-red-500"
@@ -1377,22 +1383,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1402,16 +1410,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-blue-100 text-blue-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-blue-100 text-blue-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-blue-500"
@@ -1420,22 +1428,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1445,16 +1455,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-red-100 text-red-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-red-500"
@@ -1463,22 +1473,24 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                       <tr class="border-b">
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex gap-3 items-center">
                             <span
-                              class="w-10 h-10 text-white rounded-full bg-primary text-center pt-2"
+                              class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
                               >FM</span
                             >
                             <div class="flex flex-col">
@@ -1488,16 +1500,16 @@
                           </div>
                         </td>
                         <td
-                          class="p-3 py-5 text-center text-sm font-semibold text-nowrap"
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm font-semibold text-nowrap"
                         >
                           03, Dec 2023 | 01:15 pm
                         </td>
-                        <td class="p-3 py-5 text-center text-sm">Send coins</td>
-                        <td class="p-3 py-5 text-center text-sm">200 coins</td>
-                        <td class="p-3 py-5 text-center text-sm">
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">Send coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">200 coins</td>
+                        <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
                           <div class="flex justify-center">
                             <div
-                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
+                              class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-3 md:p-[.4rem] md:px-5"
                             >
                               <span
                                 class="w-2 h-2 rounded-full bg-green-500"
@@ -1506,15 +1518,17 @@
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="p-3 py-5 text-center text-sm flex justify-center"
+                        <td>
+                          <div
+                          class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                         >
                           <div
-                            class="flex gap-1 px-5 rounded-3xl font-semibold py-[.4rem] w-fit border-[2px] text-primary border-primary p-[0.4rem]"
+                            class="flex gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                           >
                             <img src="/eye.svg" alt="eye icon" />
                             <span> View </span>
                           </div>
+                        </div>
                         </td>
                       </tr>
                     </tbody>
