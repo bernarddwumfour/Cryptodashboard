@@ -97,6 +97,7 @@ let elementsAndEvents = [
                 ],
               },
             ],
+            methods: [() => alert("clicked")],
           },
         ],
       },
@@ -165,35 +166,62 @@ let elementsAndEvents = [
 
   {
     //Send money modals
-    trigger : ".sendMoneyButton",
-    target : "#sendMoneySelectUserModal",
-    actions : [{
-      trigger :".sendMoneyContinueToReviewTransaction",
-      target : "#sendCoinsReviewTransaction",
-      actions: [
-        {
-          trigger: ".continueToSpinner",
-          target: "#spinnerModal",
-          actions: [
-            {
-              trigger: ".showTransactionSuccessButton",
-              target: "#showTransactionSuccessModal",
-              actions: [
-                {
-                  trigger: ".sendCoinsShowTransactionDetailsButton",
-                  target: "#sendCoinsTransactionDetailsModal",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    }]
+    trigger: ".sendMoneyButton",
+    target: "#sendMoneySelectUserModal",
+    actions: [
+      {
+        trigger: ".sendMoneyContinueToReviewTransaction",
+        target: "#sendCoinsReviewTransaction",
+        actions: [
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
+            actions: [
+              {
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
+                actions: [
+                  {
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     //Deposite money
-    
-  }
+    trigger: ".depositeMoneyButton",
+    target: "#depositeMoneyEnterAmount",
+    actions: [
+      {
+        trigger: ".depositeMoneyContinueToReviewTransaction",
+        target: "#depositeMoneyReviewTransaction",
+        actions: [
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
+            actions: [
+              {
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
+                actions: [
+                  {
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 const replaceInnerContent = (container, contentContainer) => {
@@ -211,6 +239,13 @@ let showModalOnTriggerClick = (elements) => {
         document.querySelector("#modal").classList.remove("hidden");
         document.querySelector("#modal").classList.add("flex");
         replaceInnerContent("#modalContent", element.target);
+
+        //Handling all methods at a stage
+        if (element.methods && element.methods.length > 0) {
+          element.methods.forEach((method) => {
+            method();
+          });
+        }
 
         //Handling All close Modal Events by close button
         let closeModalButton = document
