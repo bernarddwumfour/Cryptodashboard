@@ -8,6 +8,7 @@ export default defineConfig({
         main: 'index.html',
         transactions: '/transactions.html',
         modals : "/modals.html",
+        transactionVolume : "/transaction-volume.html",
       },
     },
   },

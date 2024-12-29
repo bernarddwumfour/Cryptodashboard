@@ -47,10 +47,10 @@ for (let i = 0; i < 30; i++) {
     userstemplate += `
     <div class="flex flex-col gap-2 items-center">
                <span
-                 class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200 overflow-hidden"
+                 class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200 animate-pulse overflow-hidden"
                >
                </span>
-               <span class="text-xs h-2 rounded-md w-14 bg-gray-200"></span>
+               <span class="text-xs h-2 rounded-md w-14 bg-gray-200 animate-pulse"></span>
              </div>
              `;
     
