@@ -9,6 +9,7 @@ export default defineConfig({
         transactions: '/transactions.html',
         modals : "/modals.html",
         transactionVolume : "/transaction-volume.html",
+        revenueAnalysis : "/revenue-analysis.html",
       },
     },
   },

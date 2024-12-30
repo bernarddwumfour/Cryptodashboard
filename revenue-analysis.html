@@ -474,7 +474,7 @@
                   class="w-full h-full"
                 />
               </span>
-              <h1 class="text-base md:text-lg font-bold overview">Channel Effectiveness</h1>
+              <h1 class="text-base md:text-lg font-bold overview">Overview</h1>
             </div>
             <nav>
               <menu class="flex gap-3">
@@ -763,42 +763,19 @@
             <div class="flex justify-between items-center">
               <span> Transaction trends </span>
 
-              <div>
-                <div class="flex">
-                  <div
-                    class="flex bg-gray-100 hover:bg-gray-200 rounded-lg transition p-1"
-                  >
-                    <nav
-                      class="flex gap-x-1"
-                      aria-label="Tabs"
-                      role="tablist"
-                      aria-orientation="horizontal"
-                    >
-                      <button
-                        type="button"
-                        class="hs-tab-active:bg-white hs-tab-active:text-red-700 py-2 px-3 inline-flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
-                        id="segment-item-1"
-                        aria-selected="true"
-                        data-hs-tab="#segment-1"
-                        aria-controls="segment-1"
-                        role="tab"
-                      >
-                        Coins
-                      </button>
-                      <button
-                        type="button"
-                        class="hs-tab-active:bg-white hs-tab-active:text-red-700 py-2 px-3 inline-flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
-                        id="segment-item-2"
-                        aria-selected="false"
-                        data-hs-tab="#segment-2"
-                        aria-controls="segment-2"
-                        role="tab"
-                      >
-                        Money
-                      </button>
-                    </nav>
-                  </div>
-                </div>
+              <div class="flex font-semibold">
+                <span class="flex gap-2 items-center">
+                  <span
+                    class="size-2 inline-block rounded-full bg-primary"
+                  ></span>
+                  <span> Coins sent </span>
+                </span>
+                <span class="flex gap-2 items-center">
+                  <span
+                    class="size-2 inline-block rounded-full bg-orange-400"
+                  ></span>
+                  <span> Coins received </span>
+                </span>
               </div>
 
               <div class="flex gap-6">
@@ -954,339 +931,6 @@
           </div>
 
           <div class="flex flex-col md:flex-row gap-6 m-4">
-            <div
-              class="border border-gray-300 rounded-xl w-full overflow-hidden overflow-y-scroll max-h-[500px] p-2 md:p-6"
-            >
-              <table class="min-w-full border-collapserounded-lg">
-                <h3 class="text-xl font-semibold p-6 pb-8 block">
-                  Coin Transactions
-                </h3>
-                <tbody class="border-0 border-gray-200 recenttransactiontable">
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              class="border border-gray-300 rounded-xl w-full overflow-hidden overflow-y-scroll max-h-[500px] p-2 md:p-6"
-            >
-              <table class="min-w-full border-collapserounded-lg">
-                <h3 class="text-xl font-semibold p-6 pb-8 block">
-                  Money Transactions
-                </h3>
-                <tbody class="border-0 border-gray-200 recenttransactiontable">
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      <div class="flex gap-3 items-center">
-                        <span
-                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
-                          >FM</span
-                        >
-                        <div class="flex flex-col text-start">
-                          <span class="text-nowrap">Faith Mollins</span>
-                          <span class="text-gray-400 text-xs">
-                            03, Dec 2023 | 01:15 pm</span
-                          >
-                        </div>
-                      </div>
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      Send coins
-                    </td>
-                    <td class="p-3 py-5 text-center text-[.65rem] md:text-sm">
-                      200 coins
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="flex flex-col md:flex-row gap-6 m-4">
             <div class="border border-gray-300 rounded-xl w-full">
               <div class="p-4 md:p-6">
                 <div class="flex justify-between gap-6 items-center">
@@ -1359,33 +1003,25 @@
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                       <span class="flex gap-6 items-center">
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                       <span class="flex gap-6 items-center">
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                       <span class="flex gap-6 items-center">
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                     </div>
                     <div class="flex flex-col gap-2">
@@ -1479,25 +1115,19 @@
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                       <span class="flex gap-6 items-center">
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                       <span class="flex gap-6 items-center">
                         <span
                           class="size-4 inline-block rounded-full bg-blue-600"
                         ></span>
-                        <span>
-                          Coins sent
-                        </span>
+                        <span> Coins sent </span>
                       </span>
                     </div>
                     <div class="flex flex-col gap-2">
