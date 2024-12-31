@@ -10,6 +10,8 @@ export default defineConfig({
         modals : "/modals.html",
         transactionVolume : "/transaction-volume.html",
         revenueAnalysis : "/revenue-analysis.html",
+        channelEffectiveness : "/channel-effectiveness.html",
+        visitorFlow : "/visitor-flow.html",
       },
     },
   },
