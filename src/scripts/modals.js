@@ -87,6 +87,12 @@ let elementsAndEvents = [
     target: "#sidebar",
   },
   {
+    //View Transaction details
+    trigger: ".viewTranscationDetailsButton",
+    target: "#sendCoinsTransactionDetailsModal",
+
+  },
+  {
     //Send Coins modals
     trigger: ".sendCoinsButton",
     target: "#sendCoinsSelectUserModal",
