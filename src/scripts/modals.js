@@ -22,6 +22,12 @@ let elementsAndEvents = [
                   {
                     trigger: ".showTransactionSuccessButton",
                     target: "#showTransactionSuccessModal",
+                    actions: [
+                      {
+                        trigger: ".sendCoinsShowTransactionDetailsButton",
+                        target: "#sendCoinsTransactionDetailsModal",
+                      },
+                    ],
                   },
                 ],
               },
@@ -54,6 +60,12 @@ let elementsAndEvents = [
                   {
                     trigger: ".showTransactionSuccessButton",
                     target: "#showTransactionSuccessModal",
+                    actions: [
+                      {
+                        trigger: ".sendCoinsShowTransactionDetailsButton",
+                        target: "#sendCoinsTransactionDetailsModal",
+                      },
+                    ],
                   },
                 ],
               },

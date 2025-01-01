@@ -12,6 +12,8 @@ export default defineConfig({
         revenueAnalysis : "/revenue-analysis.html",
         channelEffectiveness : "/channel-effectiveness.html",
         visitorFlow : "/visitor-flow.html",
+        cards : "cards.html",
+        manageAccounts : "manage-accounts.html"
       },
     },
   },

@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizemug</title>
+  </head>
+  <body class="">
+    <div class="grid grid-cols-6">
+      <aside
+        class="pb-6 px-2 max-h-screen overflow-scroll col-span-1 hidden md:block"
+      >
+        <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
+          <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo" />
+        </a>
+        <nav class="flex flex-col gap-6">
+            <menu class="flex flex-col">
+              <li>
+                <a
+                  href="/"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-[.95rem]">
+                  other_houses
+                </span>
+                  <span> Overview</span>
+                </a>
+              </li>
+              <span class="px-2 text-sm py-4 ps-4 font-semibold"> COINS </span>
+              <li>
+                <button
+                  class="buyCoinsMultipleOptionsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  currency_exchange
+                </span>
+                  <span> Buy coins </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                  <span class="material-symbols-outlined text-sm">
+                  north_east
+                  </span>
+                  <span> Send coins </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  south_west
+                  </span>
+                  <span> Receive coins </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="withdrawCoinsButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-[.95rem]">
+                  upgrade
+                  </span>
+                  <span> Withdraw coins </span>
+                </button>
+              </li>
+            </menu>
+  
+            <menu class="flex flex-col">
+              <span class="px-2 text-sm py-4 ps-4 font-semibold"> MONEY </span>
+              <li>
+                <button
+                  class="sendMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  north_east
+                  </span>
+                  <span> Send money </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="depositeMoneyButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  vertical_align_bottom
+                  </span>
+                  <span> Deposit money </span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="withdrawCoinsButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-[.95rem]">
+                  upgrade
+                  </span>
+                  <span> withdraw money </span>
+                </button>
+              </li>
+            </menu>
+  
+            <menu class="flex flex-col">
+              <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                ANALYTICS
+              </span>
+              <li>
+                <a
+                  href="/transaction-volume.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  sync_alt
+                  </span>
+                  <span> Transaction Volume </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/revenue-analysis.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  database
+                  </span>
+                  <span> Revenue Analysis </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/channel-effectiveness.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  list_alt_check
+                  </span>
+                  <span> Channel Effectiveness </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/visitor-flow.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  conversion_path
+                  </span>
+                  <span> Visitor Flow & Behaviour </span>
+                </a>
+              </li>
+            </menu>
+  
+            <menu class="flex flex-col">
+              <span class="px-2 text-sm py-4 ps-4 font-semibold"> Manage </span>
+              <li>
+                <a
+                  href="/cards.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  credit_card
+                  </span>
+                  <span> Cards </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/manage-accounts.html"
+                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                >
+                <span class="material-symbols-outlined text-sm">
+                  account_balance
+                  </span>
+                  <span> Bank Accounts </span>
+                </a>
+              </li>
+            </menu>
+  
+            <div class="flex flex-col">
+              <span class="px-2 text-sm py-4 ps-4 font-semibold"> Support </span>
+              <menu class="px-4 flex flex-wrap gap-2">
+                <li>
+                  <a href="#" class="text-sm">Contact</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm">About</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm">Help</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm">Security</a>
+                </li>
+                <li>
+                  <a href="#" class="text-sm">Community</a>
+                </li>
+              </menu>
+              <span class="px-4 text-sm py-2"> © 2024 Sizemug </span>
+            </div>
+          </nav>
+
+        <!-- MODAL FOR NOTIFICATIONS -->
+        <template id="notificationModal">
+          <div
+            class="w-screen max-w-[650px] absolute h-full max-h-screen md:h-auto md:max-h-[calc(100vh-3rem)] flex flex-col bg-white top-0 md:top-6 right-0 md:right-6 p-6 rounded-xl z-[11]"
+          >
+            <div
+              class="flex flex-row-reverse justify-end gap-4 md:flex-row py-3 items-center md:justify-between md:border-b border-gray-300"
+            >
+              <p class="font-semibold">Notifications</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="overflow-y-scroll">
+              <div>
+                <div class="pt-6">
+                  <span class="text-gray-400 font-semibold"> New </span>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span
+                        class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"
+                      >
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/error.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="error icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Withdrawal Error
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          ❌ Withdrawal Failed. Please check your bank details
+                          or try again.
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span
+                        class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"
+                      >
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span
+                        class="w-3 h-3 bg-violet-600 rounded-full flex-none ms-2"
+                      >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pt-6">
+                  <span class="text-gray-400 font-semibold"> Last 7 Days </span>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/error.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="error icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Withdrawal Error
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          ❌ Withdrawal Failed. Please check your bank details
+                          or try again.
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 py-4 items-center justify-start">
+                    <img
+                      src="/success.svg"
+                      class="w-7 h-7 md:w-11 md:h-11 self-start"
+                      alt="success icon"
+                    />
+
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col gap-1">
+                        <span class="font-bold text-sm">
+                          Deposite Successful
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                          🎉 Deposit Successful! $50.00 has been added to your
+                          Money Wallet
+                        </span>
+                        <span class="text-xs py-1 text-gray-400">
+                          13 mins ago
+                        </span>
+                      </div>
+
+                      <span class="w-3 h-3 rounded-full justify-self-end">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-4">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Close
+              </span>
+              <div
+                class="p-2 flex justify-center gap-3 items-center bg-white border-2 border-violet-600 text-violet-600 rounded-2xl w-full text-sm text-center cursor-pointer"
+              >
+                <span> Mark all as read </span>
+                <img src="/mark.svg" class="w-5 h-5" alt="mark icon" />
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- END OF MODAL FOR NOTIFICATIONS -->
+      </aside>
+      <main class="col-span-6 md:col-span-5 h-screen overflow-y-scroll">
+        <div class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl min-h-[calc(100%-1rem)]">
+          <header
+            class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
+          >
+            <div class="flex gap-4 items-center">
+              <span class="md:hidden w-5 h-5 sidebarButton">
+                <img
+                  src="/navbars.svg"
+                  alt="nav bars icon"
+                  class="w-full h-full"
+                />
+              </span>
+              <h1 class="text-base md:text-lg font-bold overview">Overview</h1>
+            </div>
+            <nav>
+              <menu class="flex gap-3">
+                <li
+                  class="w-10 h-10 p-3 md:bg-gray-200 rounded-full flex justify-center items-center notificationButton"
+                >
+                  <img src="/bell.svg" alt="bell" class="w-full h-full" />
+                </li>
+                <li
+                  class="w-10 h-10 rounded-full bg-violet-200 text-violet-600 flex justify-center items-center text-center"
+                >
+                  <span> EO </span>
+                </li>
+              </menu>
+            </nav>
+          </header>
+
+          <!-- SIDEBAR -->
+
+          <template id="sidebar">
+            <div
+              class="absolute overflow-y-scroll md:hidden top-0 left-0 w-5/6 max-w-[400px] h-full bg-gradient-to-tr from-[#DA4DAA] to-[#4D4BFE]"
+            >
+              <aside
+                class="pb-6 px-2 max-h-screen col-span-1 text-white relative"
+              >
+                <span class="closeModalButton relative block p-2 mx-2 mt-2">
+                  <img
+                    src="/closeButton.svg"
+                    class="w-7 h-7"
+                    alt="close button"
+                  />
+                </span>
+
+                <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
+                  <img
+                    src="/logowhite.svg"
+                    class="h-12 w-fit"
+                    alt="sizemug logo"
+                  />
+                </a>
+                <nav class="flex flex-col gap-6">
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      COINS
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Buy coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Send coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Receieve coins </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Withdraw coins </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      MONEY
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Send money </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Deposit money </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> withdraw money </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      ANALYTICS
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Transaction Volume </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Revenue Analysis </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Channel Effectiveness </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Visitor Flow & Behaviour </span>
+                      </a>
+                    </li>
+                  </menu>
+
+                  <menu class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      Manage
+                    </span>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Cards </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <img
+                          src="/buy.svg"
+                          class="w-4 h-4 text-white filt"
+                          alt="buy icon"
+                        />
+                        <span> Bank Accounts </span>
+                      </a>
+                    </li>
+                  </menu>
+                </nav>
+              </aside>
+            </div>
+          </template>
+
+          <!-- END OF SIDEBAR -->
+
+          <div class="p-4 pt-0 md:pt-4">
+            <h2 class="pb-3 font-bold continuetoerror">My Wallet Account</h2>
+            <!-- Slider main container -->
+            <div class="swiper w-full relative md:hidden pb-8">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div
+                    class="rounded-lg bg-gradient-to-br from-[#FFA800] via-[#FFC838] to-[#FFC838] p-4"
+                  >
+                    <div class="flex gap-3 items-start">
+                      <span class="w-5 h-5">
+                        <img src="/cardcoin.svg" alt="" />
+                      </span>
+                      <span class="text-white text-xs">Coin Balance</span>
+                    </div>
+                    <div class="py-3 pb-8">
+                      <span class="text-3xl font-bold text-white">
+                        100,000
+                      </span>
+                      <span class="text-white text-smS"> COINS </span>
+                    </div>
+                    <div class="flex justify-evenly gap-2">
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendCoinsButton"
+                      >
+                        <img
+                          src="/send.svg"
+                          alt="send icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block"> Send </span>
+                      </div>
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px]"
+                      >
+                        <img
+                          src="/receive.svg"
+                          alt="receive icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block">
+                          Receive
+                        </span>
+                      </div>
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] buyCoinsMultipleOptionsButton"
+                      >
+                        <img
+                          src="/buy.svg"
+                          alt="buy icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block"> Buy </span>
+                      </div>
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawCoinsButton"
+                      >
+                        <img
+                          src="/withdraw.svg"
+                          alt="withdraw icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block">
+                          Withdraw
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="rounded-lg bg-gradient-to-bl from-[#992DF2] via-[#4D4BFE] to-[#4D4BFE] p-4"
+                  >
+                    <div class="flex gap-3 items-center">
+                      <span class="w-5 h-5">
+                        <img src="/signal.svg" alt="" />
+                      </span>
+                      <span class="text-white text-xs">Money Balance</span>
+                    </div>
+                    <div class="py-3 pb-8">
+                      <span class="text-3xl font-bold text-white">
+                        35,000
+                      </span>
+                      <span class="text-white text-smS"> USD </span>
+                    </div>
+                    <div class="flex justify-evenly gap-2">
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendMoneyButton"
+                      >
+                        <img
+                          src="/send.svg"
+                          alt="send icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block"> Send </span>
+                      </div>
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] depositeMoneyButton"
+                      >
+                        <img
+                          src="/deposit.svg"
+                          alt="deposit icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block">
+                          Deposit
+                        </span>
+                      </div>
+                      <div
+                        class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawMoneyButton"
+                      >
+                        <img
+                          src="/withdraw.svg"
+                          alt="withdraw icon"
+                          class="w-2 h-2"
+                        /><span class="text-[0.7rem] inline-block">
+                          Withdraw
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination absolute"></div>
+            </div>
+
+            <div class="grid-cols-1 sm:grid-cols-2 gap-6 hidden md:grid">
+              <div
+                class="rounded-lg bg-gradient-to-br from-[#FFA800] via-[#FFC838] to-[#FFC838] p-4"
+              >
+                <div class="flex gap-3 items-start">
+                  <span class="w-5 h-5">
+                    <img src="/cardcoin.svg" alt="" />
+                  </span>
+                  <span class="text-white text-xs">Coin Balance</span>
+                </div>
+                <div class="py-3 pb-8">
+                  <span class="text-3xl font-bold text-white"> 100,000 </span>
+                  <span class="text-white text-smS"> COINS </span>
+                </div>
+                <div class="flex justify-evenly gap-2">
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendCoinsButton"
+                  >
+                    <img src="/send.svg" alt="send icon" class="w-2 h-2" /><span
+                      class="text-[0.7rem] inline-block"
+                    >
+                      Send
+                    </span>
+                  </div>
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px]"
+                  >
+                    <img
+                      src="/receive.svg"
+                      alt="receive icon"
+                      class="w-2 h-2"
+                    /><span class="text-[0.7rem] inline-block"> Receive </span>
+                  </div>
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] buyCoinsMultipleOptionsButton"
+                  >
+                    <img src="/buy.svg" alt="buy icon" class="w-2 h-2" /><span
+                      class="text-[0.7rem] inline-block"
+                    >
+                      Buy
+                    </span>
+                  </div>
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawCoinsButton"
+                  >
+                    <img
+                      src="/withdraw.svg"
+                      alt="withdraw icon"
+                      class="w-2 h-2"
+                    /><span class="text-[0.7rem] inline-block"> Withdraw </span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="rounded-lg bg-gradient-to-bl from-[#992DF2] via-[#4D4BFE] to-[#4D4BFE] p-4"
+              >
+                <div class="flex gap-3 items-center">
+                  <span class="w-5 h-5">
+                    <img src="/signal.svg" alt="" />
+                  </span>
+                  <span class="text-white text-xs">Money Balance</span>
+                </div>
+                <div class="py-3 pb-8">
+                  <span class="text-3xl font-bold text-white"> 35,000 </span>
+                  <span class="text-white text-smS"> USD </span>
+                </div>
+                <div class="flex justify-evenly gap-2">
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendMoneyButton"
+                  >
+                    <img src="/send.svg" alt="send icon" class="w-2 h-2" /><span
+                      class="text-[0.7rem] inline-block"
+                    >
+                      Send
+                    </span>
+                  </div>
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] depositeMoneyButton"
+                  >
+                    <img
+                      src="/deposit.svg"
+                      alt="deposit icon"
+                      class="w-2 h-2"
+                    /><span class="text-[0.7rem] inline-block"> Deposit </span>
+                  </div>
+                  <div
+                    class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawMoneyButton"
+                  >
+                    <img
+                      src="/withdraw.svg"
+                      alt="withdraw icon"
+                      class="w-2 h-2"
+                    /><span class="text-[0.7rem] inline-block"> Withdraw </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="pt-6">
+                <h3 class="font-bold text-lg">
+                    My Cards
+                </h3>
+                <div class="overflow-x-scroll">
+                    <div class="flex gap-6 py-4 flex-row">
+                      <div
+                        class="rounded-lg w-[350px] max-w-[calc(100%-2rem)] flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard"
+                      >
+                        <div class="flex gap-3 items-center justify-between">
+                          <span class="w-5 h-5">
+                            <img src="/signal.svg" alt="" />
+                          </span>
+                          <span class="w-10 h-5">
+                            <img src="/overlappingcircles.svg" alt="" />
+                          </span>
+                        </div>
+                        <div class="pb-3 pt-10">
+                          <span class="text-md font-bold text-white">
+                            8765 7654 6543 5432
+                          </span>
+                        </div>
+                        <div class="flex justify-between gap-3">
+                          <div class="flex flex-col">
+                            <span class="text-[.5rem] text-white">11/26</span>
+                            <span class="text-[.5rem] text-white font-semibold"
+                              >Faith Muoma</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div
+                        class="rounded-lg w-[350px] max-w-[calc(100%-2rem)] flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard"
+                      >
+                        <div class="flex gap-3 items-center justify-between">
+                          <span class="w-5 h-5">
+                            <img src="/signal.svg" alt="" />
+                          </span>
+                          <span class="w-10 h-5">
+                            <img src="/overlappingcircles.svg" alt="" />
+                          </span>
+                        </div>
+                        <div class="pb-3 pt-10">
+                          <span class="text-md font-bold text-white">
+                            8765 7654 6543 5432
+                          </span>
+                        </div>
+                        <div class="flex justify-between gap-3">
+                          <div class="flex flex-col">
+                            <span class="text-[.5rem] text-white">11/26</span>
+                            <span class="text-[.5rem] text-white font-semibold"
+                              >Faith Muoma</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+              <button class="p-6 py-2 rounded-3xl border-2 text-sm border-primary text-primary font-semibold">
+                + Add Card
+              </button>
+          </div>
+        </div>
+
+        <!-- BACKDROP AND MODAL -->
+        <div
+          class="fixed z-10 w-screen h-screen top-0 left-0 justify-center overflow-y-scroll items-end md:items-center hidden"
+          id="modal"
+        >
+          <div
+            id="backdrop"
+            class="bg-black w-full h-full absolute bg-opacity-5 backdrop-blur-sm"
+          ></div>
+
+          <!-- MODAL CONTENT IS DISPLAYED HERE -->
+          <div class="bg-white rounded-lg z-[11]" id="modalContent"></div>
+        </div>
+        <!-- END OF BACKDROP AND MODAL -->
+
+        <!-- TEMPLATES FOR MODALS -->
+
+        <div class="coinModals">
+          <div class="sendCoinsModals">
+            <template id="sendCoinsSelectUserModal">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold">Send Coins</p>
+
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div
+                  class="p-4 bg-gray-100 rounded-lg my-6 border border-gray-300"
+                >
+                  <span class="text-gray-400 text-sm"
+                    >Your balance(available)</span
+                  >
+                  <div class="py-2">
+                    <span class="text-xl font-bold"> 10,000 </span>
+                    <span class="text-xs uppercase font-bold"> coins </span>
+                  </div>
+                  <span class="text-blue-600 italic font-semibold"
+                    >1 coin = $0.10 USD</span
+                  >
+                </div>
+
+                <div class="py-3">
+                  <span class="font-bold py-2"> Send to </span>
+
+                  <div class="overflow-x-scroll">
+                    <div class="flex gap-4 p-2 recenttransaction">
+                      <div class="flex flex-col gap-1 items-center">
+                        <span
+                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center"
+                        >
+                          +
+                        </span>
+                        <span class="text-xs">Add</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="py-2">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1">Amount</span>
+                    <input
+                      type="text"
+                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      placeholder="Coins"
+                    />
+                  </div>
+
+                  <div class="pb-4">
+                    <div class="py-2">
+                      <span class="font-bold py-2">Message</span
+                      ><span class="text-gray-400 px-2">(optional)</span>
+                    </div>
+                    <textarea
+                      type="text"
+                      class="p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
+                      placeholder="Tyepe here..."
+                    >
+                    </textarea>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer sendCoinsContinueToReviewTransaction"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+
+            <template id="sendCoinsReviewTransaction">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold showTransactionErrorButton">
+                    Review Transactions
+                  </p>
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <p class="font-semibold py-3">Send Coins To</p>
+
+                <div class="flex justify-between py-2">
+                  <div class="flex gap-2">
+                    <span class="w-10 h-10 rounded-full bg-gray-200">
+                      <img
+                        src="/person.svg"
+                        class="w-full h-full"
+                        alt="coin svg"
+                      />
+                    </span>
+                    <div class="flex flex-col">
+                      <span>Faith Mollins</span>
+                      <span class="text-gray-400 text-sm">@faith</span>
+                    </div>
+                  </div>
+                  <div
+                    class="text-xs p-2 rounded-2xl text-white flex-none h-fit px-6 bg-blue-600"
+                  >
+                    Change
+                  </div>
+                </div>
+
+                <p class="text-sm font-semibold py-2">Amount</p>
+
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                    value="400 coins"
+                  />
+                  <img
+                    src="/pencil.svg"
+                    alt="pencil"
+                    class="absolute top-[13px] right-3 w-3 h-3"
+                  />
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+
+            <template id="spinnerModal">
+              <div
+                class="w-full min-w-[200px] p-10 flex relative justify-center items-center showTransactionSuccessButton"
+              >
+                <span class="loader"></span>
+              </div>
+            </template>
+
+            <template id="showTransactionSuccessModal">
+              <div
+                class="flex flex-col items-center justify-center gap-3 w-full max-w-[500px] min-w-[200px] text-center p-4"
+              >
+                <img src="/success.svg" class="w-10 h-10" alt="success icon" />
+                <p class="text-md font-[500] pb-20 md:pb-0">
+                  🎉 Coins Sent! You’ve successfully sent 400 Coins to @Mikey
+                </p>
+
+                <div class="flex p-2 justify-center gap-6">
+                  <span
+                    class="text-gray-600 underline cursor-pointer hidden md:inline-block cancelModalButton"
+                    >Continue</span
+                  >
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-0 text-white bg-primary md:bg-transparent rounded-2xl md:w-full text-center md:text-primary md:underline no-underline cursor-pointer sendCoinsShowTransactionDetailsButton"
+                    >View Transaction</span
+                  >
+                </div>
+              </div>
+            </template>
+
+            <template id="sendCoinsTransactionDetailsModal">
+              <div class="w-screen max-w-full md:max-w-[550px] p-6">
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold showTransactionErrorButton">
+                    Transaction details
+                  </p>
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div class="py-6">
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">Transaction ID</span>
+                    <span> TR1122233098 </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">date</span>
+                    <span> 03, Dec 2023 | 01:15 pm </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">Transaction type</span>
+                    <span class="text-red-600 font-semibold"> Send coins </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">To</span>
+                    <span> @Mickey </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">Amount</span>
+                    <span> -400 coins </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">Message</span>
+                    <span> Just a little something to say thank you! 🙌 </span>
+                  </div>
+
+                  <div class="flex justify-between gap-6 py-3">
+                    <span class="text-gray-400">Status</span>
+                    <div class="flex justify-center">
+                      <div
+                        class="rounded-2xl flex gap-2 font-semibold py-[0.4rem] w-fit items-center bg-green-100 text-green-500 p-[.4rem] px-5"
+                      >
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        <span class="text-sm">Completed</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 cancelModalButton cursor-pointer"
+                  >
+                    Download Receipt
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <div class="withdrawCoinsModals">
+            <template id="withdrawCoinsEnterAmount">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold">Withdraw Coins</p>
+
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div
+                  class="p-4 bg-gray-100 rounded-lg my-6 border border-gray-300"
+                >
+                  <span class="text-gray-400 text-sm"
+                    >Your balance(available)</span
+                  >
+                  <div class="py-2">
+                    <span class="text-xl font-bold"> 10,000 </span>
+                    <span class="text-xs uppercase font-bold"> coins </span>
+                  </div>
+                  <span class="text-blue-600 italic font-semibold"
+                    >1 coin = $0.10 USD</span
+                  >
+                </div>
+
+                <div class="py-2">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1">Amount</span>
+                    <div class="relative">
+                      <input
+                        type="text"
+                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        placeholder="Coins"
+                      />
+                      <span
+                        class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-2 rounded-md"
+                      >
+                        Max
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="pb-4">
+                    <div class="py-2">
+                      <span class="font-bold py-2">Coin Conversion</span
+                      ><span class="text-gray-400 px-2">(USD)</span>
+                    </div>
+                    <input
+                      type="text"
+                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      placeholder="$0.00"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawCoinsContinueToReviewTransaction"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+
+            <template id="withdrawCoinsReviewTransaction">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold showTransactionErrorButton">
+                    Review Transactions
+                  </p>
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <p class="font-semibold py-3">Withdraw Coins To</p>
+                <span class="text-sm text-gray-400"> Money wallet </span>
+
+                <p class="text-sm font-semibold py-2">Amount</p>
+
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                    value="400 coins"
+                  />
+                  <img
+                    src="/pencil.svg"
+                    alt="pencil"
+                    class="absolute top-[13px] right-3 w-3 h-3"
+                  />
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <div class="moneyModals">
+          <div class="withdrawMoneyModals">
+            <template id="withdrawMoneyEnteramount">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold">Withdraw Money</p>
+
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div
+                  class="p-4 bg-gray-100 rounded-lg my-6 border border-gray-300"
+                >
+                  <span class="text-gray-400 text-sm"
+                    >Your balance(available)</span
+                  >
+                  <div class="py-2">
+                    <span class="text-xl font-bold"> 25,000 </span>
+                    <span class="text-xs uppercase font-bold"> USD </span>
+                  </div>
+                </div>
+
+                <div class="py-2">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1">Amount</span>
+                    <div class="relative">
+                      <input
+                        type="text"
+                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        placeholder="Coins"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="my-2 font-semibold">Choose A Payment Method</p>
+                  <div class="flex gap-4 py-2">
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
+                    >
+                      Card
+                    </span>
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                    >
+                      Paypal
+                    </span>
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                    >
+                      Money Wallet
+                    </span>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="py-3 text-sm font-semibold">Select Card</p>
+
+                  <div
+                    class="rounded-lg bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 max-w-[250px]"
+                  >
+                    <div class="flex gap-3 items-center justify-between">
+                      <span class="w-5 h-5">
+                        <img src="/signal.svg" alt="" />
+                      </span>
+                      <span class="w-10 h-5">
+                        <img src="/overlappingcircles.svg" alt="" />
+                      </span>
+                    </div>
+                    <div class="pb-3 pt-7">
+                      <span class="text-md font-bold text-white">
+                        8765 7654 6543 5432
+                      </span>
+                    </div>
+                    <div class="flex justify-between gap-3">
+                      <div class="flex flex-col">
+                        <span class="text-[.5rem] text-white">11/26</span>
+                        <span class="text-[.5rem] text-white font-semibold"
+                          >Faith Muoma</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawMoneyContinueToReviewTransaction"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+
+            <template id="withdrawMoneyReviewTransaction">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold showTransactionErrorButton">
+                    Review Transactions
+                  </p>
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div>
+                  <p class="font-semibold py-3">Withdraw money to</p>
+
+                  <div class="flex justify-between">
+                    <div class="flex flex-col gap-1 text-xs text-gray-500">
+                      <span>Faith Muema</span>
+                      <span>2290011882773</span>
+                    </div>
+
+                    <div
+                      class="text-xs p-2 rounded-2xl text-white flex-none h-fit px-6 bg-blue-600"
+                    >
+                      Change
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-sm font-semibold py-2">Amount</p>
+
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                    value=""
+                    placeholder="USD"
+                  />
+                  <img
+                    src="/pencil.svg"
+                    alt="pencil"
+                    class="absolute top-[13px] right-3 w-3 h-3"
+                  />
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
+                  >
+                    Withdraw money
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <div class="sendMoneymodals">
+            <template id="sendMoneySelectUserModal">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold">Send Money</p>
+
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div
+                  class="p-4 bg-gray-100 rounded-lg my-6 border border-gray-300"
+                >
+                  <span class="text-gray-400 text-sm"
+                    >Your balance(available)</span
+                  >
+                  <div class="py-2">
+                    <span class="text-xl font-bold"> 10,000 </span>
+                    <span class="text-xs uppercase font-bold"> coins </span>
+                  </div>
+                </div>
+
+                <div class="py-3">
+                  <span class="font-bold py-2"> Send to </span>
+
+                  <div class="overflow-x-scroll">
+                    <div class="flex gap-4 p-2 recenttransaction">
+                      <div class="flex flex-col gap-1 items-center">
+                        <span
+                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center"
+                        >
+                          +
+                        </span>
+                        <span class="text-xs">Add</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+
+                      <div class="flex flex-col gap-1 items-center">
+                        <span class="w-12 h-12 rounded-full bg-gray-200">
+                          <img
+                            src="/person.svg"
+                            class="w-full h-full"
+                            alt="coin svg"
+                          />
+                        </span>
+                        <span class="text-xs">Faith</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="py-2">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1">Amount</span>
+                    <input
+                      type="text"
+                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      placeholder="Coins"
+                    />
+                  </div>
+
+                  <div class="pb-4">
+                    <div class="py-2">
+                      <span class="font-bold py-2">Message</span
+                      ><span class="text-gray-400 px-2">(optional)</span>
+                    </div>
+                    <textarea
+                      type="text"
+                      class="p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
+                      placeholder="Tyepe here..."
+                    >
+                    </textarea>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer sendMoneyContinueToReviewTransaction"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <div class="depositeMoneyModals">
+            <template id="depositeMoneyEnterAmount">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold">Deposite Money</p>
+
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div class="py-2">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1">Amount</span>
+                    <div class="relative">
+                      <input
+                        type="text"
+                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        placeholder="Coins"
+                      />
+                      <span
+                        class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-2 rounded-md"
+                      >
+                        Max
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="my-2 font-semibold">Choose A Payment Method</p>
+                  <div class="flex gap-4 py-2">
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
+                    >
+                      Card
+                    </span>
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                    >
+                      Paypal
+                    </span>
+                    <span
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                    >
+                      Money Wallet
+                    </span>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer depositeMoneyContinueToReviewTransaction"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </div>
+            </template>
+
+            <template id="depositeMoneyReviewTransaction">
+              <div
+                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+              >
+                <div
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                >
+                  <span class="md:hidden w-20"></span>
+
+                  <p class="font-semibold showTransactionErrorButton">
+                    Review Transactions
+                  </p>
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
+                    <img src="/closeButton.svg" alt="close button" />
+                  </span>
+                </div>
+
+                <div>
+                  <p class="font-semibold py-3">Add money from</p>
+
+                  <div class="flex justify-between">
+                    <div class="flex flex-col gap-1 text-xs text-gray-500">
+                      <span>Faith Muema</span>
+                      <span>2290011882773</span>
+                    </div>
+
+                    <div
+                      class="text-xs p-2 rounded-2xl text-white flex-none h-fit px-6 bg-blue-600"
+                    >
+                      Change
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-sm font-semibold py-2">Amount</p>
+
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                    value=""
+                    placeholder="USD"
+                  />
+                  <img
+                    src="/pencil.svg"
+                    alt="pencil"
+                    class="absolute top-[13px] right-3 w-3 h-3"
+                  />
+                </div>
+
+                <div class="flex gap-4 py-2 mt-10">
+                  <span
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                  >
+                    Cancel
+                  </span>
+                  <span
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
+                  >
+                    Deposite money
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL  -->
+        <template id="buyCoinsCustomInput">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="overflow-x-scroll">
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        50 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $5 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        100 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $10 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        500 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $45 </span>
+                </div>
+
+                <div
+                  class="flex gap-2 border-[1px] justify-center items-center border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <img src="/customAdd.svg" class="w-5 h-5" alt="add icon" />
+                  <span class="text-sm">Custom</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-6 py-4 pt-6 outline-none">
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded-lg outline-none px-4"
+              />
+              <span class="w-14 h-14">
+                <img
+                  src="/conversion.svg"
+                  class="w-full h-full"
+                  alt="conversion icon"
+                />
+              </span>
+              <input
+                type="text"
+                class="w-full border border-gray-300 rounded-lg outline-none px-4"
+              />
+            </div>
+
+            <p class="text-md my-4 mb-6">Total : <span>$0.00</span></p>
+
+            <div>
+              <p class="my-2 font-semibold">Choose A Payment Method</p>
+              <div class="flex gap-4 py-2">
+                <span
+                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
+                >
+                  Card
+                </span>
+                <span
+                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                >
+                  Paypal
+                </span>
+                <span
+                  class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                >
+                  Money Wallet
+                </span>
+              </div>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+        <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL  -->
+
+        <!-- TEMPLATE FOR ADD COIN MODAL -->
+        <template id="addCoinsModal">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div
+              class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
+            >
+              <div class="flex justify-start gap-2 items-center">
+                <span class="w-8 h-8 rounded-full">
+                  <img src="/coin.svg" alt="coin svg" />
+                </span>
+                <span class="italic text-md font-semibold text-primary">
+                  50 coins
+                </span>
+              </div>
+              <span class="font-semibold text-sm"> $5 </span>
+            </div>
+
+            <p class="text-md my-4 mb-6">Total : <span>$5.00</span></p>
+
+            <p class="my-2 font-semibold">Choose A Payment Method</p>
+            <div class="flex gap-4 py-2">
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCard"
+              >
+                Card
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Paypal
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Money Wallet
+              </span>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+        <!-- END OF TEMPLATE FOR ADD COIN MODAL -->
+
+        <!-- TEMPLATE FOR CHOOSE PAYEMENT METHOD -->
+        <template id="choosePaymentMethod">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div
+              class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
+            >
+              <div class="flex justify-start gap-2 items-center">
+                <span class="w-8 h-8 rounded-full">
+                  <img src="/coin.svg" alt="coin svg" />
+                </span>
+                <span class="italic text-md font-semibold text-primary">
+                  50 coins
+                </span>
+              </div>
+              <span class="font-semibold text-sm"> $5 </span>
+            </div>
+
+            <p class="text-md my-4 mb-6">Total : <span>$5.00</span></p>
+
+            <p class="my-2 font-semibold">Choose A Payment Method</p>
+            <div class="flex gap-4 py-2">
+              <span
+                class="p-1 border text-gray-300 bg-blue-600 w-full text-sm text-center rounded-md cursor-default"
+              >
+                Card
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full text-sm text-center rounded-md cursor-pointer hover:bg-blue-600"
+              >
+                Paypal
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full text-sm text-center rounded-md cursor-pointer hover:bg-blue-600"
+              >
+                Money Wallet
+              </span>
+            </div>
+
+            <div>
+              <p class="py-3 text-sm font-semibold">Select Card</p>
+
+              <div
+                class="rounded-lg bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 max-w-[250px]"
+              >
+                <div class="flex gap-3 items-center justify-between">
+                  <span class="w-5 h-5">
+                    <img src="/signal.svg" alt="" />
+                  </span>
+                  <span class="w-10 h-5">
+                    <img src="/overlappingcircles.svg" alt="" />
+                  </span>
+                </div>
+                <div class="pb-3 pt-7">
+                  <span class="text-md font-bold text-white">
+                    8765 7654 6543 5432
+                  </span>
+                </div>
+                <div class="flex justify-between gap-3">
+                  <div class="flex flex-col">
+                    <span class="text-[.5rem] text-white">11/26</span>
+                    <span class="text-[.5rem] text-white font-semibold"
+                      >Faith Muoma</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+        <!-- END OF TEMPLATE FOR CHOOSE PAYEMENT METHOD -->
+
+        <!-- TEMPLATE FOR REVIEW TANSACTION MODAL -->
+        <template id="reviewTransaction">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold showTransactionErrorButton">
+                Review Transactions
+              </p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold py-3">Buy Coins From</p>
+
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-1 text-xs text-gray-500">
+                  <span>Faith Muema</span>
+                  <span>2290011882773</span>
+                </div>
+
+                <div
+                  class="text-xs p-2 rounded-2xl text-white flex-none h-fit px-6 bg-blue-600"
+                >
+                  Change
+                </div>
+              </div>
+            </div>
+
+            <p class="text-sm font-semibold py-3">Amount</p>
+
+            <div class="relative">
+              <input
+                type="text"
+                class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                value="$5"
+              />
+              <img
+                src="/pencil.svg"
+                alt="pencil"
+                class="absolute top-[13px] right-3 w-3 h-3"
+              />
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToSpinner"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+        <!-- END OF TEMPLATE FOR REVIEW TANSACTION MODAL -->
+
+        <!-- TEMPLATE FOR SPINNER MODAL -->
+
+        <template id="spinnerModal">
+          <div
+            class="w-full min-w-[200px] p-10 flex relative justify-center items-center showTransactionSuccessButton"
+          >
+            <span class="loader"></span>
+          </div>
+        </template>
+        <!-- END OF TEMPLATE FOR SPINNER MODAL -->
+
+        <!-- TEMPLATE FOR BUY COIN ERROR MODAL -->
+
+        <template id="showTransactionErrorModal">
+          <div class="w-screen max-w-full sm:max-w-[550px] p-6 h-auto">
+            <img src="/error.svg" class="w-10 h-10" alt="error icon" />
+            <p class="text-md font-[500]">
+              ❌ Transaction Failed. Please check your details or try again.
+            </p>
+
+            <div class="flex p-2 justify-center gap-6">
+              <span class="text-gray-600 underline cursor-pointer"
+                >Continue</span
+              >
+              <span class="text-primary underline cursor-pointer"
+                >Try Again</span
+              >
+            </div>
+          </div>
+        </template>
+
+        <!-- END OF TEMPLATE FOR BUY COIN ERROR MODAL -->
+
+        <!-- TEMPLATE FOR BUY COIN ERROR MODAL WITH MULTIPLE COIN OPTIONS -->
+
+        <template id="buyCoinsMultipleOptionsModal">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="overflow-x-scroll">
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        50 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $5 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        100 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $10 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        500 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $45 </span>
+                </div>
+
+                <div
+                  class="flex gap-2 border-[1px] justify-center items-center border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <img src="/customAdd.svg" class="w-5 h-5" alt="add icon" />
+                  <span class="text-sm">Custom</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-md my-4 mb-6">Total : <span>$5.00</span></p>
+
+            <p class="my-2 font-semibold">Choose A Payment Method</p>
+            <div class="flex gap-4 py-2">
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md payWithCardMultipleCoinOptionsButton"
+              >
+                Card
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Paypal
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+              >
+                Money Wallet
+              </span>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+
+        <!-- END OF TEMPLATE FOR BUY COIN ERROR MODAL WITH MULTIPLE COIN OPTIONS -->
+
+        <!-- TEMPLATE FOR BUY COIN (SELECT PAYMENT CARD) WITH MULTIPLE COIN OPTIONS -->
+
+        <template id="payWithCardMultipleCoinOptionsModal">
+          <div
+            class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+          >
+            <div
+              class="flex py-3 items-center justify-between border-b border-gray-300"
+            >
+              <p class="font-semibold">Buy Coins</p>
+              <span class="w-8 h-8 closeModalButton cursor-pointer">
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="overflow-x-scroll">
+              <div class="flex gap-2">
+                <div
+                  class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        50 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $5 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        100 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $10 </span>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 border-[1px] border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <div class="flex gap-2">
+                    <div class="flex justify-start gap-2 items-center">
+                      <span class="w-8 h-8 rounded-full">
+                        <img src="/coin.svg" alt="coin svg" />
+                      </span>
+                      <span class="italic text-md font-semibold text-primary">
+                        500 coins
+                      </span>
+                    </div>
+                  </div>
+
+                  <span class="font-semibold text-sm"> $45 </span>
+                </div>
+
+                <div
+                  class="flex gap-2 border-[1px] justify-center items-center border-gray-300 rounded-md p-2 my-2 max-w-[150px] w-full flex-none"
+                >
+                  <img src="/customAdd.svg" class="w-5 h-5" alt="add icon" />
+                  <span class="text-sm">Custom</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-md my-4 mb-6">Total : <span>$5.00</span></p>
+
+            <p class="my-2 font-semibold">Choose A Payment Method</p>
+            <div class="flex gap-4 py-2">
+              <span
+                class="p-1 border text-gray-300 bg-blue-600 w-full text-sm text-center rounded-md cursor-default"
+              >
+                Card
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full text-sm text-center rounded-md cursor-pointer hover:bg-blue-600"
+              >
+                Paypal
+              </span>
+              <span
+                class="p-1 border text-gray-300 w-full text-sm text-center rounded-md cursor-pointer hover:bg-blue-600"
+              >
+                Money Wallet
+              </span>
+            </div>
+
+            <p class="py-3 text-sm font-semibold">Select Card</p>
+
+            <div
+              class="rounded-lg bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 max-w-[250px]"
+            >
+              <div class="flex gap-3 items-center justify-between">
+                <span class="w-5 h-5">
+                  <img src="/signal.svg" alt="" />
+                </span>
+                <span class="w-10 h-5">
+                  <img src="/overlappingcircles.svg" alt="" />
+                </span>
+              </div>
+              <div class="pb-3 pt-7">
+                <span class="text-md font-bold text-white">
+                  8765 7654 6543 5432
+                </span>
+              </div>
+              <div class="flex justify-between gap-3">
+                <div class="flex flex-col">
+                  <span class="text-[.5rem] text-white">11/26</span>
+                  <span class="text-[.5rem] text-white font-semibold"
+                    >Faith Muoma</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+              >
+                Cancel
+              </span>
+              <span
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+              >
+                Continue
+              </span>
+            </div>
+          </div>
+        </template>
+
+        <!-- END OF TEMPLATE FOR BUY COIN WITH MULTIPLE COIN OPTIONS -->
+
+        <!-- TEMPLATE FOR BUY COIN SUCCESS MODAL -->
+
+        <template id="showTransactionSuccessModal">
+          <div
+            class="flex flex-col items-center justify-center gap-3 w-full max-w-[500px] min-w-[200px] text-center p-4"
+          >
+            <img src="/success.svg" class="w-10 h-10" alt="success icon" />
+            <p class="text-md font-[500]">
+              🎉 Purchase Successful! 800 Coins have been added to your wallet.
+            </p>
+
+            <div class="flex p-2 justify-center gap-6">
+              <span class="text-gray-600 underline cursor-pointer"
+                >Continue</span
+              >
+              <span class="text-primary underline cursor-pointer"
+                >View Transaction</span
+              >
+            </div>
+          </div>
+        </template>
+
+        <!-- END OF TEMPLATE FOR BUY COIN SUCCESS MODAL -->
+
+        <!-- END OF TEMPLATES FOR MODALS -->
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        spaceBetween: 40,
+      });
+    </script>
+  </body>
+</html>
