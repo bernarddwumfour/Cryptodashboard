@@ -79,6 +79,7 @@ let elementsAndEvents = [
     //Notification modal
     trigger: ".notificationButton",
     target: "#notificationModal",
+    methods: [() => alert("clicked")],
   },
   {
     //Sidebar Modal
@@ -279,7 +280,7 @@ let showModalOnTriggerClick = (elements) => {
           });
 
         //Handle all events("clicks") within the modal
-        console.log(element.actions);
+        // console.log(element.actions);
         element.actions && showModalOnTriggerClick(element.actions);
       });
     });
@@ -289,7 +290,7 @@ let showModalOnTriggerClick = (elements) => {
 //Closing modal by clicking on backdrop
 let backdrop = document.querySelector("#backdrop");
 backdrop &&
-  backdrop.addEventListener("click", (e) => {
+  backdrop.addEventListener("click", () => {
     document.querySelector("#modal").classList.add("hidden");
   });
 
