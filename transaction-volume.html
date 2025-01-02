@@ -951,7 +951,7 @@
                   role="tabpanel"
                   aria-labelledby="segment-item-1"
                 >
-                  <canvas class="!w-full !h-full" id="myChart"></canvas>
+                  <div class="!w-full !h-full" id="areaChart"></div>
                 </div>
                 <div
                   id="segment-2"
@@ -959,7 +959,7 @@
                   role="tabpanel"
                   aria-labelledby="segment-item-2"
                 >
-                  <canvas class="!w-full !h-full" id="myChart"></canvas>
+                  <div class="!w-full !h-full" id="barChart"></div>
                 </div>
               </div>
             </div>
@@ -1689,9 +1689,11 @@
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-    <script>
-      const ctx = document.getElementById("myChart");
+
+     <script>
+      // const ctx = document.getElementById("myChart");
       const pieChart1 = document.getElementById("pieChart1");
       const pieChart2 = document.getElementById("pieChart2");
 
@@ -1751,28 +1753,101 @@
         },
       });
 
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1,
-            },
-          ],
+      var areaChartOptions = {
+        chart: {
+          height: 350,
+          type: "area",
         },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
+        dataLabels: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
           },
-          responsive: true,
-          maintainAspectRatio: false,
+          // {
+          //   name: "Series 2",
+          //   data: [25, 5, 38, 35, 26, 10, 49],
+          // },
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
+          },
         },
-      });
+        xaxis: {
+          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        },
+        //Chanege colours here.
+        colors: ['#AF79F0'],
+      };
+
+
+      var chart = new ApexCharts(
+        document.querySelector("#areaChart"),
+        areaChartOptions
+      );
+
+      chart.render();
+    </script>
+    <script>
+        var barChartOptions = {
+          series: [{
+            name: "Series 1",
+            data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
+          },],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            borderRadius: 5,
+            borderRadiusApplication: 'end'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        },
+        yaxis: {
+          title: {
+            text: '$ (thousands)'
+          }
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$ " + val + " thousands"
+            }
+          }
+        }, //Chanege colours here.
+        colors: ['#AF79F0'],
+        };
+
+
+      var chart = new ApexCharts(
+        document.querySelector("#barChart"),
+        barChartOptions
+      );
+      chart.render();
     </script>
   </body>
 </html>
