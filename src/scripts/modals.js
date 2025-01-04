@@ -42,10 +42,10 @@ let elementsAndEvents = [
     target: "#buyCoinsMultipleOptionsModal",
     actions: [
       {
-        trigger: ".payWithCardMultipleCoinOptionsButton",
-        target: "#payWithCardMultipleCoinOptionsModal",
-        actions: [
-          {
+        // trigger: ".payWithCardMultipleCoinOptionsButton",
+        // target: "#payWithCardMultipleCoinOptionsModal",
+        // actions: [
+        //   {
             trigger: ".continueToPayment",
             target: "#reviewTransaction",
             actions: [
@@ -70,8 +70,8 @@ let elementsAndEvents = [
                 ],
               },
             ],
-          },
-        ],
+      //     },
+      //   ],
       },
     ],
   },
@@ -96,6 +96,7 @@ let elementsAndEvents = [
     //Send Coins modals
     trigger: ".sendCoinsButton",
     target: "#sendCoinsSelectUserModal",
+    methods : [()=>alert("method1"),()=>alert("method2")],
     actions: [
       {
         trigger: ".sendCoinsContinueToReviewTransaction",

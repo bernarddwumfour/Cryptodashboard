@@ -18,6 +18,6 @@
     "@popperjs/core": "^2.11.8",
     "@preline/dropdown": "^2.6.0",
     "apexcharts": "^4.3.0",
-    "preline": "^2.6.0"
+    "preline": "^2.7.0"
   }
 }
