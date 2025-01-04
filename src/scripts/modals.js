@@ -1,42 +1,11 @@
+import { addCoins } from "./transactions/addCoins";
+import { depositeMoney } from "./transactions/depositMoney";
+import { sendCoins } from "./transactions/sendCoins";
+import { sendMoney } from "./transactions/sendMoney";
+import { withdrawCoins } from "./transactions/withdrawCoins";
+import { withdrawMoney } from "./transactions/withdrawMoney";
+
 let elementsAndEvents = [
-  {
-    trigger: ".addCoinsButton",
-    target: "#addCoinsModal",
-    actions: [
-      {
-        trigger: ".payWithCard",
-        target: "#choosePaymentMethod",
-        actions: [
-          {
-            trigger: ".continueToPayment",
-            target: "#reviewTransaction",
-            actions: [
-              {
-                trigger: ".showTransactionErrorButton",
-                target: "#showTransactionErrorModal",
-              },
-              {
-                trigger: ".continueToSpinner",
-                target: "#spinnerModal",
-                actions: [
-                  {
-                    trigger: ".showTransactionSuccessButton",
-                    target: "#showTransactionSuccessModal",
-                    actions: [
-                      {
-                        trigger: ".sendCoinsShowTransactionDetailsButton",
-                        target: "#sendCoinsTransactionDetailsModal",
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
   {
     trigger: ".buyCoinsMultipleOptionsButton",
     target: "#buyCoinsMultipleOptionsModal",
@@ -46,35 +15,44 @@ let elementsAndEvents = [
         // target: "#payWithCardMultipleCoinOptionsModal",
         // actions: [
         //   {
-            trigger: ".continueToPayment",
-            target: "#reviewTransaction",
+        trigger: ".continueToPayment",
+        target: "#reviewTransaction",
+        actions: [
+          {
+            trigger: ".showTransactionErrorButton",
+            target: "#showTransactionErrorModal",
+          },
+          {
+            trigger: ".continueToSpinner",
+            target: "#spinnerModal",
             actions: [
               {
-                trigger: ".showTransactionErrorButton",
-                target: "#showTransactionErrorModal",
-              },
-              {
-                trigger: ".continueToSpinner",
-                target: "#spinnerModal",
+                trigger: ".showTransactionSuccessButton",
+                target: "#showTransactionSuccessModal",
                 actions: [
                   {
-                    trigger: ".showTransactionSuccessButton",
-                    target: "#showTransactionSuccessModal",
-                    actions: [
-                      {
-                        trigger: ".sendCoinsShowTransactionDetailsButton",
-                        target: "#sendCoinsTransactionDetailsModal",
-                      },
-                    ],
+                    trigger: ".sendCoinsShowTransactionDetailsButton",
+                    target: "#sendCoinsTransactionDetailsModal",
                   },
                 ],
               },
             ],
-      //     },
-      //   ],
+          },
+        ],
+        //     },
+        //   ],
       },
     ],
   },
+  addCoins,
+  sendCoins,
+  withdrawCoins,
+  
+  //MONEY MODALS
+  withdrawMoney,
+  sendMoney,
+  depositeMoney,
+  
   {
     //Notification modal
     trigger: ".notificationButton",
@@ -90,159 +68,10 @@ let elementsAndEvents = [
     //View Transaction details
     trigger: ".viewTranscationDetailsButton",
     target: "#sendCoinsTransactionDetailsModal",
-
-  },
-  {
-    //Send Coins modals
-    trigger: ".sendCoinsButton",
-    target: "#sendCoinsSelectUserModal",
-    methods : [()=>alert("method1"),()=>alert("method2")],
-    actions: [
-      {
-        trigger: ".sendCoinsContinueToReviewTransaction",
-        target: "#sendCoinsReviewTransaction",
-        actions: [
-          {
-            trigger: ".continueToSpinner",
-            target: "#spinnerModal",
-            actions: [
-              {
-                trigger: ".showTransactionSuccessButton",
-                target: "#showTransactionSuccessModal",
-                actions: [
-                  {
-                    trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
-                  },
-                ],
-              },
-            ],
-            methods: [() => alert("clicked")],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    //Withdraw coins Modals
-    trigger: ".withdrawCoinsButton",
-    target: "#withdrawCoinsEnterAmount",
-    actions: [
-      {
-        trigger: ".withdrawCoinsContinueToReviewTransaction",
-        target: "#withdrawCoinsReviewTransaction",
-        actions: [
-          {
-            trigger: ".continueToSpinner",
-            target: "#spinnerModal",
-            actions: [
-              {
-                trigger: ".showTransactionSuccessButton",
-                target: "#showTransactionSuccessModal",
-                actions: [
-                  {
-                    trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-
-  //MONEY MODALS
-  {
-    //withdraw Money modals
-    trigger: ".withdrawMoneyButton",
-    target: "#withdrawMoneyEnteramount",
-    actions: [
-      {
-        trigger: ".withdrawMoneyContinueToReviewTransaction",
-        target: "#withdrawMoneyReviewTransaction",
-        actions: [
-          {
-            trigger: ".continueToSpinner",
-            target: "#spinnerModal",
-            actions: [
-              {
-                trigger: ".showTransactionSuccessButton",
-                target: "#showTransactionSuccessModal",
-                actions: [
-                  {
-                    trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-
-  {
-    //Send money modals
-    trigger: ".sendMoneyButton",
-    target: "#sendMoneySelectUserModal",
-    actions: [
-      {
-        trigger: ".sendMoneyContinueToReviewTransaction",
-        target: "#sendCoinsReviewTransaction",
-        actions: [
-          {
-            trigger: ".continueToSpinner",
-            target: "#spinnerModal",
-            actions: [
-              {
-                trigger: ".showTransactionSuccessButton",
-                target: "#showTransactionSuccessModal",
-                actions: [
-                  {
-                    trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    //Deposite money
-    trigger: ".depositeMoneyButton",
-    target: "#depositeMoneyEnterAmount",
-    actions: [
-      {
-        trigger: ".depositeMoneyContinueToReviewTransaction",
-        target: "#depositeMoneyReviewTransaction",
-        actions: [
-          {
-            trigger: ".continueToSpinner",
-            target: "#spinnerModal",
-            actions: [
-              {
-                trigger: ".showTransactionSuccessButton",
-                target: "#showTransactionSuccessModal",
-                actions: [
-                  {
-                    trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
   },
 ];
+
+
 
 const replaceInnerContent = (container, contentContainer) => {
   let contentToReplace = document.querySelector(contentContainer).innerHTML;
