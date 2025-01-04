@@ -13,17 +13,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sizemug</title>
   </head>
-  <body class="">
+  <body class="" style="font-variation-settings: 'FILL' 0">
     <div class="grid grid-cols-6">
       <aside
         class="pb-6 px-2 max-h-screen overflow-scroll col-span-1 hidden md:block"
@@ -477,7 +481,11 @@
                 <li
                   class="w-10 h-10 p-3 md:bg-gray-200 rounded-full flex justify-center items-center notificationButton"
                 >
-                  <img src="/bell.svg" alt="bell" class="w-full h-full object-cover" />
+                  <img
+                    src="/bell.svg"
+                    alt="bell"
+                    class="w-full h-full object-cover"
+                  />
                 </li>
                 <li
                   class="w-10 h-10 rounded-full bg-violet-200 text-violet-600 flex justify-center items-center text-center"
@@ -881,14 +889,29 @@
             </div>
 
             <div class="border border-gray-300 rounded-xl w-full xl:col-span-2">
-              <div>
+              <div data-controller="tabs" data-tabs-index-value="0">
                 <div class="flex gap-6 p-4 border-b border-gray-200">
-                  <span> Saved </span>
-                  <span> Purchased </span>
+                  <span
+                    data-action="click->tabs#change"
+                    data-tabs-target="tab"
+                    class="cursor-pointer text-lg flex justify-center items-center gap-1 text-gray-500"
+                  >
+                    <i class="material-icons text-2xl"> bookmark </i>
+                    Saved
+                  </span>
+                  <span
+                    data-action="click->tabs#change"
+                    data-tabs-target="tab"
+                    class="cursor-pointer text-lg flex justify-center items-center gap-1 text-gray-500"
+                  >
+                  <i class="material-icons text-2xl"> sell </i>
+                    Purchased
+                  </span>
                 </div>
 
                 <div
                   class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[500px] p-4 overflow-y-scroll"
+                  data-tabs-target="panel"
                 >
                   <div
                     class="rounded-lg border border-gray-200 overflow-hidden"
@@ -910,10 +933,10 @@
                         <span class="text-lg font-semibold">$40.00</span>
                       </div>
 
-                      <span class="w-12 h-12 bg-gray-200 rounded-full">
-                        <span class="material-symbols-outlined fill-coin font-black">
-                          bookmark
-                          </span>
+                      <span
+                        class="w-12 h-12 rounded-full flex justify-center items-center text-coin"
+                      >
+                        <i class="material-icons text-4xl"> bookmark </i>
                       </span>
                     </div>
                   </div>
@@ -936,7 +959,11 @@
                         <span class="text-lg font-semibold">$40.00</span>
                       </div>
 
-                      <span class="w-12 h-12 bg-gray-200 rounded-full"></span>
+                      <span
+                        class="w-12 h-12 rounded-full flex justify-center items-center text-coin"
+                      >
+                        <i class="material-icons text-4xl"> bookmark </i>
+                      </span>
                     </div>
                   </div>
                   <div
@@ -959,10 +986,77 @@
                       </div>
 
                       <span
-                        class="flex justify-center items-center w-12 h-12 rounded-full"
+                        class="w-12 h-12 rounded-full flex justify-center items-center text-coin"
                       >
-                        <img src="/bookmark.svg" alt="bookmark icon" class="w-6">
+                        <i class="material-icons text-4xl"> bookmark </i>
                       </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[500px] p-4 overflow-y-scroll"
+                  data-tabs-target="panel"
+                >
+                  <div
+                    class="rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                    <div class="aspect-[12/8] w-full bg-gray-200">
+                      <img
+                        src="https://picsum.photos/200/300?random=1
+                            "
+                        class="w-full h-full object-cover"
+                        alt="random image"
+                      />
+                    </div>
+
+                    <div class="flex justify-between p-4 items-center">
+                      <div class="flex flex-col gap-2">
+                        <span class="text-gray-500"
+                          >Ecommerece Landing Page</span
+                        >
+                        <span class="text-lg font-semibold">$40.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                    <div class="aspect-[12/8] w-full bg-gray-200">
+                      <img
+                        src="https://picsum.photos/200/300?random=2
+                            "
+                        class="w-full h-full object-cover"
+                        alt="random image"
+                      />
+                    </div>
+                    <div class="flex justify-between p-4 items-center">
+                      <div class="flex flex-col gap-2">
+                        <span class="text-gray-500"
+                          >Ecommerece Landing Page</span
+                        >
+                        <span class="text-lg font-semibold">$40.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                    <div class="aspect-[12/8] w-full bg-gray-200">
+                      <img
+                        src="https://picsum.photos/200/300?random=13
+                            "
+                        class="w-full h-full object-cover"
+                        alt="random image"
+                      />
+                    </div>
+                    <div class="flex justify-between p-4 items-center">
+                      <div class="flex flex-col gap-2">
+                        <span class="text-gray-500"
+                          >Ecommerece Landing Page</span
+                        >
+                        <span class="text-lg font-semibold">$40.00</span>
+                      </div>
                     </div>
                   </div>
                 </div>
