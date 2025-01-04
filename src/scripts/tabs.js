@@ -21,6 +21,8 @@ Stimulus.register("tabs", class extends Controller {
     })
     this.tabTargets.forEach((el, index) => {
       index == this.indexValue ? el.classList.add("bg-white") : el.classList.remove("bg-white")
+      index == this.indexValue ? el.classList.add("!text-primary") : el.classList.remove("!text-primary")
+
     })
   }
 })

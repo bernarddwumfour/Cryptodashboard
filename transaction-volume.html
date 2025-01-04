@@ -790,7 +790,7 @@
                     >
                       <a
                         href="#"
-                        class="inline-block text-gray-700 rounded-xl py-3 px-5 text-sm font-medium text-center"
+                        class="inline-block text-gray-700 rounded-xl py-2 px-5 text-sm font-medium text-center"
                         >Coins</a
                       >
                     </li>
@@ -801,7 +801,7 @@
                     >
                       <a
                         href="#"
-                        class="inline-block text-gray-700 rounded-xl py-3 px-5 text-sm font-medium text-center"
+                        class="inline-block text-gray-700 rounded-xl py-2 px-5 text-sm font-medium text-center"
                         >Money</a
                       >
                     </li>
@@ -890,62 +890,134 @@
               </div>
             </div>
 
-            <div class="hs-dropdown relative inline-flex">
-              <button
-                id="hs-dropdown-default"
-                type="button"
-                class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                aria-label="Dropdown"
-              >
-                Chart Type
-                <svg
-                  class="hs-dropdown-open:rotate-180 size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-
-              <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 !opacity-1 z-10 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="hs-dropdown-default"
-              >
-                <div class="p-1 space-y-0.5">
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                    href="#"
-                  >
-                    Line Graph
-                  </a>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                    href="#"
-                  >
-                    Bar Chart
-                  </a>
-                </div>
-              </div>
-            </div>
-
             <div class="min-h-[400px] relative w-full">
               <div class="mt-3">
                 <div class="hidden px-1 py-2" data-tabs-target="panel">
-                  <div class="!w-full !h-full" id="areaChart"></div>
+                  <div
+                    class="text-sm"
+                    data-controller="tabs"
+                    data-tabs-index-value="0"
+                  >
+                    <div class="dropdown inline-block relative">
+                      <button
+                        class="text-gray-700 py-2 px-4 rounded border-2 border-gray-300 inline-flex items-center"
+                      >
+                        <span class="mr-1">Chart Type</span>
+                        <svg
+                          class="fill-current h-4 w-8"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                          />
+                        </svg>
+                      </button>
+                      <ul
+                        class="dropdown-menu absolute hidden text-gray-700 w-full shadow-sm bg-white pt-2 z-20"
+                      >
+                        <li
+                          data-action="click->tabs#change"
+                          data-tabs-target="tab"
+                          class=""
+                        >
+                          <a
+                            class="rounded-t hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
+                            href="#"
+                            >Area Chart</a
+                          >
+                        </li>
+                        <li
+                          data-action="click->tabs#change"
+                          data-tabs-target="tab"
+                          class="inactive"
+                        >
+                          <a
+                            class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
+                            href="#"
+                            >Bar Chart</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div
+                      data-tabs-target="panel"
+                      class="hidden !w-full !h-full"
+                    >
+                      <div id="areaChartCoins"></div>
+                    </div>
+                    <div
+                      data-tabs-target="panel"
+                      class="hidden !w-full !h-full"
+                    >
+                      <div id="barChartCoins"></div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="hidden px-1 py-2" data-tabs-target="panel">
-                  <div class="!w-full !h-full" id="barChart"></div>
+                  <div
+                    class="text-sm"
+                    data-controller="tabs"
+                    data-tabs-index-value="0"
+                  >
+                    <div class="dropdown inline-block relative">
+                      <button
+                        class="text-gray-700 py-2 px-4 rounded border-2 border-gray-300 inline-flex items-center"
+                      >
+                        <span class="mr-1">Chart Type</span>
+                        <svg
+                          class="fill-current h-4 w-8"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                          />
+                        </svg>
+                      </button>
+                      <ul
+                        class="dropdown-menu absolute hidden text-gray-700 w-full shadow-sm bg-white pt-2 z-20"
+                      >
+                        <li
+                          data-action="click->tabs#change"
+                          data-tabs-target="tab"
+                          class=""
+                        >
+                          <a
+                            class="rounded-t hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
+                            href="#"
+                            >Area Chart</a
+                          >
+                        </li>
+                        <li
+                          data-action="click->tabs#change"
+                          data-tabs-target="tab"
+                          class="inactive"
+                        >
+                          <a
+                            class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
+                            href="#"
+                            >Bar Chart</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div
+                      data-tabs-target="panel"
+                      class="hidden !w-full !h-full"
+                    >
+                      <div id="areaChartMoney"></div>
+                    </div>
+                    <div
+                      data-tabs-target="panel"
+                      class="hidden !w-full !h-full"
+                    >
+                      <div id="barChartMoney"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1739,7 +1811,7 @@
         },
       });
 
-      var areaChartOptions = {
+      var areaChartCoinsOptions = {
         chart: {
           height: 350,
           type: "area",
@@ -1780,18 +1852,18 @@
           ],
         },
         //Chanege colours here.
-        colors: ["#AF79F0"],
+        colors: ["#FFC454"],
       };
 
       var chart = new ApexCharts(
-        document.querySelector("#areaChart"),
-        areaChartOptions
+        document.querySelector("#areaChartCoins"),
+        areaChartCoinsOptions
       );
 
       chart.render();
     </script>
     <script>
-      var barChartOptions = {
+      var barChartCoinsOptions = {
         series: [
           {
             name: "Series 1",
@@ -1845,15 +1917,135 @@
               return "$ " + val + " thousands";
             },
           },
-        }, //Chanege colours here.
+        }, //Change colours here.
+        colors: ["#FFC454"],
+      };
+
+      var chart = new ApexCharts(
+        document.querySelector("#barChartCoins"),
+        barChartCoinsOptions
+      );
+      chart.render();
+    </script>
+
+<!-- Charts For money -->
+<script>
+      var areaChartMoneyOptions = {
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
+          },
+          // {
+          //   name: "Series 2",
+          //   data: [25, 5, 38, 35, 26, 10, 49],
+          // },
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
+          },
+        },
+        xaxis: {
+          categories: [
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+          ],
+        },
+        //Chanege colours here.
         colors: ["#AF79F0"],
       };
 
       var chart = new ApexCharts(
-        document.querySelector("#barChart"),
-        barChartOptions
+        document.querySelector("#areaChartMoney"),
+        areaChartMoneyOptions
       );
+
       chart.render();
-    </script>
+</script>
+
+<script>
+  var barChartMoneyOptions = {
+    series: [
+      {
+        name: "Series 1",
+        data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+        borderRadius: 5,
+        borderRadiusApplication: "end",
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
+    },
+    xaxis: {
+      categories: [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+      ],
+    },
+    yaxis: {
+      title: {
+        text: "$ (thousands)",
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands";
+        },
+      },
+    }, //Change colours here.
+    colors: ["#AF79F0"],
+  };
+
+  var chart = new ApexCharts(
+    document.querySelector("#barChartMoney"),
+    barChartMoneyOptions
+  );
+  chart.render();
+</script>
   </body>
 </html>

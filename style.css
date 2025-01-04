@@ -9,6 +9,11 @@
   .swiper-pagination-bullet-active {
     background-color: rgb(140, 53, 216);
   }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
   .loader {
     width: 48px;
     height: 48px;
