@@ -13,11 +13,29 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sizemug</title>
+    <style>
+      /* Selecting Account To Edit Or Delete */
+
+      .credit_card_selected .buttons {
+        display: flex !important;
+      }
+
+      .credit_card_selected .credit_card {
+        color: #fda629;
+        border: 2px solid #fda629;
+      }
+      .credit_card_selected .material-symbols-outlined {
+        display: block !important;
+      }
+    </style>
   </head>
   <body class="">
     <div class="grid grid-cols-6">
@@ -28,196 +46,196 @@
           <img src="/sizemug.svg" class="h-9 w-fit" alt="sizemug logo" />
         </a>
         <nav class="flex flex-col gap-6">
-            <menu class="flex flex-col">
-              <li>
-                <a
-                  href="/"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+          <menu class="flex flex-col">
+            <li>
+              <a
+                href="/"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-[.95rem]">
                   other_houses
                 </span>
-                  <span> Overview</span>
-                </a>
-              </li>
-              <span class="px-2 text-sm py-4 ps-4 font-semibold"> COINS </span>
-              <li>
-                <button
-                  class="buyCoinsMultipleOptionsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                <span> Overview</span>
+              </a>
+            </li>
+            <span class="px-2 text-sm py-4 ps-4 font-semibold"> COINS </span>
+            <li>
+              <button
+                class="buyCoinsMultipleOptionsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   currency_exchange
                 </span>
-                  <span> Buy coins </span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
-                  <span class="material-symbols-outlined text-sm">
+                <span> Buy coins </span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
+                <span class="material-symbols-outlined text-sm">
                   north_east
-                  </span>
-                  <span> Send coins </span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Send coins </span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   south_west
-                  </span>
-                  <span> Receive coins </span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="withdrawCoinsButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Receive coins </span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-[.95rem]">
                   upgrade
-                  </span>
-                  <span> Withdraw coins </span>
-                </button>
-              </li>
-            </menu>
-  
-            <menu class="flex flex-col">
-              <span class="px-2 text-sm py-4 ps-4 font-semibold"> MONEY </span>
-              <li>
-                <button
-                  class="sendMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Withdraw coins </span>
+              </button>
+            </li>
+          </menu>
+
+          <menu class="flex flex-col">
+            <span class="px-2 text-sm py-4 ps-4 font-semibold"> MONEY </span>
+            <li>
+              <button
+                class="sendMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   north_east
-                  </span>
-                  <span> Send money </span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="depositeMoneyButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Send money </span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="depositeMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   vertical_align_bottom
-                  </span>
-                  <span> Deposit money </span>
-                </button>
-              </li>
-              <li>
-                <button
-                  class="withdrawCoinsButton w-full  text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Deposit money </span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-[.95rem]">
                   upgrade
-                  </span>
-                  <span> withdraw money </span>
-                </button>
-              </li>
-            </menu>
-  
-            <menu class="flex flex-col">
-              <span class="px-2 text-sm py-4 ps-4 font-semibold">
-                ANALYTICS
-              </span>
-              <li>
-                <a
-                  href="/transaction-volume.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> withdraw money </span>
+              </button>
+            </li>
+          </menu>
+
+          <menu class="flex flex-col">
+            <span class="px-2 text-sm py-4 ps-4 font-semibold">
+              ANALYTICS
+            </span>
+            <li>
+              <a
+                href="/transaction-volume.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   sync_alt
-                  </span>
-                  <span> Transaction Volume </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/revenue-analysis.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Transaction Volume </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/revenue-analysis.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   database
-                  </span>
-                  <span> Revenue Analysis </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/channel-effectiveness.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Revenue Analysis </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/channel-effectiveness.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   list_alt_check
-                  </span>
-                  <span> Channel Effectiveness </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/visitor-flow.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Channel Effectiveness </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/visitor-flow.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   conversion_path
-                  </span>
-                  <span> Visitor Flow & Behaviour </span>
-                </a>
-              </li>
-            </menu>
-  
-            <menu class="flex flex-col">
-              <span class="px-2 text-sm py-4 ps-4 font-semibold"> Manage </span>
-              <li>
-                <a
-                  href="/cards.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Visitor Flow & Behaviour </span>
+              </a>
+            </li>
+          </menu>
+
+          <menu class="flex flex-col">
+            <span class="px-2 text-sm py-4 ps-4 font-semibold"> Manage </span>
+            <li>
+              <a
+                href="/cards.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   credit_card
-                  </span>
-                  <span> Cards </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/manage-accounts.html"
-                  class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
-                >
+                </span>
+                <span> Cards </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/manage-accounts.html"
+                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+              >
                 <span class="material-symbols-outlined text-sm">
                   account_balance
-                  </span>
-                  <span> Bank Accounts </span>
-                </a>
+                </span>
+                <span> Bank Accounts </span>
+              </a>
+            </li>
+          </menu>
+
+          <div class="flex flex-col">
+            <span class="px-2 text-sm py-4 ps-4 font-semibold"> Support </span>
+            <menu class="px-4 flex flex-wrap gap-2">
+              <li>
+                <a href="#" class="text-sm">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm">About</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm">Help</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm">Security</a>
+              </li>
+              <li>
+                <a href="#" class="text-sm">Community</a>
               </li>
             </menu>
-  
-            <div class="flex flex-col">
-              <span class="px-2 text-sm py-4 ps-4 font-semibold"> Support </span>
-              <menu class="px-4 flex flex-wrap gap-2">
-                <li>
-                  <a href="#" class="text-sm">Contact</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm">About</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm">Help</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm">Security</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm">Community</a>
-                </li>
-              </menu>
-              <span class="px-4 text-sm py-2"> © 2024 Sizemug </span>
-            </div>
-          </nav>
+            <span class="px-4 text-sm py-2"> © 2024 Sizemug </span>
+          </div>
+        </nav>
 
         <!-- MODAL FOR NOTIFICATIONS -->
         <template id="notificationModal">
@@ -453,7 +471,9 @@
         <!-- END OF MODAL FOR NOTIFICATIONS -->
       </aside>
       <main class="col-span-6 md:col-span-5 h-screen overflow-y-scroll">
-        <div class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl min-h-[calc(100%-1rem)]">
+        <div
+          class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl min-h-[calc(100%-1rem)]"
+        >
           <header
             class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
@@ -928,18 +948,24 @@
                   </div>
                 </div>
               </div>
-
             </div>
-            
+
             <div class="pt-6">
-                <h3 class="font-bold text-lg">
-                    My Cards
-                </h3>
-                <div class="overflow-x-scroll">
-                    <div class="flex gap-6 py-4 flex-row">
+              <h3 class="font-bold text-lg">My Cards</h3>
+              <div class="flex gap-6">
+                <div class="overflow-y-scroll w-full">
+                  <div class="flex gap-6 py-4 flex-row flex-wrap">
+                    <div
+                      class="mb-6 credit_card_container w-full max-w-[350px]"
+                    >
                       <div
-                        class="rounded-lg w-[350px] max-w-[calc(100%-2rem)] flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard"
+                        class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
                       >
+                        <span
+                          class="material-symbols-outlined absolute w-4 h-4 bg-coin -top-1 hidden -left-1 pt-1 rounded-full text-[.7rem] text-white text-center"
+                        >
+                          check
+                        </span>
                         <div class="flex gap-3 items-center justify-between">
                           <span class="w-5 h-5">
                             <img src="/signal.svg" alt="" />
@@ -962,10 +988,38 @@
                           </div>
                         </div>
                       </div>
-      
+
+                      <div class="buttons gap-6 mt-4 hidden">
+                        <button
+                          class="p-6 py-2 rounded-3xl border-2 text-sm text-white bg-blue-500 font-semibold flex items-center gap-2 editCardButton"
+                        >
+                          <span class="material-symbols-outlined text-base"
+                            >edit</span
+                          >
+                          <span>Edit</span>
+                        </button>
+                        <button
+                          class="p-6 py-2 rounded-3xl border-2 text-sm border-red-500 text-red-500 font-semibold flex items-center gap-2 deleteCardButton"
+                        >
+                          <span class="material-symbols-outlined text-base"
+                            >delete</span
+                          >
+                          <span>Remove</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      class="mb-6 credit_card_container w-full max-w-[350px]"
+                    >
                       <div
-                        class="rounded-lg w-[350px] max-w-[calc(100%-2rem)] flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 creditCard"
+                        class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
                       >
+                        <span
+                          class="material-symbols-outlined absolute w-4 h-4 bg-coin -top-1 hidden -left-1 pt-1 rounded-full text-[.7rem] text-white text-center"
+                        >
+                          check
+                        </span>
                         <div class="flex gap-3 items-center justify-between">
                           <span class="w-5 h-5">
                             <img src="/signal.svg" alt="" />
@@ -987,14 +1041,139 @@
                             >
                           </div>
                         </div>
+                      </div>
+
+                      <div class="buttons gap-6 mt-4 hidden">
+                        <button
+                          class="p-6 py-2 rounded-3xl border-2 text-sm text-white bg-blue-500 font-semibold flex items-center gap-2 editCardButton"
+                        >
+                          <span class="material-symbols-outlined text-base"
+                            >edit</span
+                          >
+                          <span>Edit</span>
+                        </button>
+                        <button
+                          class="p-6 py-2 rounded-3xl border-2 text-sm border-red-500 text-red-500 font-semibold flex items-center gap-2 deleteCardButton"
+                        >
+                          <span class="material-symbols-outlined text-base"
+                            >delete</span
+                          >
+                          <span>Remove</span>
+                        </button>
                       </div>
                     </div>
                   </div>
-            </div>
 
-              <button class="p-6 py-2 rounded-3xl border-2 text-sm border-primary text-primary font-semibold">
-                + Add Card
-              </button>
+                  <button
+                    class="p-6 py-2 rounded-3xl border-2 text-sm border-primary text-primary font-semibold"
+                  >
+                    + Add Card
+                  </button>
+                </div>
+
+                <div class="w-7/12 border border-gray-200 rounded-2xl p-4 hidden" id="editCardForm">
+                  <h3 class="text-lg font-semibold pb-4">Edit Card Details</h3>
+
+                  <div
+                    class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
+                  >
+                    <span
+                      class="material-symbols-outlined absolute w-4 h-4 bg-coin -top-1 hidden -left-1 pt-1 rounded-full text-[.7rem] text-white text-center"
+                    >
+                      check
+                    </span>
+                    <div class="flex gap-3 items-center justify-between">
+                      <span class="w-5 h-5">
+                        <img src="/signal.svg" alt="" />
+                      </span>
+                      <span class="w-10 h-5">
+                        <img src="/overlappingcircles.svg" alt="" />
+                      </span>
+                    </div>
+                    <div class="pb-3 pt-10">
+                      <span class="text-md font-bold text-white">
+                        8765 7654 6543 5432
+                      </span>
+                    </div>
+                    <div class="flex justify-between gap-3">
+                      <div class="flex flex-col">
+                        <span class="text-[.5rem] text-white">11/26</span>
+                        <span class="text-[.5rem] text-white font-semibold"
+                          >Faith Muoma</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-4">
+                    <div class="flex flex-col gap-3 mb-4">
+                      <span class="text-sm text-blue-900 font-semibold">
+                        Card holder's name
+                      </span>
+                      <input
+                        type="text"
+                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        placeholder="Full name"
+                      />
+                    </div>
+
+                    <div class="flex flex-col gap-3 mb-4">
+                      <span class="text-sm text-blue-900 font-semibold">
+                        Card Number
+                      </span>
+                      <input
+                        type="text"
+                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        placeholder="eg. 288378101"
+                      />
+                    </div>
+
+                    <div class="flex gap-4">
+                      <div class="flex flex-col gap-3 mb-4">
+                        <span class="text-sm text-blue-900 font-semibold">
+                          Expitration Date
+                        </span>
+                        <input
+                          type="text"
+                          class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                          placeholder="eg. 23/03/2026"
+                        />
+                      </div>
+
+                      <div class="flex flex-col gap-3 mb-4">
+                        <span class="text-sm text-blue-900 font-semibold">
+                          Cvv
+                        </span>
+                        <input
+                          type="text"
+                          class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                      <input type="checkbox" name="" id="saveCard">
+                      <label for="saveCard" class="text-sm font-semibold">Save card for future use</label>
+                    </div>
+
+                    <div class="flex gap-4 py-2 mt-4">
+                      <span
+                        class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer"
+                      >
+                        Cancel
+                      </span>
+                      <span
+                        class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer"
+                      >
+                        Continue
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1014,6 +1193,49 @@
         <!-- END OF BACKDROP AND MODAL -->
 
         <!-- TEMPLATES FOR MODALS -->
+
+         <template id="deleteCardModal">
+          <div
+          class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+        >
+          <div
+            class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+          >
+            <span class="md:hidden w-20"></span>
+
+            <p class="font-semibold"></p>
+
+            <span
+              class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+            >
+              <img src="/closeButton.svg" alt="close button" />
+            </span>
+          </div>
+
+         <div class="flex flex-col gap-2 items-center text-center">
+          <span class="material-symbols-outlined text-3xl text-white text-center bg-red-500 rounded-full p-4 py-3 mb-4">
+            remove
+          </span>
+          <h3 class="font-bold text-xl pb-2">Remove Card</h3>
+          <p class="text-gray-500">
+            Are you sure you want to remove this card? You will no longer be able to use it for payments.
+          </p>
+         </div>
+
+          <div class="flex gap-4 py-2 mt-10">
+            <span
+              class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+            >
+              Cancel
+            </span>
+            <span
+              class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-red-500 rounded-2xl md:w-full text-sm text-center cursor-pointer sendCoinsContinueToReviewTransaction"
+            >
+              Remove Card
+            </span>
+          </div>
+        </div>
+         </template>
 
         <div class="coinModals">
           <div class="sendCoinsModals">
@@ -2754,6 +2976,35 @@
         },
         spaceBetween: 40,
       });
+
+      //Selecting Card To Edit Or Delete
+      let credit_card = document.querySelectorAll(".credit_card");
+      let credit_card_container = document.querySelectorAll(
+        ".credit_card_container"
+      );
+
+      for (let i = 0; i < credit_card.length; i++) {
+        credit_card[i].addEventListener("click", () => {
+          credit_card_container.forEach((container, index) => {
+            if (index == i) return;
+            container.classList.remove("credit_card_selected");
+          });
+          credit_card_container[i].classList.toggle("credit_card_selected");
+        });
+      }
+
+      //Display or hide edit card form
+      let editCardButton = document.querySelectorAll(".editCardButton");
+      let editCardForm = document.querySelector("#editCardForm");
+
+      editCardButton.forEach(button=>{
+        button.addEventListener("click",()=>{
+          editCardForm.classList.add("block")
+          editCardForm.classList.remove("hidden")
+
+        })
+      })
+
     </script>
   </body>
 </html>

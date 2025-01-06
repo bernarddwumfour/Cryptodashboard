@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- Modals -->
   </head>
   <body class="flex flex-col justify-center items-center min-h-screen">
@@ -52,6 +56,11 @@
         class="button p-4 bg-violet-600 text-white rounded-md depositeMoneyButton"
       >
         Deposite money
+      </button>
+      <button
+        class="button p-4 bg-violet-600 text-white rounded-md addBankAccontButton"
+      >
+        Add Bank Account
       </button>
     </div>
     <div
@@ -273,6 +282,254 @@
         </aside>
       </div>
     </template>
+
+    <div class="bankAccountModals">
+      <template id="addBankAccount">
+        <div
+          class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+        >
+          <div
+            class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+          >
+            <span class="md:hidden w-20"></span>
+
+            <p class="font-semibold">Add Bank Account</p>
+
+            <span
+              class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+            >
+              <img src="/closeButton.svg" alt="close button" />
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-3 mb-4">
+            <span> Select Country </span>
+            <div class="text-sm">
+              <div
+                x-data="select"
+                class="relative w-full"
+                @click.outside="open = false"
+              >
+                <button
+                  @click="toggle"
+                  :class="(open) && 'ring-blue-600'"
+                  class="flex w-full items-center justify-between rounded bg-white p-3 ring-1 ring-gray-300"
+                >
+                  <span x-text="(Country == '') ? 'Country' : Country"></span>
+                  <svg
+                    class="fill-current h-4 w-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </button>
+
+                <ul
+                  class="z-20 absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
+                  x-show="open"
+                >
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Afhganistan')"
+                  >
+                    <span> Afhganistan </span>
+                    <span
+                      class="w-6 h-6 material-symbols-outlined rounded-full border border-gray-300 text-white text-center pb-2 bg-gray-200"
+                      :class="(Country == 'Afhganistan') && 'bg-violet-600'"
+                      x-text="(Country == 'Afhganistan') ? '&#x2713;' : ''"
+                    >
+                    </span>
+                  </li>
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Alan Island')"
+                  >
+                    <span> Alan Island </span>
+                    <span
+                      class="w-6 h-6 material-symbols-outlined rounded-full border border-gray-300 text-white text-center pb-2 bg-gray-200"
+                      :class="(Country == 'Alan Island') && 'bg-violet-600'"
+                      x-text="(Country == 'Alan Island') ? '&#x2713;' : ''"
+                    >
+                    </span>
+                  </li>
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Albania')"
+                  >
+                    <span> Albania </span>
+                    <span
+                      class="w-6 h-6 material-symbols-outlined rounded-full border border-gray-300 text-white text-center pb-2 bg-gray-200"
+                      :class="(Country == 'Albania') && 'bg-violet-600'"
+                      x-text="(Country == 'Albania') ? '&#x2713;' : ''"
+                    >
+                    </span>
+                  </li>
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Algeria')"
+                  >
+                    <span> Algeria </span>
+                    <span
+                      class="w-6 h-6 material-symbols-outlined rounded-full border border-gray-300 text-white text-center pb-2 bg-gray-200"
+                      :class="(Country == 'Algeria') && 'bg-violet-600'"
+                      x-text="(Country == 'Algeria') ? '&#x2713;' : ''"
+                    >
+                    </span>
+                  </li>
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('American Samoa')"
+                  >
+                    <span> American Samoa </span>
+                    <span
+                      class="w-6 h-6 material-symbols-outlined rounded-full border border-gray-300 text-white text-center pb-2 bg-gray-200"
+                      :class="(Country == 'American Samoa') && 'bg-violet-600'"
+                      x-text="(Country == 'American Samoa') ? '&#x2713;' : ''"
+                    >
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                <div id="areaChartCoins"></div>
+              </div>
+              <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                <div id="barChartCoins"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 mb-4">
+            <span> Select Bank </span>
+            <div class="text-sm">
+              <div
+                x-data="select"
+                class="relative w-full"
+                @click.outside="open = false"
+              >
+                <button
+                  @click="toggle"
+                  :class="(open) && 'ring-blue-600'"
+                  class="flex w-full items-center justify-between rounded bg-white p-3 ring-1 ring-gray-300"
+                >
+                  <span x-text="(Country == '') ? 'Country' : Country"></span>
+                  <svg
+                    class="fill-current h-4 w-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </button>
+
+                <ul
+                  class="z-20 absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
+                  x-show="open"
+                >
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Area chart')"
+                  >
+                    <span> Area Chart </span>
+                    <span
+                      class="w-4 h-4 rounded-full border border-gray-300 bg-gray-200"
+                    >
+                    </span>
+                  </li>
+                  <li
+                    class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200 flex justify-between gap-6"
+                    @click="setCountry('Bar Chart')"
+                  >
+                    <span> Bar Chart </span>
+                    <span
+                      class="w-4 h-4 rounded-full border border-gray-300 bg-gray-200"
+                    >
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                <div id="areaChartCoins"></div>
+              </div>
+              <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                <div id="barChartCoins"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4 py-2 mt-10">
+            <span
+              class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+            >
+              Cancel
+            </span>
+            <span
+              class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer continueToEnterBankDetails"
+            >
+              Continue
+            </span>
+          </div>
+        </div>
+      </template>
+
+      <template id="enterBankDetails">
+        <div
+          class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+        >
+          <div
+            class="flex flex-row-reverse md:flex-row py-3 items-center justify-between mb-3 md:border-b-2 border-0 border-gray-300"
+          >
+            <span class="md:hidden w-20"></span>
+
+            <p class="font-semibold">Enter Your Bank Details</p>
+
+            <span
+              class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+            >
+              <img src="/closeButton.svg" alt="close button" />
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-3 mb-4">
+            <span> Full name of bank holder </span>
+            <input
+              type="text"
+              class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+              placeholder="Full name"
+            />
+          </div>
+
+          <div class="flex flex-col gap-3 mb-4">
+            <span> Account Number </span>
+            <input
+              type="text"
+              class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+              placeholder="eg. 288378101"
+            />
+          </div>
+
+          <div class="flex gap-4 py-2 mt-10">
+            <span
+              class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+            >
+              Cancel
+            </span>
+            <span
+              class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
+            >
+              Continue
+            </span>
+          </div>
+        </div>
+      </template>
+    </div>
 
     <div class="withdrawCoinsModals">
       <template id="withdrawCoinsEnterAmount">
@@ -783,8 +1040,24 @@
         </div>
       </template>
     </div>
-
-    
   </body>
   <script type="module" src="/src/main.js"></script>
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+  <script>
+    document.addEventListener("alpine:init", () => {
+      Alpine.data("select", () => ({
+        open: false,
+        Country: "",
+
+        toggle() {
+          this.open = !this.open;
+        },
+
+        setCountry(val) {
+          this.Country = val;
+          this.open = false;
+        },
+      }));
+    });
+  </script>
 </html>

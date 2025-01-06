@@ -1,3 +1,4 @@
+import { addBankAccount } from "./transactions/addBankAccount";
 import { addCoins } from "./transactions/addCoins";
 import { depositeMoney } from "./transactions/depositMoney";
 import { sendCoins } from "./transactions/sendCoins";
@@ -52,6 +53,9 @@ let elementsAndEvents = [
   withdrawMoney,
   sendMoney,
   depositeMoney,
+
+  //Accounts
+  addBankAccount,
   
   {
     //Notification modal
@@ -69,6 +73,11 @@ let elementsAndEvents = [
     trigger: ".viewTranscationDetailsButton",
     target: "#sendCoinsTransactionDetailsModal",
   },
+  //Remove Credit card
+  {
+    trigger : ".deleteCardButton",
+    target : "#deleteCardModal",
+  }
 ];
 
 
