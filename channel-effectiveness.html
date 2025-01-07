@@ -21,6 +21,14 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
 
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -787,195 +795,137 @@
             </div>
           </div>
 
-          <div class="p-4 border m-4 border-gray-300 rounded-2xl">
+          <div
+            class="p-4 border m-4 border-gray-300 rounded-2xl"
+            data-controller="tabs"
+            data-tabs-index-value="0"
+          >
             <div class="flex justify-between items-center">
               <span> Transaction trends </span>
 
               <div>
-                <div class="flex">
-                  <div
-                    class="flex bg-gray-100 hover:bg-gray-200 rounded-lg transition p-1"
-                  >
-                    <nav
-                      class="flex gap-x-1"
-                      aria-label="Tabs"
-                      role="tablist"
-                      aria-orientation="horizontal"
+                <!-- Tabs -->
+                <div class="mx-6 mt-2">
+                  <ul class="flex flex-wrap gap-3 bg-gray-100 p-2 rounded-xl">
+                    <li
+                      class="rounded-xl bg-white"
+                      data-action="click->tabs#change"
+                      data-tabs-target="tab"
                     >
-                      <button
-                        type="button"
-                        class="hs-tab-active:bg-white hs-tab-active:text-red-700 py-2 px-3 inline-flex items-center gap-x-2 text-sm text-gray-400 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none active"
-                        id="segment-item-1"
-                        aria-selected="true"
-                        data-hs-tab="#segment-1"
-                        aria-controls="segment-1"
-                        role="tab"
+                      <a
+                        href="#"
+                        class="inline-block text-gray-700 rounded-xl py-2 px-5 text-sm font-medium text-center"
+                        >Ad Spent</a
                       >
-                        Coins
-                      </button>
-                      <button
-                        type="button"
-                        class="hs-tab-active:bg-white hs-tab-active:text-red-700 py-2 px-3 inline-flex items-center gap-x-2 text-sm text-gray-400 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none"
-                        id="segment-item-2"
-                        aria-selected="false"
-                        data-hs-tab="#segment-2"
-                        aria-controls="segment-2"
-                        role="tab"
+                    </li>
+                    <li
+                      class="rounded-xl inactive"
+                      data-action="click->tabs#change"
+                      data-tabs-target="tab"
+                    >
+                      <a
+                        href="#"
+                        class="inline-block text-gray-700 rounded-xl py-2 px-5 text-sm font-medium text-center"
+                        >Engagement</a
                       >
-                        Money
-                      </button>
-                    </nav>
-                  </div>
+                    </li>
+                    <li
+                      class="rounded-xl inactive"
+                      data-action="click->tabs#change"
+                      data-tabs-target="tab"
+                    >
+                      <a
+                        href="#"
+                        class="inline-block text-gray-700 rounded-xl py-2 px-5 text-sm font-medium text-center"
+                        >Clicks</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <div class="flex gap-6">
+              <div class="flex gap-6 items-center">
                 <div
-                  class="flex p-2 py-2 text-xs rounded-lg border-2 border-gray-200 items-center gap-2"
+                  class="flex p-2 py-2 text-xs rounded-lg border-2 cursor-pointer border-gray-200 items-center gap-2"
                 >
-                  <img
-                    src="/back.svg"
-                    alt="back icon rotated"
-                    class="w-3 h-3 rotate-[270deg]"
-                  />
+                  <span class="material-symbols-outlined w-6 h-6"> cycle </span>
                   <span class=""> Refresh table </span>
                 </div>
 
-                <div class="hs-dropdown relative inline-flex">
+                <div
+                  x-data="select"
+                  class="relative w-[8rem] text-sm"
+                  @click.outside="open = false"
+                >
                   <button
-                    id="hs-dropdown-default"
-                    type="button"
-                    class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                    aria-haspopup="menu"
-                    aria-expanded="false"
-                    aria-label="Dropdown"
+                    @click="toggle"
+                    :class="(open) && 'ring-blue-600'"
+                    class="flex w-full items-center justify-between rounded bg-white p-2 ring-1 ring-gray-300"
                   >
-                    Actions
+                    <span
+                      x-text="(ChartType == '') ? 'Monthly' : ChartType"
+                    ></span>
                     <svg
-                      class="hs-dropdown-open:rotate-180 size-4"
+                      class="fill-current h-4 w-8"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      viewBox="0 0 20 20"
                     >
-                      <path d="m6 9 6 6 6-6" />
+                      <path
+                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                      />
                     </svg>
                   </button>
 
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 !opacity-1 z-10 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="hs-dropdown-default"
+                  <ul
+                    class="z-20 absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
+                    x-show="open"
                   >
-                    <div class="p-1 space-y-0.5">
-                      <a
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                        href="#"
-                      >
-                        Hourly
-                      </a>
-                      <a
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                        href="#"
-                      >
-                        Daily
-                      </a>
-                      <a
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                        href="#"
-                      >
-                        Weekly
-                      </a>
-                      <a
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                        href="#"
-                      >
-                        Monthly
-                      </a>
-                      <a
-                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                        href="#"
-                      >
-                        Custom
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hs-dropdown relative inline-flex">
-              <button
-                id="hs-dropdown-default"
-                type="button"
-                class="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                aria-haspopup="menu"
-                aria-expanded="false"
-                aria-label="Dropdown"
-              >
-                Chart Type
-                <svg
-                  class="hs-dropdown-open:rotate-180 size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-
-              <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 !opacity-1 z-10 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="hs-dropdown-default"
-              >
-                <div class="p-1 space-y-0.5">
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                    href="#"
-                  >
-                    Line Graph
-                  </a>
-                  <a
-                    class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                    href="#"
-                  >
-                    Bar Chart
-                  </a>
+                    <li
+                      class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      @click="setChartType('Hourly')"
+                    >
+                      Hourly
+                    </li>
+                    <li
+                      class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      @click="setChartType('Daily')"
+                    >
+                      Daily
+                    </li>
+                    <li
+                      class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      @click="setChartType('Weekly')"
+                    >
+                      Weekly
+                    </li>
+                    <li
+                      class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      @click="setChartType('Monthly')"
+                    >
+                      Monthly
+                    </li>
+                    <hr class="bg-gray-200 my-2" />
+                    <li
+                      class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      @click="setChartType('Custom')"
+                    >
+                      Custom
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
             <div class="min-h-[400px] relative w-full">
               <div class="mt-3">
-                <div
-                  id="segment-1"
-                  class="h-[350px]"
-                  role="tabpanel"
-                  aria-labelledby="segment-item-1"
-                >
-                  <canvas class="!w-full !h-full" id="myChart"></canvas>
+                <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                  <div id="areaChart1"></div>
                 </div>
-                <div
-                  id="segment-2"
-                  class="hidden h-[350px]"
-                  role="tabpanel"
-                  aria-labelledby="segment-item-2"
-                >
-                  <canvas class="!w-full !h-full" id="myChart"></canvas>
+                <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                  <div id="areaChart2"></div>
+                </div>
+                <div data-tabs-target="panel" class="hidden !w-full !h-full">
+                  <div id="areaChart3"></div>
                 </div>
               </div>
             </div>
@@ -1279,32 +1229,174 @@
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
 
     <script>
-      const ctx = document.getElementById("myChart");
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("select", () => ({
+          open: false,
+          ChartType: "",
 
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1,
-            },
+          toggle() {
+            this.open = !this.open;
+          },
+
+          setChartType(val) {
+            this.ChartType = val;
+            this.open = false;
+          },
+        }));
+      });
+
+    </script>
+    <script>
+      var areaChartOptions1 = {
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [45, 42, 18, 15, 19, 23, 21, 45, 13],
+          },
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
+          },
+        },
+        xaxis: {
+          categories: [
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
           ],
         },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-          responsive: true,
-          maintainAspectRatio: false,
+        //Chanege colours here.
+        colors: ["#AF79F0"],
+      };
+
+      var chart = new ApexCharts(
+        document.querySelector("#areaChart1"),
+        areaChartOptions1
+      );
+
+      chart.render();
+    </script>
+    <script>
+      var areaChartOptions2 = {
+        chart: {
+          height: 350,
+          type: "area",
         },
-      });
+        dataLabels: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
+          },
+          // {
+          //   name: "Series 2",
+          //   data: [25, 5, 38, 35, 26, 10, 49],
+          // },
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
+          },
+        },
+        xaxis: {
+          categories: [
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+          ],
+        },
+        //Chanege colours here.
+        colors: ["#AF79F0"],
+      };
+
+      var chart = new ApexCharts(
+        document.querySelector("#areaChart2"),
+        areaChartOptions2
+      );
+
+      chart.render();
+    </script>
+    <script>
+      var areaChartOptions3 = {
+        chart: {
+          height: 350,
+          type: "area",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [25, 52, 48, 45, 39, 23, 52, 65, 13],
+          },
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100],
+          },
+        },
+        xaxis: {
+          categories: [
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+          ],
+        },
+        //Chanege colours here.
+        colors: ["#AF79F0"],
+      };
+
+      var chart = new ApexCharts(
+        document.querySelector("#areaChart3"),
+        areaChartOptions3
+      );
+
+      chart.render();
     </script>
   </body>
 </html>
