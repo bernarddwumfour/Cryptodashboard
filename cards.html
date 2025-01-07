@@ -952,11 +952,11 @@
 
             <div class="pt-6">
               <h3 class="font-bold text-lg">My Cards</h3>
-              <div class="flex gap-6">
-                <div class="overflow-y-scroll w-full">
-                  <div class="flex gap-6 py-4 flex-row flex-wrap">
+              <div class="flex gap-6 flex-col lg:flex-row">
+                <div class="w-full">
+                  <div class="flex overflow-x-scroll gap-6 py-4 flex-row lg:flex-wrap">
                     <div
-                      class="mb-6 credit_card_container w-full max-w-[350px]"
+                      class="mb-6 credit_card_container flex-none w-[350px]"
                     >
                       <div
                         class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
@@ -1010,7 +1010,7 @@
                     </div>
 
                     <div
-                      class="mb-6 credit_card_container w-full max-w-[350px]"
+                      class="mb-6 credit_card_container flex-none w-[350px]"
                     >
                       <div
                         class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
@@ -1065,13 +1065,13 @@
                   </div>
 
                   <button
-                    class="p-6 py-2 rounded-3xl border-2 text-sm border-primary text-primary font-semibold"
+                    class="p-6 py-2 rounded-3xl w-fit border-2 text-sm border-primary text-primary font-semibold"
                   >
                     + Add Card
                   </button>
                 </div>
 
-                <div class="w-7/12 border border-gray-200 rounded-2xl p-4 hidden" id="editCardForm">
+                <div class="w-full md:w-7/12 border border-gray-200 rounded-2xl p-4 hidden" id="editCardForm">
                   <h3 class="text-lg font-semibold pb-4">Edit Card Details</h3>
 
                   <div
@@ -1164,7 +1164,7 @@
                         Cancel
                       </span>
                       <span
-                        class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer"
+                        class="w-full  p-4 md:p-2 text-white bg-gray-200 rounded-2xl text-sm text-center cursor-pointer"
                       >
                         Continue
                       </span>
