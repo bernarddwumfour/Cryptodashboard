@@ -44,7 +44,7 @@ switchContentOnElementClick(
 
 let userstemplate = ``;
 for (let i = 0; i < 30; i++) {
-    userstemplate += `
+  userstemplate += `
     <div class="flex flex-col gap-2 items-center">
                <span
                  class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200 animate-pulse overflow-hidden"
@@ -53,10 +53,10 @@ for (let i = 0; i < 30; i++) {
                <span class="text-xs h-2 rounded-md w-14 bg-gray-200 animate-pulse"></span>
              </div>
              `;
-    
 }
-let transactionSectionUsers = document.getElementsByClassName("recenttransaction")[0]
-transactionSectionUsers.innerHTML = userstemplate
+let transactionSectionUsers =
+  document.getElementsByClassName("recenttransaction")[0];
+  transactionSectionUsers ? transactionSectionUsers.innerHTML = userstemplate : "";
 
 let getUsers = async () => {
   let users = [];
@@ -65,7 +65,10 @@ let getUsers = async () => {
   for (let i = 0; i < 30; i++) {
     let res = await fetch("https://randomuser.me//api");
     let data = await res.json();
-    users.push({name : data.results[0].name.first,image : data.results[0].picture.medium})
+    users.push({
+      name: data.results[0].name.first,
+      image: data.results[0].picture.medium,
+    });
     userstemplate += `
          <div class="flex flex-col gap-1 items-center">
                     <span
@@ -82,10 +85,9 @@ let getUsers = async () => {
                   `;
   }
 
-//   let transactionSectionUsers = document.getElementsByClassName("recenttransaction")[0]
 
-  transactionSectionUsers.innerHTML = userstemplate
-    console.log(users);
+  transactionSectionUsers.innerHTML = userstemplate;
+  console.log(users);
 };
 
 getUsers();

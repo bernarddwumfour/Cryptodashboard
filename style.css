@@ -1,35 +1,49 @@
 * {
-    font-family: "Inter", sans-serif;
-  }
+  font-family: "Inter", sans-serif;
+}
 
-  ::-webkit-scrollbar{
-    display: none;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: rgb(140, 53, 216);
-  }
+::-webkit-scrollbar {
+  display: none;
+}
 
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid rgb(54, 196, 54);
-    border-bottom-color: rgba(54, 196, 54,0.4);
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+.swiper-pagination-bullet-active {
+  background-color: rgb(140, 53, 216);
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(54, 196, 54);
+  border-bottom-color: rgba(54, 196, 54, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Selecting Account To Edit Or Delete */
+
+.credit_card_selected .buttons {
+  display: flex !important;
+}
+
+.credit_card_selected .credit_card {
+  color: #fda629;
+  border: 2px solid #fda629;
+}
+.credit_card_selected .material-symbols-outlined {
+  display: block !important;
+}

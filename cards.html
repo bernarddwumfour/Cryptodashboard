@@ -21,21 +21,6 @@
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sizemug</title>
-    <style>
-      /* Selecting Account To Edit Or Delete */
-
-      .credit_card_selected .buttons {
-        display: flex !important;
-      }
-
-      .credit_card_selected .credit_card {
-        color: #fda629;
-        border: 2px solid #fda629;
-      }
-      .credit_card_selected .material-symbols-outlined {
-        display: block !important;
-      }
-    </style>
   </head>
   <body class="">
     <div class="grid grid-cols-6">
@@ -953,11 +938,11 @@
             <div class="pt-6">
               <h3 class="font-bold text-lg">My Cards</h3>
               <div class="flex gap-6 flex-col lg:flex-row">
-                <div class="w-full">
-                  <div class="flex overflow-x-scroll gap-6 py-4 flex-row lg:flex-wrap">
-                    <div
-                      class="mb-6 credit_card_container flex-none w-[350px]"
-                    >
+                <div class="w-full credit_cards">
+                  <div
+                    class="flex overflow-x-scroll gap-6 py-4 flex-row lg:flex-wrap"
+                  >
+                    <div class="mb-6 credit_card_container flex-none w-[350px]">
                       <div
                         class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
                       >
@@ -1009,9 +994,7 @@
                       </div>
                     </div>
 
-                    <div
-                      class="mb-6 credit_card_container flex-none w-[350px]"
-                    >
+                    <div class="mb-6 credit_card_container flex-none w-[350px]">
                       <div
                         class="rounded-lg w-full flex-none bg-gradient-to-bl from-blue-500 via-purple-500 to-pink-500 p-4 credit_card cursor-pointer relative mx-1"
                       >
@@ -1071,7 +1054,10 @@
                   </button>
                 </div>
 
-                <div class="w-full md:w-7/12 border border-gray-200 rounded-2xl p-4 hidden" id="editCardForm">
+                <div
+                  class="w-full md:w-7/12 border border-gray-200 rounded-2xl p-4 hidden"
+                  id="editCardForm"
+                >
                   <h3 class="text-lg font-semibold pb-4">Edit Card Details</h3>
 
                   <div
@@ -1153,8 +1139,10 @@
                     </div>
 
                     <div class="flex gap-2">
-                      <input type="checkbox" name="" id="saveCard">
-                      <label for="saveCard" class="text-sm font-semibold">Save card for future use</label>
+                      <input type="checkbox" name="" id="saveCard" />
+                      <label for="saveCard" class="text-sm font-semibold"
+                        >Save card for future use</label
+                      >
                     </div>
 
                     <div class="flex gap-4 py-2 mt-4">
@@ -1164,12 +1152,11 @@
                         Cancel
                       </span>
                       <span
-                        class="w-full  p-4 md:p-2 text-white bg-gray-200 rounded-2xl text-sm text-center cursor-pointer"
+                        class="w-full p-4 md:p-2 text-white bg-gray-200 rounded-2xl text-sm text-center cursor-pointer"
                       >
                         Continue
                       </span>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -1194,48 +1181,51 @@
 
         <!-- TEMPLATES FOR MODALS -->
 
-         <template id="deleteCardModal">
+        <template id="deleteCardModal">
           <div
-          class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
-        >
-          <div
-            class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+            class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
           >
-            <span class="md:hidden w-20"></span>
-
-            <p class="font-semibold"></p>
-
-            <span
-              class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+            <div
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
             >
-              <img src="/closeButton.svg" alt="close button" />
-            </span>
+              <span class="md:hidden w-20"></span>
+
+              <p class="font-semibold"></p>
+
+              <span
+                class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+              >
+                <img src="/closeButton.svg" alt="close button" />
+              </span>
+            </div>
+
+            <div class="flex flex-col gap-2 items-center text-center">
+              <span
+                class="material-symbols-outlined text-3xl text-white text-center bg-red-500 rounded-full p-4 py-3 mb-4"
+              >
+                remove
+              </span>
+              <h3 class="font-bold text-xl pb-2">Remove Card</h3>
+              <p class="text-gray-500">
+                Are you sure you want to remove this card? You will no longer be
+                able to use it for payments.
+              </p>
+            </div>
+
+            <div class="flex gap-4 py-2 mt-10">
+              <span
+                class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+              >
+                Cancel
+              </span>
+              <span
+                class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-red-500 rounded-2xl md:w-full text-sm text-center cursor-pointer sendCoinsContinueToReviewTransaction"
+              >
+                Remove Card
+              </span>
+            </div>
           </div>
-
-         <div class="flex flex-col gap-2 items-center text-center">
-          <span class="material-symbols-outlined text-3xl text-white text-center bg-red-500 rounded-full p-4 py-3 mb-4">
-            remove
-          </span>
-          <h3 class="font-bold text-xl pb-2">Remove Card</h3>
-          <p class="text-gray-500">
-            Are you sure you want to remove this card? You will no longer be able to use it for payments.
-          </p>
-         </div>
-
-          <div class="flex gap-4 py-2 mt-10">
-            <span
-              class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
-            >
-              Cancel
-            </span>
-            <span
-              class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-red-500 rounded-2xl md:w-full text-sm text-center cursor-pointer sendCoinsContinueToReviewTransaction"
-            >
-              Remove Card
-            </span>
-          </div>
-        </div>
-         </template>
+        </template>
 
         <div class="coinModals">
           <div class="sendCoinsModals">
@@ -2977,34 +2967,16 @@
         spaceBetween: 40,
       });
 
-      //Selecting Card To Edit Or Delete
-      let credit_card = document.querySelectorAll(".credit_card");
-      let credit_card_container = document.querySelectorAll(
-        ".credit_card_container"
-      );
-
-      for (let i = 0; i < credit_card.length; i++) {
-        credit_card[i].addEventListener("click", () => {
-          credit_card_container.forEach((container, index) => {
-            if (index == i) return;
-            container.classList.remove("credit_card_selected");
-          });
-          credit_card_container[i].classList.toggle("credit_card_selected");
-        });
-      }
-
       //Display or hide edit card form
       let editCardButton = document.querySelectorAll(".editCardButton");
       let editCardForm = document.querySelector("#editCardForm");
 
-      editCardButton.forEach(button=>{
-        button.addEventListener("click",()=>{
-          editCardForm.classList.add("block")
-          editCardForm.classList.remove("hidden")
-
-        })
-      })
-
+      editCardButton.forEach((button) => {
+        button.addEventListener("click", () => {
+          editCardForm.classList.add("block");
+          editCardForm.classList.remove("hidden");
+        });
+      });
     </script>
   </body>
 </html>

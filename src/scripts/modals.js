@@ -1,5 +1,5 @@
 import { addBankAccount } from "./transactions/addBankAccount";
-import { addCoins } from "./transactions/addCoins";
+import { addCoins, addCoinsCustom } from "./transactions/addCoins";
 import { depositeMoney } from "./transactions/depositMoney";
 import { sendCoins } from "./transactions/sendCoins";
 import { sendMoney } from "./transactions/sendMoney";
@@ -46,9 +46,10 @@ let elementsAndEvents = [
     ],
   },
   addCoins,
+  addCoinsCustom,
   sendCoins,
   withdrawCoins,
-  
+
   //MONEY MODALS
   withdrawMoney,
   sendMoney,
@@ -56,7 +57,7 @@ let elementsAndEvents = [
 
   //Accounts
   addBankAccount,
-  
+
   {
     //Notification modal
     trigger: ".notificationButton",
@@ -75,12 +76,10 @@ let elementsAndEvents = [
   },
   //Remove Credit card
   {
-    trigger : ".deleteCardButton",
-    target : "#deleteCardModal",
-  }
+    trigger: ".deleteCardButton",
+    target: "#deleteCardModal",
+  },
 ];
-
-
 
 const replaceInnerContent = (container, contentContainer) => {
   let contentToReplace = document.querySelector(contentContainer).innerHTML;
@@ -88,6 +87,33 @@ const replaceInnerContent = (container, contentContainer) => {
   // console.log(contentToReplace);
   // console.log(document.querySelector(container))
 };
+
+//Selecting Card To Edit Or Delete
+
+const selectCreditCard = () => {
+  let credit_cards = document.querySelectorAll(".credit_cards");
+
+  credit_cards &&
+    credit_cards.forEach((creditCard) => {
+      let credit_card = creditCard.querySelectorAll(".credit_card");
+      let credit_card_container = creditCard.querySelectorAll(
+        ".credit_card_container"
+      );
+
+      for (let i = 0; i < credit_card.length; i++) {
+        credit_card[i].addEventListener("click", () => {
+          credit_card_container.forEach((container, index) => {
+            if (index == i) return;
+            container.classList.remove("credit_card_selected");
+          });
+          credit_card_container[i].classList.toggle("credit_card_selected");
+        });
+      }
+    });
+};
+
+//Card selection for all pages
+selectCreditCard();
 
 let showModalOnTriggerClick = (elements) => {
   elements.forEach((element) => {
@@ -97,6 +123,9 @@ let showModalOnTriggerClick = (elements) => {
         document.querySelector("#modal").classList.remove("hidden");
         document.querySelector("#modal").classList.add("flex");
         replaceInnerContent("#modalContent", element.target);
+
+        //Card selecting within modals
+        selectCreditCard();
 
         //Handling all methods at a stage
         if (element.methods && element.methods.length > 0) {
