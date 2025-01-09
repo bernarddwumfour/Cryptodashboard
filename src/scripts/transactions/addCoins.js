@@ -28,6 +28,11 @@ export const addCoins = {
         },
       ],
     },
+    //Add Credit card
+    {
+      trigger: ".addCardButton",
+      target: "#addCardModal",
+    },
   ],
 };
 
@@ -60,6 +65,11 @@ export const addCoinsCustom = {
           ],
         },
       ],
+    },
+    //Add Credit card
+    {
+      trigger: ".addCardButton",
+      target: "#addCardModal",
     },
   ],
 };

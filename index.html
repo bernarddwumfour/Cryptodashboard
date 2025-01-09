@@ -251,7 +251,7 @@
                     <div class="flex justify-between items-center w-full">
                       <div class="flex flex-col gap-1">
                         <span class="font-bold text-sm">
-                          Deposite Successful
+                          Deposit Successful
                         </span>
                         <span class="text-gray-400 text-sm">
                           🎉 Deposit Successful! $50.00 has been added to your
@@ -307,7 +307,7 @@
                     <div class="flex justify-between items-center w-full">
                       <div class="flex flex-col gap-1">
                         <span class="font-bold text-sm">
-                          Deposite Successful
+                          Deposit Successful
                         </span>
                         <span class="text-gray-400 text-sm">
                           🎉 Deposit Successful! $50.00 has been added to your
@@ -341,7 +341,7 @@
                     <div class="flex justify-between items-center w-full">
                       <div class="flex flex-col gap-1">
                         <span class="font-bold text-sm">
-                          Deposite Successful
+                          Deposit Successful
                         </span>
                         <span class="text-gray-400 text-sm">
                           🎉 Deposit Successful! $50.00 has been added to your
@@ -367,7 +367,7 @@
                     <div class="flex justify-between items-center w-full">
                       <div class="flex flex-col gap-1">
                         <span class="font-bold text-sm">
-                          Deposite Successful
+                          Deposit Successful
                         </span>
                         <span class="text-gray-400 text-sm">
                           🎉 Deposit Successful! $50.00 has been added to your
@@ -419,7 +419,7 @@
                     <div class="flex justify-between items-center w-full">
                       <div class="flex flex-col gap-1">
                         <span class="font-bold text-sm">
-                          Deposite Successful
+                          Deposit Successful
                         </span>
                         <span class="text-gray-400 text-sm">
                           🎉 Deposit Successful! $50.00 has been added to your
@@ -1904,6 +1904,97 @@
 
         <!-- TEMPLATES FOR MODALS -->
 
+        <!-- Card And Accounts Modals -->
+
+        <div class="cardsAndAccountsModals">
+
+          <template id="addCardModal">
+            <div
+              class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+            >
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <p class="font-semibold">Add Card</p>
+
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+
+              <div class="py-2">
+                <div class="pb-4">
+                  <span class="font-bold block py-1 text-sm text-indigo-900">Card holders name</span>
+                  <input
+                    type="text"
+                    class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                    placeholder="eg.Faith Moumo"
+                  />
+                </div>
+
+                <div class="pb-4">
+                  <span class="font-bold block py-1 text-sm text-indigo-900">Card number</span>
+                  <input
+                    type="text"
+                    class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                    placeholder="eg. 2299875019"
+                  />
+                </div>
+
+                <div class="flex gap-4 py-3">
+                  <div class="pb-4">
+                    <span class="font-bold block py-1 text-sm text-indigo-900">Expiration date</span>
+                    <input
+                      type="text"
+                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      placeholder="eg 23/03/2025"
+                    />
+                  </div>
+  
+               
+                  <div class="pb-4">
+                    <span class="font-bold block py-1 text-sm text-indigo-900">Cvv</span>
+                    <input
+                      type="text"
+                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      placeholder="eg 1542"
+                    />
+                  </div>   
+                </div>
+                <div class="flex gap-2 items-center">
+                  <input class="accent-coin scale-125" type="checkbox" name="saveCard" id="saveCard">
+                  <label for="saveCard" class="text-sm">
+                    Save card for future use
+                  </label>
+                </div>
+
+               
+              </div>
+
+              <div class="flex gap-4 py-2 mt-10">
+                <span
+                  class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                >
+                  Cancel
+                </span>
+                <span
+                  class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer sendCoinsContinueToReviewTransaction"
+                >
+                  Save Card
+                </span>
+              </div>
+            </div>
+          </template>
+
+        </div>
+
+        <!-- End Of Card And Accounts Modals -->
+
         <div class="coinModals">
           <div class="sendCoinsModals">
             <template id="sendCoinsSelectUserModal">
@@ -2366,7 +2457,7 @@
                     Cancel
                   </span>
                   <span
-                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawCoinsContinueToReviewTransaction"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawCoinsContinueToReviewTransaction"
                   >
                     Continue
                   </span>
@@ -2581,8 +2672,8 @@
                         </div>
                       </div>
                     </div>
-                    <button class="text-blue-500 text-sm my-4">
-                      + Add a new account
+                    <button class="text-blue-500 text-sm my-4 addCardButton">
+                      + Add another Card
                     </button>
                   </div>
 
@@ -2617,7 +2708,7 @@
                     Cancel
                   </span>
                   <span
-                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawMoneyContinueToReviewTransaction"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer withdrawMoneyContinueToReviewTransaction"
                   >
                     Continue
                   </span>
@@ -2893,7 +2984,7 @@
                     Cancel
                   </span>
                   <span
-                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer sendMoneyContinueToReviewTransaction"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer sendMoneyContinueToReviewTransaction"
                   >
                     Continue
                   </span>
@@ -2912,7 +3003,7 @@
                 >
                   <span class="md:hidden w-20"></span>
 
-                  <p class="font-semibold">Deposite Money</p>
+                  <p class="font-semibold">Deposit Money</p>
 
                   <span
                     class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
@@ -3047,8 +3138,8 @@
                         </div>
                       </div>
                     </div>
-                    <button class="text-blue-500 text-sm my-2">
-                      + Add a new account
+                    <button class="text-blue-500 text-sm my-2 addCardButton">
+                      + Add another card
                     </button>
                   </div>
 
@@ -3083,7 +3174,7 @@
                     Cancel
                   </span>
                   <span
-                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-gray-200 rounded-2xl md:w-full text-sm text-center cursor-pointer depositeMoneyContinueToReviewTransaction"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer depositeMoneyContinueToReviewTransaction"
                   >
                     Continue
                   </span>
@@ -3152,7 +3243,7 @@
                   <span
                     class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
                   >
-                    Deposite money
+                    Deposit money
                   </span>
                 </div>
               </div>
@@ -3354,7 +3445,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="text-blue-500 text-sm my-2">
+                <button class="text-blue-500 text-sm my-2 addCardButton">
                   + Add another card
                 </button>
               </div>
@@ -3390,7 +3481,7 @@
                 Cancel
               </span>
               <span
-                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center"
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center"
               >
                 Continue
               </span>
@@ -3527,7 +3618,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="text-blue-500 text-sm my-2">
+                <button class="text-blue-500 text-sm my-2 addCardButton">
                   + Add another card
                 </button>
               </div>
@@ -3563,7 +3654,7 @@
                 Cancel
               </span>
               <span
-                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center continueToPayment"
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
               >
                 Continue
               </span>
@@ -3700,7 +3791,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="text-blue-500 text-sm my-2">
+                <button class="text-blue-500 text-sm my-2 addCardButton">
                   + Add another card
                 </button>
               </div>
@@ -4049,7 +4140,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="text-blue-500 text-sm my-2">
+                <button class="text-blue-500 text-sm my-2 addCardButton">
                   + Add another card
                 </button>
               </div>
@@ -4085,7 +4176,7 @@
                 Cancel
               </span>
               <span
-                class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center continueToPayment"
+                class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
               >
                 Continue
               </span>
@@ -4272,7 +4363,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="text-blue-500 text-sm my-2">
+                <button class="text-blue-500 text-sm my-2 addCardButton">
                   + Add another card
                 </button>
               </div>

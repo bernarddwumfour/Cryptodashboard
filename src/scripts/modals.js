@@ -79,6 +79,11 @@ let elementsAndEvents = [
     trigger: ".deleteCardButton",
     target: "#deleteCardModal",
   },
+  //Add Credit card
+  {
+    trigger: ".addCardButton",
+    target: "#addCardModal",
+  },
 ];
 
 const replaceInnerContent = (container, contentContainer) => {
