@@ -495,12 +495,10 @@
               <aside
                 class="pb-6 px-2 max-h-screen col-span-1 text-white relative"
               >
-                <span class="closeModalButton relative block p-2 mx-2 mt-2">
-                  <img
-                    src="/closeButton.svg"
-                    class="w-7 h-7"
-                    alt="close button"
-                  />
+                <span
+                  class="closeModalButton material-symbols-outlined text-3xl relative block p-2 mx-2 mt-2"
+                >
+                  close
                 </span>
 
                 <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
@@ -512,60 +510,59 @@
                 </a>
                 <nav class="flex flex-col gap-6">
                   <menu class="flex flex-col">
+                    <li>
+                      <a
+                        href="/"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          other_houses
+                        </span>
+                        <span> Overview</span>
+                      </a>
+                    </li>
                     <span class="px-2 text-sm py-4 ps-4 font-semibold">
                       COINS
                     </span>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="buyCoinsMultipleOptionsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          currency_exchange
+                        </span>
                         <span> Buy coins </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          north_east
+                        </span>
                         <span> Send coins </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
-                        <span> Receieve coins </span>
-                      </a>
+                        <span class="material-symbols-outlined text-sm">
+                          south_west
+                        </span>
+                        <span> Receive coins </span>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          upgrade
+                        </span>
                         <span> Withdraw coins </span>
-                      </a>
+                      </button>
                     </li>
                   </menu>
 
@@ -574,43 +571,34 @@
                       MONEY
                     </span>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          north_east
+                        </span>
                         <span> Send money </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="depositeMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          vertical_align_bottom
+                        </span>
                         <span> Deposit money </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          upgrade
+                        </span>
                         <span> withdraw money </span>
-                      </a>
+                      </button>
                     </li>
                   </menu>
 
@@ -620,53 +608,45 @@
                     </span>
                     <li>
                       <a
-                        href="#"
+                        href="/transaction-volume.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          sync_alt
+                        </span>
                         <span> Transaction Volume </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/revenue-analysis.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          database
+                        </span>
                         <span> Revenue Analysis </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/channel-effectiveness.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          list_alt_check
+                        </span>
                         <span> Channel Effectiveness </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/visitor-flow.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          conversion_path
+                        </span>
                         <span> Visitor Flow & Behaviour </span>
                       </a>
                     </li>
@@ -678,31 +658,54 @@
                     </span>
                     <li>
                       <a
-                        href="#"
+                        href="/cards.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          credit_card
+                        </span>
                         <span> Cards </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/manage-accounts.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          account_balance
+                        </span>
                         <span> Bank Accounts </span>
                       </a>
                     </li>
                   </menu>
+
+                  <div class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      Support
+                    </span>
+                    <menu class="px-4 flex flex-wrap gap-2">
+                      <li>
+                        <a href="#" class="text-sm">Contact</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">About</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Privacy Policy</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Help</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Security</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Community</a>
+                      </li>
+                    </menu>
+                    <span class="px-4 text-sm py-2"> © 2024 Sizemug </span>
+                  </div>
                 </nav>
               </aside>
             </div>
@@ -734,7 +737,7 @@
                       <span class="text-white text-smS"> COINS </span>
                     </div>
                     <div class="flex justify-evenly gap-2">
-                      <div
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendCoinsButton"
                       >
                         <img
@@ -742,8 +745,8 @@
                           alt="send icon"
                           class="w-2 h-2"
                         /><span class="text-[0.7rem] inline-block"> Send </span>
-                      </div>
-                      <div
+                      </button>
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px]"
                       >
                         <img
@@ -753,8 +756,8 @@
                         /><span class="text-[0.7rem] inline-block">
                           Receive
                         </span>
-                      </div>
-                      <div
+                      </button>
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] buyCoinsMultipleOptionsButton"
                       >
                         <img
@@ -762,8 +765,8 @@
                           alt="buy icon"
                           class="w-2 h-2"
                         /><span class="text-[0.7rem] inline-block"> Buy </span>
-                      </div>
-                      <div
+                      </button>
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawCoinsButton"
                       >
                         <img
@@ -773,7 +776,7 @@
                         /><span class="text-[0.7rem] inline-block">
                           Withdraw
                         </span>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -794,7 +797,7 @@
                       <span class="text-white text-smS"> USD </span>
                     </div>
                     <div class="flex justify-evenly gap-2">
-                      <div
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendMoneyButton"
                       >
                         <img
@@ -802,8 +805,8 @@
                           alt="send icon"
                           class="w-2 h-2"
                         /><span class="text-[0.7rem] inline-block"> Send </span>
-                      </div>
-                      <div
+                      </button>
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] depositeMoneyButton"
                       >
                         <img
@@ -813,8 +816,8 @@
                         /><span class="text-[0.7rem] inline-block">
                           Deposit
                         </span>
-                      </div>
-                      <div
+                      </button>
+                      <button
                         class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawMoneyButton"
                       >
                         <img
@@ -824,7 +827,7 @@
                         /><span class="text-[0.7rem] inline-block">
                           Withdraw
                         </span>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -848,7 +851,7 @@
                   <span class="text-white text-smS"> COINS </span>
                 </div>
                 <div class="flex justify-evenly gap-2">
-                  <div
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendCoinsButton"
                   >
                     <img src="/send.svg" alt="send icon" class="w-2 h-2" /><span
@@ -856,8 +859,8 @@
                     >
                       Send
                     </span>
-                  </div>
-                  <div
+                  </button>
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px]"
                   >
                     <img
@@ -865,8 +868,8 @@
                       alt="receive icon"
                       class="w-2 h-2"
                     /><span class="text-[0.7rem] inline-block"> Receive </span>
-                  </div>
-                  <div
+                  </button>
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] buyCoinsMultipleOptionsButton"
                   >
                     <img src="/buy.svg" alt="buy icon" class="w-2 h-2" /><span
@@ -874,8 +877,8 @@
                     >
                       Buy
                     </span>
-                  </div>
-                  <div
+                  </button>
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawCoinsButton"
                   >
                     <img
@@ -883,7 +886,7 @@
                       alt="withdraw icon"
                       class="w-2 h-2"
                     /><span class="text-[0.7rem] inline-block"> Withdraw </span>
-                  </div>
+                  </button>
                 </div>
               </div>
 
@@ -927,7 +930,7 @@
                   <span class="text-white text-smS"> USD </span>
                 </div>
                 <div class="flex justify-evenly gap-2">
-                  <div
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] sendMoneyButton"
                   >
                     <img src="/send.svg" alt="send icon" class="w-2 h-2" /><span
@@ -935,8 +938,8 @@
                     >
                       Send
                     </span>
-                  </div>
-                  <div
+                  </button>
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] depositeMoneyButton"
                   >
                     <img
@@ -944,8 +947,8 @@
                       alt="deposit icon"
                       class="w-2 h-2"
                     /><span class="text-[0.7rem] inline-block"> Deposit </span>
-                  </div>
-                  <div
+                  </button>
+                  <button
                     class="flex justify-center gap-1 w-full items-center text-gray-400 bg-white rounded-md p-[5px] withdrawMoneyButton"
                   >
                     <img
@@ -953,7 +956,7 @@
                       alt="withdraw icon"
                       class="w-2 h-2"
                     /><span class="text-[0.7rem] inline-block"> Withdraw </span>
-                  </div>
+                  </button>
                 </div>
               </div>
 
@@ -1907,13 +1910,12 @@
         <!-- Card And Accounts Modals -->
 
         <div class="cardsAndAccountsModals">
-
           <template id="addCardModal">
             <div
               class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
             >
               <div
-                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
               >
                 <span class="md:hidden w-20"></span>
 
@@ -1926,10 +1928,11 @@
                 </span>
               </div>
 
-
               <div class="py-2">
                 <div class="pb-4">
-                  <span class="font-bold block py-1 text-sm text-indigo-900">Card holders name</span>
+                  <span class="font-bold block py-1 text-sm text-indigo-900"
+                    >Card holders name</span
+                  >
                   <input
                     type="text"
                     class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
@@ -1938,7 +1941,9 @@
                 </div>
 
                 <div class="pb-4">
-                  <span class="font-bold block py-1 text-sm text-indigo-900">Card number</span>
+                  <span class="font-bold block py-1 text-sm text-indigo-900"
+                    >Card number</span
+                  >
                   <input
                     type="text"
                     class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
@@ -1948,32 +1953,38 @@
 
                 <div class="flex gap-4 py-3">
                   <div class="pb-4">
-                    <span class="font-bold block py-1 text-sm text-indigo-900">Expiration date</span>
+                    <span class="font-bold block py-1 text-sm text-indigo-900"
+                      >Expiration date</span
+                    >
                     <input
                       type="text"
                       class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg 23/03/2025"
                     />
                   </div>
-  
-               
+
                   <div class="pb-4">
-                    <span class="font-bold block py-1 text-sm text-indigo-900">Cvv</span>
+                    <span class="font-bold block py-1 text-sm text-indigo-900"
+                      >Cvv</span
+                    >
                     <input
                       type="text"
                       class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg 1542"
                     />
-                  </div>   
+                  </div>
                 </div>
                 <div class="flex gap-2 items-center">
-                  <input class="accent-coin scale-125" type="checkbox" name="saveCard" id="saveCard">
+                  <input
+                    class="accent-coin scale-125"
+                    type="checkbox"
+                    name="saveCard"
+                    id="saveCard"
+                  />
                   <label for="saveCard" class="text-sm">
                     Save card for future use
                   </label>
                 </div>
-
-               
               </div>
 
               <div class="flex gap-4 py-2 mt-10">
@@ -1991,6 +2002,113 @@
             </div>
           </template>
 
+          <template id="selectBeneficiaryModal">
+            <div
+              class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+            >
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <div class="flex gap-6 items-center">
+                  <button class="material-symbols-outlined backButton"> arrow_back </button>
+                  <p class="font-semibold">Select Beneficiary</p>
+                </div>
+
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+              <div class="py-2">
+                <div class="pb-4 relative">
+                  <span
+                    class="absolute material-symbols-outlined top-3 left-3 text-gray-600"
+                  >
+                    search
+                  </span>
+                  <input
+                    type="text"
+                    class="p-3 ps-10 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                    placeholder="Search name"
+                  />
+                </div>
+
+                <div>
+                  <div class="lg:h-[400px] relative overflow-y-scroll">
+                    <div>
+                      <span class="text-xs font-semibold pb-3 block">
+                        Recents
+                      </span>
+
+                      <div class="flex gap-3 items-center pb-4">
+                        <span
+                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
+                        >
+                          FM
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="text-nowrap">Faith Mollins</span>
+                          <span class="text-gray-400 text-sm font-normal"
+                            >@faith</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="flex gap-3 items-center pb-4">
+                        <span
+                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
+                        >
+                          FM
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="text-nowrap">Faith Mollins</span>
+                          <span class="text-gray-400 text-sm font-normal"
+                            >@faith</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span class="text-xs pb-3 font-semibold block"> A </span>
+
+                      <div class="flex gap-3 items-center pb-4">
+                        <span
+                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
+                        >
+                          FM
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="text-nowrap">Faith Mollins</span>
+                          <span class="text-gray-400 text-sm font-normal"
+                            >@faith</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="flex gap-3 items-center pb-4">
+                        <span
+                          class="w-8 h-8 md:w-10 md:h-10 text-white rounded-full bg-primary text-center pt-2"
+                        >
+                          FM
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="text-nowrap">Faith Mollins</span>
+                          <span class="text-gray-400 text-sm font-normal"
+                            >@faith</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
         </div>
 
         <!-- End Of Card And Accounts Modals -->
@@ -2002,7 +2120,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2036,11 +2154,11 @@
                   <div class="overflow-x-scroll">
                     <div class="flex gap-4 p-2 recenttransaction">
                       <div class="flex flex-col gap-1 items-center">
-                        <span
-                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center"
+                        <button
+                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center selectBeneficiaryButton"
                         >
                           +
-                        </span>
+                        </button>
                         <span class="text-xs">Add</span>
                       </div>
 
@@ -2212,7 +2330,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2312,7 +2430,7 @@
             <template id="sendCoinsTransactionDetailsModal">
               <div class="w-screen max-w-full md:max-w-[550px] p-6">
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2392,7 +2510,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2470,7 +2588,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2526,7 +2644,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2721,7 +2839,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2790,7 +2908,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -2821,11 +2939,11 @@
                   <div class="overflow-x-scroll">
                     <div class="flex gap-4 p-2 recenttransaction">
                       <div class="flex flex-col gap-1 items-center">
-                        <span
-                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center"
+                        <button
+                          class="w-12 h-12 rounded-full bg-gray-200 text-4xl text-center selectBeneficiaryButton"
                         >
                           +
-                        </span>
+                        </button>
                         <span class="text-xs">Add</span>
                       </div>
 
@@ -2999,7 +3117,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -3187,7 +3305,7 @@
                 class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b md:border-[2px] border-none border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -3257,8 +3375,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold">Buy Coins</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
@@ -3272,7 +3391,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -3289,7 +3410,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -3306,7 +3429,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -3496,8 +3621,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold">Buy Coins</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
@@ -3508,7 +3634,9 @@
               class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
             >
               <div class="flex justify-start gap-2 items-center">
-                <span class="w-8 h-8 rounded-full">
+                <span
+                  class="w-8 h-8 rounded-full flex justify-center items-center"
+                >
                   <img src="/coin.svg" alt="coin svg" />
                 </span>
                 <span class="italic text-md font-semibold text-primary">
@@ -3669,8 +3797,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold">Buy Coins</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
@@ -3681,7 +3810,9 @@
               class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
             >
               <div class="flex justify-start gap-2 items-center">
-                <span class="w-8 h-8 rounded-full">
+                <span
+                  class="w-8 h-8 rounded-full flex justify-center items-center"
+                >
                   <img src="/coin.svg" alt="coin svg" />
                 </span>
                 <span class="italic text-md font-semibold text-primary">
@@ -3872,8 +4003,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold showTransactionErrorButton">
                 Review Transactions
               </p>
@@ -3970,8 +4102,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold">Buy Coins</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
@@ -3985,7 +4118,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4002,7 +4137,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4019,7 +4156,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4193,8 +4332,9 @@
             class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
           >
             <div
-              class="flex py-3 items-center justify-between border-b border-gray-300"
+              class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
             >
+              <span class="md:hidden block"></span>
               <p class="font-semibold">Buy Coins</p>
               <span class="w-8 h-8 closeModalButton cursor-pointer">
                 <img src="/closeButton.svg" alt="close button" />
@@ -4208,7 +4348,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4225,7 +4367,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4242,7 +4386,9 @@
                 >
                   <div class="flex gap-2">
                     <div class="flex justify-start gap-2 items-center">
-                      <span class="w-8 h-8 rounded-full">
+                      <span
+                        class="w-8 h-8 rounded-full flex justify-center items-center"
+                      >
                         <img src="/coin.svg" alt="coin svg" />
                       </span>
                       <span class="italic text-md font-semibold text-primary">
@@ -4465,7 +4611,7 @@
       </main>
     </div>
     <script type="module" src="/src/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>arrow_back
     <script>
       const swiper = new Swiper(".swiper", {
         // If we need pagination

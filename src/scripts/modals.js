@@ -140,26 +140,43 @@ let showModalOnTriggerClick = (elements) => {
         }
 
         //Handling All close Modal Events by close button
-        let closeModalButton = document
+        const closeModal = () => {
+          let closeModalButton = document
+            .querySelector("#modal")
+            .querySelector(".closeModalButton");
+          closeModalButton &&
+            closeModalButton.addEventListener("click", () => {
+              document.querySelector("#modal").classList.remove("flex");
+              document.querySelector("#modal").classList.add("hidden");
+            });
+        };
+        closeModal();
+
+        const cancelModal = () => {
+          let cancelModalButton = document
+            .querySelector("#modal")
+            .querySelector(".cancelModalButton");
+          cancelModalButton &&
+            cancelModalButton.addEventListener("click", () => {
+              document.querySelector("#modal").classList.remove("flex");
+              document.querySelector("#modal").classList.add("hidden");
+            });
+        };
+        cancelModal();
+
+        //Handling All Back Buttons
+        let backButton = document
           .querySelector("#modal")
-          .querySelector(".closeModalButton");
-        closeModalButton &&
-          closeModalButton.addEventListener("click", () => {
-            document.querySelector("#modal").classList.remove("flex");
-            document.querySelector("#modal").classList.add("hidden");
+          .querySelector(".backButton");
+        backButton &&
+          backButton.addEventListener("click", () => {
+            replaceInnerContent("#modalContent", "#sendMoneySelectUserModal");
+            cancelModal();
+            closeModal();
+            showModalOnTriggerClick([element]);
           });
 
-        let cancelModalButton = document
-          .querySelector("#modal")
-          .querySelector(".cancelModalButton");
-        cancelModalButton &&
-          cancelModalButton.addEventListener("click", () => {
-            document.querySelector("#modal").classList.remove("flex");
-            document.querySelector("#modal").classList.add("hidden");
-          });
-
-        //Handle all events("clicks") within the modal
-        // console.log(element.actions);
+        //Handle all events("clicks") within the modal using recursion
         element.actions && showModalOnTriggerClick(element.actions);
       });
     });

@@ -25,5 +25,10 @@ export const sendMoney = {
           },
         ],
       },
+      //Select Beneficiary
+      {
+        trigger :".selectBeneficiaryButton",
+        target :"#selectBeneficiaryModal"
+      }
     ],
   }
