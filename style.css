@@ -47,3 +47,37 @@
 .credit_card_selected .material-symbols-outlined {
   display: block !important;
 }
+
+
+/* Calendar Customization */
+.flatpickr-day.selected.startRange, .flatpickr-day.startRange.startRange, .flatpickr-day.endRange.startRange {
+  background-color: #8837E9;
+  border-radius: 100% !important;
+  border: 0;
+  box-shadow: 15px 0 0  #f9f3ff;
+  -webkit-box-shadow: 15px 0 0  #f9f3ff;
+}
+
+.flatpickr-day.selected.endRange, .flatpickr-day.startRange.endRange, .flatpickr-day.endRange.endRange{
+  background-color: #8837E9;
+  border-radius: 100% !important;
+  border: 0;
+}
+
+.flatpickr-day.inRange{
+  background-color: #f9f3ff ;
+  border: 0;
+  box-shadow: 15px 0 0  #f9f3ff;
+  box-sizing: content-box;
+  -webkit-box-shadow: 15px 0 0  #f9f3ff;
+}
+
+
+.flatpickr-current-month .flatpickr-monthDropdown-months{
+   /* Reset default appearance */
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+  border: none !important ;
+  outline: none !important;
+}
