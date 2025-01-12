@@ -81,3 +81,9 @@
   border: none !important ;
   outline: none !important;
 }
+
+
+.apexcharts-toolbar{
+  z-index: 1 !important;
+
+}

@@ -178,6 +178,8 @@ let showModalOnTriggerClick = (elements) => {
 
         //Handle all events("clicks") within the modal using recursion
         element.actions && showModalOnTriggerClick(element.actions);
+        showModalOnTriggerClick(elementsAndEvents);
+
       });
     });
   });
