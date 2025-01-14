@@ -121,6 +121,8 @@ const selectCreditCard = () => {
 selectCreditCard();
 
 let showModalOnTriggerClick = (elements) => {
+  let prev = [];
+
   elements.forEach((element) => {
     let triggers = document.querySelectorAll(element.trigger);
     triggers.forEach((trigger) => {
@@ -173,13 +175,14 @@ let showModalOnTriggerClick = (elements) => {
             replaceInnerContent("#modalContent", "#sendMoneySelectUserModal");
             cancelModal();
             closeModal();
-            showModalOnTriggerClick([element]);
+            console.log(prev[1]);
+            showModalOnTriggerClick(prev);
           });
 
         //Handle all events("clicks") within the modal using recursion
         element.actions && showModalOnTriggerClick(element.actions);
-        showModalOnTriggerClick(elementsAndEvents);
 
+        prev = [...elements];
       });
     });
   });
