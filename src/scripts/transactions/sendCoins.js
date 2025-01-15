@@ -2,7 +2,6 @@ export const sendCoins = {
   //Send Coins modals
   trigger: ".sendCoinsButton",
   target: "#sendCoinsSelectUserModal",
-  methods: [() => alert("method1"), () => alert("method2")],
   actions: [
     {
       trigger: ".sendCoinsContinueToReviewTransaction",

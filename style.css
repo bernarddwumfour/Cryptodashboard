@@ -82,6 +82,31 @@
   outline: none !important;
 }
 
+.flatpickr-day.selected{
+  background-color: #8837E9 !important;
+  border-color: #8837E9 !important;
+}
+
+@media (max-width:700px) {
+  
+.flatpickr-calendar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  margin-left: 0;
+  padding: 2rem;
+  left: 0 !important;
+}
+
+.flatpickr-innerContainer{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+}
 
 .apexcharts-toolbar{
   z-index: 1 !important;

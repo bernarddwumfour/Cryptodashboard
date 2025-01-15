@@ -169,18 +169,25 @@ let showModalOnTriggerClick = (elements) => {
         //Handling All Back Buttons
         let backButton = document
           .querySelector("#modal")
-          .querySelector(".backButton");
-        backButton &&
-          backButton.addEventListener("click", () => {
-            replaceInnerContent("#modalContent", "#sendMoneySelectUserModal");
-            cancelModal();
-            closeModal();
-            console.log(prev[1]);
-            showModalOnTriggerClick(prev);
-          });
+          .querySelectorAll(".backButton");
+        backButton.length>0 &&
+          backButton.forEach(button=>{
+            button.addEventListener("click", () => {
+              replaceInnerContent("#modalContent", "#sendMoneySelectUserModal");
+              cancelModal();
+              closeModal();
+              console.log(prev[1]);
+              showModalOnTriggerClick(prev);
+            });
+          })
 
         //Handle all events("clicks") within the modal using recursion
         element.actions && showModalOnTriggerClick(element.actions);
+
+
+
+        // Show modal on smaller screens from the sidebar
+        showModalOnTriggerClick(elementsAndEvents)
 
         prev = [...elements];
       });

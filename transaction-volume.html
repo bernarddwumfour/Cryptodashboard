@@ -1549,7 +1549,7 @@
 
                   <div
                   x-data="select"
-                  class="relative w-fit text-[.7rem] md:text-base"
+                  class="md:relative w-fit text-[.7rem] md:text-base"
                   @click.outside="open = false"
                 >
                   <button
@@ -1572,9 +1572,12 @@
                   </button>
 
                   <ul
-                    class="z-20 absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
+                    class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:left-auto absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
                     x-show="open"
-                  >                 
+                  >      
+                  <button class="material-symbols-outlined close mx-2 p-2" @click="toggle">
+                    close
+                  </button>           
                     <li
                       class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
                       @click="setChartType('Monthly')"
