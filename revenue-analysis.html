@@ -21,6 +21,11 @@
       rel="stylesheet"
       href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
     />
+    <!-- date picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -780,8 +785,12 @@
             data-controller="tabs"
             data-tabs-index-value="0"
           >
-            <div class="flex flex-col md:flex-row gap-2 justify-between items-center">
-              <span class="font-semibold self-start md:self-auto"> Coin Analysis </span>
+            <div
+              class="flex flex-col md:flex-row gap-2 justify-between items-center"
+            >
+              <span class="font-semibold self-start md:self-auto">
+                Coin Analysis
+              </span>
 
               <div>
                 <!-- Tabs -->
@@ -807,7 +816,11 @@
                 <div
                   class="flex p-2 md:p-2 text-xs rounded-lg border-2 cursor-pointer border-gray-200 items-center gap-2"
                 >
-                  <span class="material-symbols-outlined  pb-2 w-5 h-5 md:w-6 md:h-6"> cycle </span>
+                  <span
+                    class="material-symbols-outlined pb-2 w-5 h-5 md:w-6 md:h-6"
+                  >
+                    cycle
+                  </span>
                   <span class="md:block hidden"> Refresh table </span>
                 </div>
 
@@ -961,53 +974,178 @@
                     Coins Transactions By Type
                   </span>
 
-                  <div class="hs-dropdown relative inline-flex">
+                  <div
+                    x-data="select"
+                    class="md:relative w-fit min-w-[110px] text-[.7rem] md:text-base"
+                    @click.outside="open = false"
+                  >
                     <button
-                      id="hs-dropdown-default"
-                      type="button"
-                      class="hs-dropdown-toggle py-2 h-fit px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                      aria-haspopup="menu"
-                      aria-expanded="false"
-                      aria-label="Dropdown"
+                      @click="toggle"
+                      :class="(open) && 'ring-blue-600'"
+                      class="flex w-full items-center justify-between rounded bg-white p-2 ring-1 ring-gray-300"
                     >
-                      Date
+                      <span
+                        x-text="(ChartType == '') ? 'Monthly' : ChartType"
+                      ></span>
                       <svg
-                        class="hs-dropdown-open:rotate-180 size-4"
+                        class="fill-current h-4 w-8"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        viewBox="0 0 20 20"
                       >
-                        <path d="m6 9 6 6 6-6" />
+                        <path
+                          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        />
                       </svg>
                     </button>
 
-                    <div
-                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 !opacity-1 z-10 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                      role="menu"
-                      aria-orientation="vertical"
-                      aria-labelledby="hs-dropdown-default"
+                    <ul
+                      class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:left-auto absolute mt-1 w-full md:rounded bg-white ring-1 ring-gray-300"
+                      x-show="open"
                     >
-                      <div class="p-1 space-y-0.5">
-                        <a
-                          class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                          href="#"
+                      <div
+                        class="flex justify-between items-center md:hidden gap-6"
+                      >
+                        <button
+                          class="material-symbols-outlined close me-6 p-2"
+                          @click="toggle"
                         >
+                          close
+                        </button>
+
+                        <span class="text-sm font-semibold opacity-0">
                           Monthly
-                        </a>
-                        <a
-                          class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                          href="#"
-                        >
-                          Yearly
-                        </a>
+                        </span>
+
+                        <span class="w-8 h-8 mx-2"> </span>
                       </div>
-                    </div>
+
+                      <div
+                        x-data="{ open: false, selectedMonth: '' }"
+                        class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                        @click.outside="open = false"
+                      >
+                        <button
+                          @click="open = !open"
+                          :class="{ 'ring-blue-600': open }"
+                          class="flex w-full items-center justify-between rounded py-2 md:py-0"
+                        >
+                          <span>Monthly</span>
+                          <svg
+                            class="fill-current h-4 w-8 -rotate-90"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                            />
+                          </svg>
+                        </button>
+
+                        <ul
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          x-show="open"
+                          @click.outside="open = false"
+                        >
+                          <div
+                            class="flex justify-between items-center md:hidden gap-6"
+                          >
+                            <button
+                              class="material-symbols-outlined close me-6 p-2"
+                              @click="toggle"
+                            >
+                              close
+                            </button>
+
+                            <span class="text-sm font-semibold"> Monthly </span>
+
+                            <span class="w-8 h-8 mx-2"> </span>
+                          </div>
+
+                          <template
+                            x-for="month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']"
+                          >
+                            <li
+                              class="cursor-pointer m-2 rounded-lg select-none p-2 py-3 hover:bg-gray-200"
+                              @click="setChartType(month); toggle"
+                              x-text="month"
+                            ></li>
+                          </template>
+                        </ul>
+                      </div>
+
+                      <div
+                        x-data="{ open: false, selectedYear: '' }"
+                        class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                        @click.outside="open = false"
+                      >
+                        <button
+                          @click="open = !open"
+                          :class="{ 'ring-blue-600': open }"
+                          class="flex w-full items-center justify-between rounded py-2 md:py-0"
+                        >
+                          <span>Yearly</span>
+                          <svg
+                            class="fill-current h-4 w-8 -rotate-90"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                            />
+                          </svg>
+                        </button>
+
+                        <ul
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          x-show="open"
+                          @click.outside="open = false"
+                        >
+                          <div
+                            class="flex justify-between items-center md:hidden gap-6"
+                          >
+                            <button
+                              class="material-symbols-outlined close me-6 p-2"
+                              @click="toggle"
+                            >
+                              close
+                            </button>
+
+                            <span class="text-sm font-semibold"> Yearly </span>
+
+                            <span class="w-8 h-8 mx-2"> </span>
+                          </div>
+
+                          <template
+                            x-for="year in [
+                          '2013', '2014', '2015', '2016', '2017', 
+                          '2018', '2019', '2020', '2021', '2022', 
+                          '2023', '2024'
+                        ]"
+                          >
+                            <li
+                              class="cursor-pointer m-2 rounded-lg select-none p-2 py-3 hover:bg-gray-200"
+                              @click="setChartType(year); toggle"
+                              x-text="year"
+                            ></li>
+                          </template>
+                        </ul>
+                      </div>
+
+                      <hr
+                        class="bg-gray-200 my-2 w-[calc(100%-2rem)] relative left-1/2 -translate-x-1/2"
+                      />
+                      <div
+                        class="cursor-pointer relative m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      >
+                        <input
+                          type="text"
+                          class="absolute h-full cursor-pointer top-0 left-0 opacity-0 w-full"
+                          id="dateRangePicker"
+                          @change="(e)=>setChartType(e.target.value)"
+                        />
+                        Custom
+                      </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="p-2 md:p-6 flex justify-center items-center">
@@ -1073,53 +1211,178 @@
                     Money Transactions By Type
                   </span>
 
-                  <div class="hs-dropdown relative inline-flex">
+                  <div
+                    x-data="select"
+                    class="md:relative w-fit min-w-[110px] text-[.7rem] md:text-base"
+                    @click.outside="open = false"
+                  >
                     <button
-                      id="hs-dropdown-default"
-                      type="button"
-                      class="hs-dropdown-toggle py-2 h-fit px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                      aria-haspopup="menu"
-                      aria-expanded="false"
-                      aria-label="Dropdown"
+                      @click="toggle"
+                      :class="(open) && 'ring-blue-600'"
+                      class="flex w-full items-center justify-between rounded bg-white p-2 ring-1 ring-gray-300"
                     >
-                      Date
+                      <span
+                        x-text="(ChartType == '') ? 'Monthly' : ChartType"
+                      ></span>
                       <svg
-                        class="hs-dropdown-open:rotate-180 size-4"
+                        class="fill-current h-4 w-8"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        viewBox="0 0 20 20"
                       >
-                        <path d="m6 9 6 6 6-6" />
+                        <path
+                          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        />
                       </svg>
                     </button>
 
-                    <div
-                      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 !opacity-1 z-10 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                      role="menu"
-                      aria-orientation="vertical"
-                      aria-labelledby="hs-dropdown-default"
+                    <ul
+                      class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:left-auto absolute mt-1 w-full md:rounded bg-white ring-1 ring-gray-300"
+                      x-show="open"
                     >
-                      <div class="p-1 space-y-0.5">
-                        <a
-                          class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                          href="#"
+                      <div
+                        class="flex justify-between items-center md:hidden gap-6"
+                      >
+                        <button
+                          class="material-symbols-outlined close me-6 p-2"
+                          @click="toggle"
                         >
+                          close
+                        </button>
+
+                        <span class="text-sm font-semibold opacity-0">
                           Monthly
-                        </a>
-                        <a
-                          class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400"
-                          href="#"
-                        >
-                          Yearly
-                        </a>
+                        </span>
+
+                        <span class="w-8 h-8 mx-2"> </span>
                       </div>
-                    </div>
+
+                      <div
+                        x-data="{ open: false, selectedMonth: '' }"
+                        class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                        @click.outside="open = false"
+                      >
+                        <button
+                          @click="open = !open"
+                          :class="{ 'ring-blue-600': open }"
+                          class="flex w-full items-center justify-between rounded py-2 md:py-0"
+                        >
+                          <span>Monthly</span>
+                          <svg
+                            class="fill-current h-4 w-8 -rotate-90"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                            />
+                          </svg>
+                        </button>
+
+                        <ul
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          x-show="open"
+                          @click.outside="open = false"
+                        >
+                          <div
+                            class="flex justify-between items-center md:hidden gap-6"
+                          >
+                            <button
+                              class="material-symbols-outlined close me-6 p-2"
+                              @click="toggle"
+                            >
+                              close
+                            </button>
+
+                            <span class="text-sm font-semibold"> Monthly </span>
+
+                            <span class="w-8 h-8 mx-2"> </span>
+                          </div>
+
+                          <template
+                            x-for="month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']"
+                          >
+                            <li
+                              class="cursor-pointer m-2 rounded-lg select-none p-2 py-3 hover:bg-gray-200"
+                              @click="setChartType(month); toggle"
+                              x-text="month"
+                            ></li>
+                          </template>
+                        </ul>
+                      </div>
+
+                      <div
+                        x-data="{ open: false, selectedYear: '' }"
+                        class="cursor-pointer m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                        @click.outside="open = false"
+                      >
+                        <button
+                          @click="open = !open"
+                          :class="{ 'ring-blue-600': open }"
+                          class="flex w-full items-center justify-between rounded py-2 md:py-0"
+                        >
+                          <span>Yearly</span>
+                          <svg
+                            class="fill-current h-4 w-8 -rotate-90"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                            />
+                          </svg>
+                        </button>
+
+                        <ul
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          x-show="open"
+                          @click.outside="open = false"
+                        >
+                          <div
+                            class="flex justify-between items-center md:hidden gap-6"
+                          >
+                            <button
+                              class="material-symbols-outlined close me-6 p-2"
+                              @click="toggle"
+                            >
+                              close
+                            </button>
+
+                            <span class="text-sm font-semibold"> Yearly </span>
+
+                            <span class="w-8 h-8 mx-2"> </span>
+                          </div>
+
+                          <template
+                            x-for="year in [
+                            '2013', '2014', '2015', '2016', '2017', 
+                            '2018', '2019', '2020', '2021', '2022', 
+                            '2023', '2024'
+                          ]"
+                          >
+                            <li
+                              class="cursor-pointer m-2 rounded-lg select-none p-2 py-3 hover:bg-gray-200"
+                              @click="setChartType(year); toggle"
+                              x-text="year"
+                            ></li>
+                          </template>
+                        </ul>
+                      </div>
+
+                      <hr
+                        class="bg-gray-200 my-2 w-[calc(100%-2rem)] relative left-1/2 -translate-x-1/2"
+                      />
+                      <div
+                        class="cursor-pointer relative m-2 rounded-lg select-none p-2 hover:bg-gray-200"
+                      >
+                        <input
+                          type="text"
+                          class="absolute h-full cursor-pointer top-0 left-0 opacity-0 w-full"
+                          id="dateRangePicker"
+                          @change="(e)=>setChartType(e.target.value)"
+                        />
+                        Custom
+                      </div>
+                    </ul>
                   </div>
                 </div>
                 <div class="p-2 md:p-6 flex justify-center items-center">
@@ -1399,6 +1662,15 @@
 
       var chart = new ApexCharts(document.querySelector("#barChart"), barChart);
       chart.render();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#dateRangePicker", {
+        mode: "range",
+        dateFormat: "Y-m-d",
+        // disable: [new Date()],
+      });
     </script>
   </body>
 </html>
