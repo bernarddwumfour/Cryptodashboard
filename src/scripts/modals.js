@@ -62,7 +62,6 @@ let elementsAndEvents = [
     //Notification modal
     trigger: ".notificationButton",
     target: "#notificationModal",
-    methods: [() => alert("clicked")],
   },
   {
     //Sidebar Modal
@@ -170,8 +169,8 @@ let showModalOnTriggerClick = (elements) => {
         let backButton = document
           .querySelector("#modal")
           .querySelectorAll(".backButton");
-        backButton.length>0 &&
-          backButton.forEach(button=>{
+        backButton.length > 0 &&
+          backButton.forEach((button) => {
             button.addEventListener("click", () => {
               replaceInnerContent("#modalContent", "#sendMoneySelectUserModal");
               cancelModal();
@@ -179,15 +178,13 @@ let showModalOnTriggerClick = (elements) => {
               console.log(prev[1]);
               showModalOnTriggerClick(prev);
             });
-          })
+          });
 
         //Handle all events("clicks") within the modal using recursion
         element.actions && showModalOnTriggerClick(element.actions);
 
-
-
         // Show modal on smaller screens from the sidebar
-        showModalOnTriggerClick(elementsAndEvents)
+        showModalOnTriggerClick(elementsAndEvents);
 
         prev = [...elements];
       });

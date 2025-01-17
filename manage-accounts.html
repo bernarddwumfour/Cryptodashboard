@@ -504,21 +504,19 @@
             </nav>
           </header>
 
-          <!-- SIDEBAR -->
+          <!-- SIDEBAR MOBILE-->
 
           <template id="sidebar">
             <div
-              class="absolute overflow-y-scroll md:hidden top-0 left-0 w-5/6 max-w-[400px] h-full bg-gradient-to-tr from-[#DA4DAA] to-[#4D4BFE]"
+              class="absolute overflow-y-scroll lg:hidden top-0 left-0 w-5/6 max-w-[400px] h-full bg-gradient-to-tr from-[#DA4DAA] to-[#4D4BFE]"
             >
               <aside
                 class="pb-6 px-2 max-h-screen col-span-1 text-white relative"
               >
-                <span class="closeModalButton relative block p-2 mx-2 mt-2">
-                  <img
-                    src="/closeButton.svg"
-                    class="w-7 h-7"
-                    alt="close button"
-                  />
+                <span
+                  class="closeModalButton material-symbols-outlined text-3xl relative block p-2 mx-2 mt-2"
+                >
+                  close
                 </span>
 
                 <a href="/" class="logo py-4 flex relative mx-4 mb-6 left-0">
@@ -530,60 +528,59 @@
                 </a>
                 <nav class="flex flex-col gap-6">
                   <menu class="flex flex-col">
+                    <li>
+                      <a
+                        href="/"
+                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      >
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          other_houses
+                        </span>
+                        <span> Overview</span>
+                      </a>
+                    </li>
                     <span class="px-2 text-sm py-4 ps-4 font-semibold">
                       COINS
                     </span>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="buyCoinsMultipleOptionsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          currency_exchange
+                        </span>
                         <span> Buy coins </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          north_east
+                        </span>
                         <span> Send coins </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
-                        <span> Receieve coins </span>
-                      </a>
+                        <span class="material-symbols-outlined text-sm">
+                          south_west
+                        </span>
+                        <span> Receive coins </span>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          upgrade
+                        </span>
                         <span> Withdraw coins </span>
-                      </a>
+                      </button>
                     </li>
                   </menu>
 
@@ -592,43 +589,34 @@
                       MONEY
                     </span>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="sendMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          north_east
+                        </span>
                         <span> Send money </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="depositeMoneyButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          vertical_align_bottom
+                        </span>
                         <span> Deposit money </span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                      <button
+                        class="withdrawCoinsButton w-full text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-[.95rem]">
+                          upgrade
+                        </span>
                         <span> withdraw money </span>
-                      </a>
+                      </button>
                     </li>
                   </menu>
 
@@ -638,53 +626,45 @@
                     </span>
                     <li>
                       <a
-                        href="#"
+                        href="/transaction-volume.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          sync_alt
+                        </span>
                         <span> Transaction Volume </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/revenue-analysis.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          database
+                        </span>
                         <span> Revenue Analysis </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/channel-effectiveness.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          list_alt_check
+                        </span>
                         <span> Channel Effectiveness </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/visitor-flow.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          conversion_path
+                        </span>
                         <span> Visitor Flow & Behaviour </span>
                       </a>
                     </li>
@@ -696,31 +676,54 @@
                     </span>
                     <li>
                       <a
-                        href="#"
+                        href="/cards.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          credit_card
+                        </span>
                         <span> Cards </span>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/manage-accounts.html"
                         class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
                       >
-                        <img
-                          src="/buy.svg"
-                          class="w-4 h-4 text-white filt"
-                          alt="buy icon"
-                        />
+                        <span class="material-symbols-outlined text-sm">
+                          account_balance
+                        </span>
                         <span> Bank Accounts </span>
                       </a>
                     </li>
                   </menu>
+
+                  <div class="flex flex-col">
+                    <span class="px-2 text-sm py-4 ps-4 font-semibold">
+                      Support
+                    </span>
+                    <menu class="px-4 flex flex-wrap gap-2">
+                      <li>
+                        <a href="#" class="text-sm">Contact</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">About</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Privacy Policy</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Help</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Security</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-sm">Community</a>
+                      </li>
+                    </menu>
+                    <span class="px-4 text-sm py-2"> © 2024 Sizemug </span>
+                  </div>
                 </nav>
               </aside>
             </div>

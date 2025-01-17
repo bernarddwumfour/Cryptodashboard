@@ -827,7 +827,7 @@
               </div>
 
               <div
-                class="flex flex-col md:flex-row gap-2 md:gap-6 items-end md:items-center"
+                class="flex w-14 overflow-visible md:w-fit flex-col md:flex-row gap-2 md:gap-6 items-end md:items-center"
               >
                 <div
                   class="flex p-1 md:p-2 md:py-2 text-xs rounded-lg border-2 cursor-pointer border-gray-200 items-center gap-2"
@@ -838,7 +838,7 @@
 
                 <div
                   x-data="select"
-                  class="relative min-w-fit text-[.7rem] md:text-base"
+                  class="md:relative min-w-fit text-[.7rem] md:text-base"
                   @click.outside="open = false"
                 >
                   <button
@@ -861,7 +861,7 @@
                   </button>
 
                   <ul
-                    class="z-20 absolute mt-1 w-full rounded bg-white ring-1 ring-gray-300"
+                    class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:left-auto absolute mt-1 w-full md:rounded bg-white ring-1 ring-gray-300"
                     x-show="open"
                   >
                     <li
@@ -1619,7 +1619,7 @@
                         </button>
 
                         <ul
-                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-a absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
                           x-show="open"
                           @click.outside="open = false"
                         >
@@ -1673,7 +1673,7 @@
                         </button>
 
                         <ul
-                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-a absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
                           x-show="open"
                           @click.outside="open = false"
                         >
@@ -1857,7 +1857,7 @@
                         </button>
 
                         <ul
-                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-a absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
                           x-show="open"
                           @click.outside="open = false"
                         >
@@ -1911,7 +1911,7 @@
                         </button>
 
                         <ul
-                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-auto absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
+                          class="z-20 py-4 md:py-0 rounded-tl-2xl rounded-tr-2xl bottom-0 left-0 md:bottom-auto md:right-full md:left-a absolute mt-1 w-screen md:w-fit md:rounded bg-white ring-1 ring-gray-300"
                           x-show="open"
                           @click.outside="open = false"
                         >
