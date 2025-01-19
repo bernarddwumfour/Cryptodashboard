@@ -167,7 +167,7 @@
             <li>
               <a
                 href="/channel-effectiveness.html"
-                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                class="text-sm ps-4 bg-violet-500 bg-opacity-15 text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
               >
                 <span class="material-symbols-outlined text-sm">
                   list_alt_check
@@ -474,7 +474,9 @@
         <!-- END OF MODAL FOR NOTIFICATIONS -->
       </aside>
       <main class="col-span-6 lg:col-span-5 h-screen overflow-y-scroll">
-        <div class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl">
+        <div
+          class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl min-h-[calc(100%-1rem)]"
+        >
           <header
             class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
@@ -1282,7 +1284,7 @@
         },
         series: [
           {
-            name: "Series 1",
+            name: "Ad spent",
             data: [45, 42, 18, 15, 19, 23, 21, 45, 13],
           },
         ],
@@ -1293,6 +1295,13 @@
             opacityFrom: 0.7,
             opacityTo: 0.9,
             stops: [0, 90, 100],
+          },
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return "$" + val;
+            },
           },
         },
         xaxis: {
@@ -1330,7 +1339,7 @@
         },
         series: [
           {
-            name: "Series 1",
+            name: "Engagements",
             data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
           },
           // {
@@ -1382,7 +1391,7 @@
         },
         series: [
           {
-            name: "Series 1",
+            name: "Clicks",
             data: [25, 52, 48, 45, 39, 23, 52, 65, 13],
           },
         ],

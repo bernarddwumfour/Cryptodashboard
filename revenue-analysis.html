@@ -151,7 +151,7 @@
             <li>
               <a
                 href="/revenue-analysis.html"
-                class="text-sm ps-4 hover:bg-violet-500 hover:bg-opacity-15 hover:text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
+                class="text-sm ps-4 bg-violet-500 bg-opacity-15 text-violet-500 flex items-center gap-2 rounded-lg p-2 my-1"
               >
                 <span class="material-symbols-outlined text-sm">
                   database
@@ -469,7 +469,9 @@
         <!-- END OF MODAL FOR NOTIFICATIONS -->
       </aside>
       <main class="col-span-6 lg:col-span-5 h-screen overflow-y-scroll">
-        <div class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl">
+        <div
+          class="border-[1px] border-gray-300 md:m-2 md:rounded-3xl min-h-[calc(100%-1rem)]"
+        >
           <header
             class="flex justify-between border md:rounded-none rounded-2xl md:border-0 m-4 md:m-0 md:border-b-[1px] border-gay-300 p-2 md:p-4"
           >
@@ -978,7 +980,7 @@
             <div class="border border-gray-300 rounded-xl w-full">
               <div class="p-4 md:p-6">
                 <div class="flex justify-between gap-6 items-center">
-                  <span class="font-semibold text-lg py-2">
+                  <span class="font-semibold text-base md:text-lg py-2">
                     Coins Transactions By Type
                   </span>
 
@@ -1166,7 +1168,7 @@
                   <span class="font-semibold pb-2 block">
                     Transaction types
                   </span>
-                  <div class="flex justify-between gap-6">
+                  <div class="flex justify-between gap-6 text-xs md:text-sm">
                     <div class="flex flex-col gap-2">
                       <span class="flex gap-6 items-center">
                         <span
@@ -1215,7 +1217,7 @@
             <div class="border border-gray-300 rounded-xl w-full">
               <div class="p-4 md:p-6">
                 <div class="flex justify-between gap-6 items-center">
-                  <span class="font-semibold text-lg py-2">
+                  <span class="font-semibold text-base md:text-lg py-2">
                     Money Transactions By Type
                   </span>
 
@@ -1403,7 +1405,7 @@
                   <span class="font-semibold pb-2 block">
                     Transaction types
                   </span>
-                  <div class="flex justify-between gap-6">
+                  <div class="flex justify-between gap-6 text-xs md:text-sm">
                     <div class="flex flex-col gap-2">
                       <span class="flex gap-6 items-center">
                         <span
@@ -1460,6 +1462,7 @@
     </div>
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="./node_modules/preline/dist/preline.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
@@ -1484,6 +1487,7 @@
       const ctx = document.getElementById("myChart");
       const pieChart1 = document.getElementById("pieChart1");
       const pieChart2 = document.getElementById("pieChart2");
+      Chart.register(ChartDataLabels);
 
       // data for pie charts
       const pieChartData1 = {
@@ -1512,6 +1516,25 @@
             },
           },
         },
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+            datalabels: {
+              formatter: (value, context) => {
+                const dataset = context.chart.data.datasets[0];
+                const total = dataset.data.reduce((sum, val) => sum + val, 0);
+                const percentage = ((value / total) * 100).toFixed(2) + "%";
+                return percentage;
+              },
+              color: "#fff",
+              font: {
+                size: 14,
+              },
+            },
+          },
+        },
       });
 
       const pieChartData2 = {
@@ -1537,6 +1560,18 @@
             legend: {
               display: false,
             },
+            datalabels: {
+              formatter: (value, context) => {
+                const dataset = context.chart.data.datasets[0];
+                const total = dataset.data.reduce((sum, val) => sum + val, 0);
+                const percentage = ((value / total) * 100).toFixed(2) + "%";
+                return percentage;
+              },
+              color: "#fff",
+              font: {
+                size: 14,
+              },
+            },
           },
         },
       });
@@ -1561,11 +1596,11 @@
         },
         series: [
           {
-            name: "Series 1",
+            name: "Coins Sent",
             data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
           },
           {
-            name: "Series 2",
+            name: "Coins Received",
             data: [25, 5, 38, 35, 26, 10, 49, 45, 19],
           },
         ],
@@ -1606,11 +1641,11 @@
       var barChart = {
         series: [
           {
-            name: "Series 1",
+            name: "Coins Sent",
             data: [45, 52, 38, 45, 19, 23, 2, 45, 23],
           },
           {
-            name: "Series 2",
+            name: "Coins Received",
             data: [25, 5, 38, 35, 26, 10, 49, 45, 19],
           },
         ],
@@ -1649,11 +1684,6 @@
             "Sep",
             "Oct",
           ],
-        },
-        yaxis: {
-          title: {
-            text: "$ (thousands)",
-          },
         },
         fill: {
           opacity: 1,
