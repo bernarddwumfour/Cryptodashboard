@@ -119,6 +119,8 @@ const selectCreditCard = () => {
 //Card selection for all pages
 selectCreditCard();
 
+let previousElement;
+
 let showModalOnTriggerClick = (elements) => {
   let prev = [];
 
