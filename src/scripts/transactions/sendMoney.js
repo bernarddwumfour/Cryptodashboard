@@ -14,6 +14,14 @@ export const sendMoney = {
             {
               trigger: ".showTransactionSuccessButton",
               target: "#showTransactionSuccessModal",
+              methods: [
+                () => {
+                  let successmessage =
+                    document.querySelector("#successMessage");
+                  successmessage.innerHTML =
+                    "🎉 Money Sent! You’ve successfully sent $200.00 to @airj543";
+                },
+              ],
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",

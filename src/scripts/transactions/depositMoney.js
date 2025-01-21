@@ -14,6 +14,14 @@ export const depositeMoney = {
             {
               trigger: ".showTransactionSuccessButton",
               target: "#showTransactionSuccessModal",
+              methods: [
+                () => {
+                  let successmessage =
+                    document.querySelector("#successMessage");
+                  successmessage.innerHTML =
+                    "🎉 Deposit Successful! $200.00 has been added to your Money Wallet.";
+                },
+              ],
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",

@@ -14,6 +14,14 @@ export const withdrawMoney = {
             {
               trigger: ".showTransactionSuccessButton",
               target: "#showTransactionSuccessModal",
+              methods: [
+                () => {
+                  let successmessage =
+                    document.querySelector("#successMessage");
+                  successmessage.innerHTML =
+                    "🎉 Withdrawal Successful! $2000.00 has been sent to your card";
+                },
+              ],
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",

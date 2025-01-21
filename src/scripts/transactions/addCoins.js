@@ -17,6 +17,14 @@ export const addCoins = {
             {
               trigger: ".showTransactionSuccessButton",
               target: "#showTransactionSuccessModal",
+              methods: [
+                () => {
+                  let successmessage =
+                    document.querySelector("#successMessage");
+                  successmessage.innerHTML =
+                    "🎉 Purchase Successful! 50 Coins have been added to your wallet.";
+                },
+              ],
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
@@ -55,6 +63,14 @@ export const addCoinsCustom = {
             {
               trigger: ".showTransactionSuccessButton",
               target: "#showTransactionSuccessModal",
+              methods: [
+                () => {
+                  let successmessage =
+                    document.querySelector("#successMessage");
+                  successmessage.innerHTML =
+                    "🎉 Purchase Successful! 50 Coins have been added to your wallet.";
+                },
+              ],
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",

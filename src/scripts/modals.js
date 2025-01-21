@@ -88,8 +88,6 @@ let elementsAndEvents = [
 const replaceInnerContent = (container, contentContainer) => {
   let contentToReplace = document.querySelector(contentContainer).innerHTML;
   document.querySelector(container).innerHTML = contentToReplace;
-  // console.log(contentToReplace);
-  // console.log(document.querySelector(container))
 };
 
 //Selecting Card To Edit Or Delete
