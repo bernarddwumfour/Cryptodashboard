@@ -1,4 +1,9 @@
-import { coinToMoney, getTransactionDetails } from "../transactions";
+import {
+  coinToMoney,
+  getTransactionDetails,
+  moneyToCoins,
+  setTransactionAmount,
+} from "../transactions";
 
 export const addCoins = {
   trigger: ".addCoinsButton",
@@ -60,7 +65,10 @@ export const addCoins = {
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");
-                      modal.querySelectorAll("Amount").innerHTML = `${
+                      modal.querySelectorAll(".Amount").innerHTML = `${
+                        getTransactionDetails().amount
+                      } coins`;
+                      modal.querySelectorAll("transactionType").innerHTML = `${
                         getTransactionDetails().amount
                       } coins`;
                     },
@@ -83,10 +91,57 @@ export const addCoins = {
 export const addCoinsCustom = {
   trigger: ".addCoinsCustomButton",
   target: "#buyCoinsCustomInput",
+  methods: [
+    () => {
+      const coinAmount = document.querySelectorAll(".coinAmount");
+      coinAmount.forEach((coin) => {
+        coin.addEventListener("click", () => {
+          setTransactionType("addCoins");
+          setTransactionAmount(coin.dataset.amount);
+          console.log(getTransactionDetails());
+        });
+      });
+    },
+
+    () => {
+      let modal = document.querySelector("#modal");
+      modal.querySelector("#moneyAmount").addEventListener("keyup", () => {
+        modal.querySelector("#coinAmount").value = moneyToCoins(
+          modal.querySelector("#moneyAmount").value
+        );
+        modal.querySelector(".moneyAmount").innerHTML =
+          modal.querySelector("#moneyAmount").value;
+        setTransactionAmount(
+          moneyToCoins(modal.querySelector("#moneyAmount").value)
+        );
+      });
+      modal.querySelector("#moneyAmount").addEventListener("change", () => {
+        modal.querySelector("#coinAmount").value = moneyToCoins(
+          modal.querySelector("#moneyAmount").value
+        );
+        modal.querySelector(".moneyAmount").innerHTML =
+          modal.querySelector("#moneyAmount").value;
+        setTransactionAmount(
+          moneyToCoins(modal.querySelector("#moneyAmount").value)
+        );
+      });
+    },
+  ],
   actions: [
     {
       trigger: ".continueToPayment",
       target: "#reviewTransaction",
+      methods: [
+        () => {
+          let modal = document.querySelector("#modal");
+          let moneyAmountField = modal.querySelectorAll(
+            ".moneyAmountInputField"
+          );
+          moneyAmountField.forEach((field) => {
+            field.value = `$${coinToMoney(getTransactionDetails().amount)}`;
+          });
+        },
+      ],
       actions: [
         {
           trigger: ".showTransactionErrorButton",
@@ -103,8 +158,9 @@ export const addCoinsCustom = {
                 () => {
                   let successmessage =
                     document.querySelector("#successMessage");
-                  successmessage.innerHTML =
-                    "🎉 Purchase Successful! 50 Coins have been added to your wallet.";
+                  successmessage.innerHTML = `🎉 Purchase Successful! ${
+                    getTransactionDetails().amount
+                  } Coins have been added to your wallet.`;
                 },
               ],
               actions: [

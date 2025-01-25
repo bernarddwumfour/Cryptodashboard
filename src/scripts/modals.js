@@ -15,6 +15,18 @@ let elementsAndEvents = [
   {
     trigger: ".buyCoinsMultipleOptionsButton",
     target: "#buyCoinsMultipleOptionsModal",
+    methods: [
+      () => {
+        const coinAmount = document.querySelectorAll(".coinAmount");
+        coinAmount.forEach((coin) => {
+          coin.addEventListener("click", () => {
+            setTransactionType("addCoins");
+            setTransactionAmount(coin.dataset.amount);
+            console.log(getTransactionDetails());
+          });
+        });
+      },
+    ],
     actions: [
       {
         // trigger: ".payWithCardMultipleCoinOptionsButton",
