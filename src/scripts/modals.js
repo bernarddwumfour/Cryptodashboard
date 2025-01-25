@@ -1,3 +1,8 @@
+import {
+  getTransactionDetails,
+  setTransactionAmount,
+  setTransactionType,
+} from "./transactions";
 import { addBankAccount } from "./transactions/addBankAccount";
 import { addCoins, addCoinsCustom } from "./transactions/addCoins";
 import { depositeMoney } from "./transactions/depositMoney";
@@ -113,6 +118,15 @@ const selectCreditCard = () => {
       }
     });
 };
+
+const coinAmount = document.querySelectorAll(".coinAmount");
+coinAmount.forEach((coin) => {
+  coin.addEventListener("click", () => {
+    setTransactionType("addCoins");
+    setTransactionAmount(coin.dataset.amount);
+    console.log(getTransactionDetails());
+  });
+});
 
 //Card selection for all pages
 selectCreditCard();

@@ -1,7 +1,20 @@
+import {
+  getTransactionDetails,
+  setTransactionAmount,
+  setTransactionType,
+} from "../transactions";
+
 export const sendMoney = {
   //Send money modals
   trigger: ".sendMoneyButton",
   target: "#sendMoneySelectUserModal",
+  methods: [
+    () => {
+      setTransactionType("sendMoney");
+      setTransactionAmount(200);
+      console.log(getTransactionDetails());
+    },
+  ],
   actions: [
     {
       trigger: ".sendMoneyContinueToReviewTransaction",
