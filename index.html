@@ -1907,7 +1907,7 @@
         <div class="transactionModals">
           <div class="coinModals">
             <div class="buyCoinsModals">
-              <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL  -->
+              <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL ### -->
               <template id="buyCoinsCustomInput">
                 <div
                   class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
@@ -1917,7 +1917,9 @@
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
-                    <span class="w-8 h-8 closeModalButton cursor-pointer">
+                    <span
+                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
@@ -2168,12 +2170,12 @@
 
                   <div class="flex gap-4 py-2 mt-10">
                     <button
-                      class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+                      class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                     >
                       Cancel
                     </button>
                     <button
-                      class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+                      class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToPayment"
                     >
                       Continue
                     </button>
@@ -2182,7 +2184,7 @@
               </template>
               <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL  -->
 
-              <!-- TEMPLATE FOR ADD COIN MODAL -->
+              <!-- TEMPLATE FOR ADD COIN MODAL ###-->
               <template id="addCoinsModal">
                 <div
                   class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
@@ -2192,7 +2194,9 @@
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
-                    <span class="w-8 h-8 closeModalButton cursor-pointer">
+                    <span
+                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
@@ -2360,12 +2364,12 @@
 
                   <div class="flex gap-4 py-2 mt-10">
                     <button
-                      class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+                      class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                     >
                       Cancel
                     </button>
                     <button
-                      class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+                      class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToPayment"
                     >
                       Continue
                     </button>
@@ -2374,7 +2378,7 @@
               </template>
               <!-- END OF TEMPLATE FOR ADD COIN MODAL -->
 
-              <!-- TEMPLATE FOR CHOOSE PAYEMENT METHOD -->
+              <!-- TEMPLATE FOR CHOOSE PAYEMENT METHOD ### -->
               <template id="choosePaymentMethod">
                 <div
                   class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
@@ -2384,7 +2388,9 @@
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
-                    <span class="w-8 h-8 closeModalButton cursor-pointer">
+                    <span
+                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
@@ -2576,7 +2582,7 @@
 
                   <div class="flex gap-4 py-2 mt-10">
                     <span
-                      class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                      class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                     >
                       Cancel
                     </span>
@@ -3994,12 +4000,12 @@
 
                 <div class="flex gap-4 py-2 mt-10">
                   <button
-                    class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
-                    class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToSpinner"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToSpinner"
                   >
                     Continue
                   </button>
@@ -4012,7 +4018,7 @@
 
             <template id="spinnerModal">
               <div
-                class="w-full min-w-[200px] p-10 flex relative justify-center items-center showTransactionSuccessButton"
+                class="w-full min-w-[200px] p-10 flex left-0 md:left-auto absolute md:relative justify-center items-center bottom-20 md:bottom-0 showTransactionSuccessButton"
               >
                 <span class="loader"></span>
               </div>
@@ -4080,7 +4086,9 @@
                 >
                   <span class="md:hidden block"></span>
                   <p class="font-semibold">Buy Coins</p>
-                  <span class="w-8 h-8 closeModalButton cursor-pointer">
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
                 </div>
@@ -4307,12 +4315,12 @@
 
                 <div class="flex gap-4 py-2 mt-10">
                   <button
-                    class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cursor-pointer cancelModalButton"
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
-                    class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToPayment"
                   >
                     Continue
                   </button>
@@ -4333,7 +4341,9 @@
                 >
                   <span class="md:hidden block"></span>
                   <p class="font-semibold">Buy Coins</p>
-                  <span class="w-8 h-8 closeModalButton cursor-pointer">
+                  <span
+                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
                 </div>
@@ -4588,12 +4598,12 @@
 
                 <div class="flex gap-4 py-2 mt-10">
                   <button
-                    class="p-2 text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                    class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
-                    class="p-2 text-white bg-primary rounded-2xl w-full text-sm text-center continueToPayment"
+                    class="absolute w-[calc(100%-3rem)] md:bottom-0 bottom-6 md:relative p-4 md:p-2 text-white bg-primary rounded-2xl md:w-full text-sm text-center cursor-pointer continueToPayment"
                   >
                     Continue
                   </button>

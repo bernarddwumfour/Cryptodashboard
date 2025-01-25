@@ -3,6 +3,7 @@ import {
   getTransactionDetails,
   moneyToCoins,
   setTransactionAmount,
+  setTransactionType,
 } from "../transactions";
 
 export const addCoins = {

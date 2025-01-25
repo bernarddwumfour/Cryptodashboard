@@ -25,15 +25,15 @@ export const setTransactionMessage = (message) =>
 export const getTransactionDetails = () => transactionDetails;
 
 export const coinToMoney = (coinAmount) => {
-  if (coinAmount > 500) {
-    return coinAmount / 11;
+  if (coinAmount >= 500) {
+    return Number(coinAmount / 10) - Number(coinAmount / 100);
   }
   return coinAmount / 10;
 };
 
 export const moneyToCoins = (moneyAmount) => {
-  if (moneyAmount > 50) {
-    return moneyAmount * 11;
+  if (moneyAmount >= 50) {
+    return Number(moneyAmount * 10) + Number(moneyAmount);
   }
-  return moneyAmount * 10;
+  return Number(moneyAmount * 10);
 };
