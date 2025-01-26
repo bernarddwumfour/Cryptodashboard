@@ -115,7 +115,6 @@ export const addCoinsCustom = {
         setTransactionAmount(
           moneyToCoins(modal.querySelector("#moneyAmount").value)
         );
-        setTransactionType("Add coins");
       });
       modal.querySelector("#moneyAmount").addEventListener("change", () => {
         modal.querySelector("#coinAmount").value = moneyToCoins(
@@ -126,8 +125,8 @@ export const addCoinsCustom = {
         setTransactionAmount(
           moneyToCoins(modal.querySelector("#moneyAmount").value)
         );
-        setTransactionType("Add coins");
       });
+      setTransactionType("Add coins");
     },
   ],
   actions: [

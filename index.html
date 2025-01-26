@@ -3033,9 +3033,10 @@
                       <span class="font-bold block py-1">Amount</span>
                       <div class="relative">
                         <input
-                          type="text"
+                          type="number"
                           class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                           placeholder="Coins"
+                          id="coinAmount"
                         />
                         <span
                           class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-2 rounded-md"
@@ -3054,6 +3055,8 @@
                         type="text"
                         class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="$0.00"
+                        id="moneyAmount"
+                        readonly
                       />
                     </div>
                   </div>
@@ -3100,8 +3103,9 @@
                   <div class="relative">
                     <input
                       type="text"
-                      class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
+                      class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl coinAmountInputField"
                       value="400 coins"
+                      readonly
                     />
                     <img
                       src="/pencil.svg"
