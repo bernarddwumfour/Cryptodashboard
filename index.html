@@ -2794,6 +2794,7 @@
                         type="text"
                         class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="Coins"
+                        id="coinAmount"
                       />
                     </div>
 
@@ -2806,6 +2807,7 @@
                         type="text"
                         class="p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
                         placeholder="Tyepe here..."
+                        id="transactionMessage"
                       >
                       </textarea>
                     </div>
@@ -2873,8 +2875,9 @@
                   <div class="relative">
                     <input
                       type="text"
-                      class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl"
-                      value="400 coins"
+                      class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl coinAmountInputField"
+                      value="50 coins"
+                      required
                     />
                     <img
                       src="/pencil.svg"
@@ -2918,17 +2921,22 @@
                   <div class="py-6">
                     <div class="flex justify-between gap-6 py-3">
                       <span class="text-gray-400">Transaction ID</span>
-                      <span> TR1122233098 </span>
+                      <span id="transactionId"> TR1122233098 </span>
                     </div>
 
                     <div class="flex justify-between gap-6 py-3">
                       <span class="text-gray-400">date</span>
-                      <span> 03, Dec 2023 | 01:15 pm </span>
+                      <span id="transactionDate">
+                        03, Dec 2023 | 01:15 pm
+                      </span>
                     </div>
 
                     <div class="flex justify-between gap-6 py-3">
                       <span class="text-gray-400">Transaction type</span>
-                      <span class="text-red-600 font-semibold">
+                      <span
+                        id="transactionType"
+                        class="text-red-600 font-semibold"
+                      >
                         Send coins
                       </span>
                     </div>
@@ -2940,12 +2948,15 @@
 
                     <div class="flex justify-between gap-6 py-3">
                       <span class="text-gray-400">Amount</span>
-                      <span> -400 coins </span>
+                      <p><span id="transactionAmount"> -400</span> coins</p>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      id="transactionMessageContainer"
+                      class="flex justify-between gap-6 py-3 hidden"
+                    >
                       <span class="text-gray-400">Message</span>
-                      <span>
+                      <span id="transactionMessage">
                         Just a little something to say thank you! 🙌
                       </span>
                     </div>
@@ -2959,7 +2970,9 @@
                           <span
                             class="w-2 h-2 rounded-full bg-green-500"
                           ></span>
-                          <span class="text-sm">Completed</span>
+                          <span id="transactionStatus" class="text-sm"
+                            >Completed</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -3034,7 +3047,7 @@
 
                     <div class="pb-4">
                       <div class="py-2">
-                        <span class="font-bold py-2">Coin Conversion</span
+                        <span class="font-bold py-2">Money Conversion</span
                         ><span class="text-gray-400 px-2">(USD)</span>
                       </div>
                       <input

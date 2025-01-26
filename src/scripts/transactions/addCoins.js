@@ -66,12 +66,12 @@ export const addCoins = {
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");
-                      modal.querySelectorAll(".Amount").innerHTML = `${
+                      modal.querySelector("#transactionAmount").innerHTML = `${
                         getTransactionDetails().amount
-                      } coins`;
-                      modal.querySelectorAll("transactionType").innerHTML = `${
-                        getTransactionDetails().amount
-                      } coins`;
+                      }`;
+                      modal.querySelector("#transactionType").innerHTML = `${
+                        getTransactionDetails().type
+                      }`;
                     },
                   ],
                 },
@@ -97,7 +97,7 @@ export const addCoinsCustom = {
       const coinAmount = document.querySelectorAll(".coinAmount");
       coinAmount.forEach((coin) => {
         coin.addEventListener("click", () => {
-          setTransactionType("addCoins");
+          setTransactionType("Add coins");
           setTransactionAmount(coin.dataset.amount);
           console.log(getTransactionDetails());
         });
@@ -115,6 +115,7 @@ export const addCoinsCustom = {
         setTransactionAmount(
           moneyToCoins(modal.querySelector("#moneyAmount").value)
         );
+        setTransactionType("Add coins");
       });
       modal.querySelector("#moneyAmount").addEventListener("change", () => {
         modal.querySelector("#coinAmount").value = moneyToCoins(
@@ -125,6 +126,7 @@ export const addCoinsCustom = {
         setTransactionAmount(
           moneyToCoins(modal.querySelector("#moneyAmount").value)
         );
+        setTransactionType("Add coins");
       });
     },
   ],
@@ -168,6 +170,17 @@ export const addCoinsCustom = {
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
                   target: "#sendCoinsTransactionDetailsModal",
+                  methods: [
+                    () => {
+                      let modal = document.querySelector("#modal");
+                      modal.querySelector("#transactionAmount").innerHTML = `${
+                        getTransactionDetails().amount
+                      }`;
+                      modal.querySelector("#transactionType").innerHTML = `${
+                        getTransactionDetails().type
+                      }`;
+                    },
+                  ],
                 },
               ],
             },

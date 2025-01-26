@@ -134,7 +134,7 @@ const selectCreditCard = () => {
 const coinAmount = document.querySelectorAll(".coinAmount");
 coinAmount.forEach((coin) => {
   coin.addEventListener("click", () => {
-    setTransactionType("addCoins");
+    setTransactionType("Add coins");
     setTransactionAmount(coin.dataset.amount);
     console.log(getTransactionDetails());
   });
@@ -218,11 +218,11 @@ let showModalOnTriggerClick = (elements) => {
   });
 };
 
-//Closing modal by clicking on backdrop
-let backdrop = document.querySelector("#backdrop");
-backdrop &&
-  backdrop.addEventListener("click", () => {
-    document.querySelector("#modal").classList.add("hidden");
-  });
+// //Closing modal by clicking on backdrop
+// let backdrop = document.querySelector("#backdrop");
+// backdrop &&
+//   backdrop.addEventListener("click", () => {
+//     document.querySelector("#modal").classList.add("hidden");
+//   });
 
 showModalOnTriggerClick(elementsAndEvents);
