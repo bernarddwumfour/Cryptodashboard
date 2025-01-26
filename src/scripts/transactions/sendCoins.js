@@ -34,7 +34,7 @@ export const sendCoins = {
           );
         });
 
-      // setTransactionType("Send coins");
+      setTransactionType("Send coins");
     },
   ],
   actions: [
@@ -48,8 +48,6 @@ export const sendCoins = {
           coinAmountField.forEach((field) => {
             field.value = `${getTransactionDetails().amount} coins`;
           });
-          setTransactionType("Send Coins");
-          console.log(transactionDetails);
         },
       ],
       actions: [
