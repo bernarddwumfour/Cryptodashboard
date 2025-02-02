@@ -6,6 +6,7 @@ import {
 import { addBankAccount } from "./transactions/addBankAccount";
 import { addCoins, addCoinsCustom } from "./transactions/addCoins";
 import { depositeMoney } from "./transactions/depositMoney";
+import { displayTransactionDetails } from "./transactions/dispayTransactionDetails";
 import { sendCoins } from "./transactions/sendCoins";
 import { sendMoney } from "./transactions/sendMoney";
 import { withdrawCoins } from "./transactions/withdrawCoins";
@@ -50,7 +51,7 @@ let elementsAndEvents = [
                 actions: [
                   {
                     trigger: ".sendCoinsShowTransactionDetailsButton",
-                    target: "#sendCoinsTransactionDetailsModal",
+                    target: "#transactionDetailsModal",
                   },
                 ],
               },
@@ -88,7 +89,7 @@ let elementsAndEvents = [
   {
     //View Transaction details
     trigger: ".viewTranscationDetailsButton",
-    target: "#sendCoinsTransactionDetailsModal",
+    target: "#transactionDetailsModal",
   },
   //Remove Credit card
   {
@@ -145,7 +146,7 @@ selectCreditCard();
 
 let previousElement;
 
-let showModalOnTriggerClick = (elements) => {
+const showModalOnTriggerClick = (elements) => {
   let prev = [];
 
   elements.forEach((element) => {
@@ -225,4 +226,8 @@ let showModalOnTriggerClick = (elements) => {
 //     document.querySelector("#modal").classList.add("hidden");
 //   });
 
-showModalOnTriggerClick(elementsAndEvents);
+window.onload = () => {
+  showModalOnTriggerClick(elementsAndEvents);
+};
+
+export { showModalOnTriggerClick };

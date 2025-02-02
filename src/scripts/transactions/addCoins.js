@@ -62,7 +62,7 @@ export const addCoins = {
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
-                  target: "#sendCoinsTransactionDetailsModal",
+                  target: "#transactionDetailsModal",
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");
@@ -85,6 +85,11 @@ export const addCoins = {
     {
       trigger: ".addCardButton",
       target: "#addCardModal",
+    },
+    //Add Paypal Account
+    {
+      trigger: ".addPaypalAccountButton",
+      target: "#addPaypalAccountModal",
     },
   ],
 };
@@ -168,7 +173,7 @@ export const addCoinsCustom = {
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
-                  target: "#sendCoinsTransactionDetailsModal",
+                  target: "#transactionDetailsModal",
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");
@@ -191,6 +196,11 @@ export const addCoinsCustom = {
     {
       trigger: ".addCardButton",
       target: "#addCardModal",
+    },
+    //Add Paypal Account
+    {
+      trigger: ".addPaypalAccountButton",
+      target: "#addPaypalAccountModal",
     },
   ],
 };

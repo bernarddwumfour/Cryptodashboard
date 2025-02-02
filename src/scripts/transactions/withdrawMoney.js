@@ -56,7 +56,7 @@ export const withdrawMoney = {
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
-                  target: "#sendCoinsTransactionDetailsModal",
+                  target: "#transactionDetailsModal",
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");
@@ -79,6 +79,11 @@ export const withdrawMoney = {
     {
       trigger: ".addCardButton",
       target: "#addCardModal",
+    },
+    //Add Paypal Account
+    {
+      trigger: ".addPaypalAccountButton",
+      target: "#addPaypalAccountModal",
     },
   ],
 };

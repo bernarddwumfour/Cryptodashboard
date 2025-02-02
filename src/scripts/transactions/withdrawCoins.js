@@ -65,7 +65,7 @@ export const withdrawCoins = {
               actions: [
                 {
                   trigger: ".sendCoinsShowTransactionDetailsButton",
-                  target: "#sendCoinsTransactionDetailsModal",
+                  target: "#transactionDetailsModal",
                   methods: [
                     () => {
                       let modal = document.querySelector("#modal");

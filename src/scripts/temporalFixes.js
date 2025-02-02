@@ -1,3 +1,6 @@
+import { showModalOnTriggerClick } from "./modals";
+import { displayTransactionDetails } from "./transactions/dispayTransactionDetails";
+
 function switchContentOnElementClick(
   trigger,
   contentToBeReplaced,
@@ -42,6 +45,7 @@ switchContentOnElementClick(
   ".withdrawalerror"
 );
 
+//Adding dummy users recent transactions
 let userstemplate = ``;
 for (let i = 0; i < 30; i++) {
   userstemplate += `
@@ -56,7 +60,11 @@ for (let i = 0; i < 30; i++) {
 }
 let transactionSectionUsers =
   document.getElementsByClassName("recenttransaction")[0];
-  transactionSectionUsers ? transactionSectionUsers.innerHTML = userstemplate : "";
+transactionSectionUsers
+  ? (transactionSectionUsers.innerHTML = userstemplate)
+  : "";
+
+//Adding dummy users and click functionality for recent transactions
 
 let getUsers = async () => {
   let users = [];
@@ -70,7 +78,7 @@ let getUsers = async () => {
       image: data.results[0].picture.medium,
     });
     userstemplate += `
-         <div class="flex flex-col gap-1 items-center">
+         <div class="flex flex-col gap-1 items-center displayTransactionDetailsButton">
                     <span
                       class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200 overflow-hidden"
                     >
@@ -85,8 +93,9 @@ let getUsers = async () => {
                   `;
   }
 
-
   transactionSectionUsers.innerHTML = userstemplate;
+  showModalOnTriggerClick([displayTransactionDetails]);
+
   console.log(users);
 };
 
