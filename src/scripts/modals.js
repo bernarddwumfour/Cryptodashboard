@@ -101,6 +101,27 @@ let elementsAndEvents = [
     trigger: ".addCardButton",
     target: "#addCardModal",
   },
+
+  //Show transaction details and make a new transaction
+  {
+    trigger: ".viewBuyCoinsTranscationDetailsButton",
+    target: "#viewBuyCoinsTranscationDetailsModal",
+    actions: [...addCoins.actions],
+  },
+  {
+    trigger: ".viewSendCoinsTranscationDetailsButton",
+    target: "#viewSendCoinsTranscationDetailsModal",
+    actions: [...sendCoins.actions],
+  },
+  {
+    trigger: ".viewSendMoneyTranscationDetailsButton",
+    target: "#viewSendMoneyTranscationDetailsModal",
+    actions: [...sendMoney.actions],
+  },
+  {
+    trigger: ".viewReceiveCoinsTranscationDetailsButton",
+    target: "#viewReceiveCoinsTranscationDetailsModal",
+  },
 ];
 
 const replaceInnerContent = (container, contentContainer) => {

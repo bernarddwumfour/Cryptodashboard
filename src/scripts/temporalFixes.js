@@ -1,5 +1,8 @@
 import { showModalOnTriggerClick } from "./modals";
+import { addCoins } from "./transactions/addCoins";
 import { displayTransactionDetails } from "./transactions/dispayTransactionDetails";
+import { sendCoins } from "./transactions/sendCoins";
+import { sendMoney } from "./transactions/sendMoney";
 
 function switchContentOnElementClick(
   trigger,
@@ -69,8 +72,19 @@ transactionSectionUsers
 let getUsers = async () => {
   let users = [];
   let userstemplate = ``;
+  let transactionType;
 
   for (let i = 0; i < 30; i++) {
+    i == 1
+      ? (transactionType = "viewBuyCoinsTranscationDetailsButton")
+      : i == 2
+      ? (transactionType = "viewSendCoinsTranscationDetailsButton")
+      : i == 3
+      ? (transactionType = "viewSendMoneyTranscationDetailsButton")
+      : i == 0
+      ? (transactionType = "viewReceiveCoinsTranscationDetailsButton")
+      : (transactionType = "viewSendCoinsTranscationDetailsButton");
+
     let res = await fetch("https://randomuser.me//api");
     let data = await res.json();
     users.push({
@@ -78,7 +92,7 @@ let getUsers = async () => {
       image: data.results[0].picture.medium,
     });
     userstemplate += `
-         <div class="flex flex-col gap-1 items-center displayTransactionDetailsButton">
+         <div class="flex flex-col gap-1 items-center cursor-pointer ${transactionType}">
                     <span
                       class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-gray-200 overflow-hidden"
                     >
@@ -94,9 +108,33 @@ let getUsers = async () => {
   }
 
   transactionSectionUsers.innerHTML = userstemplate;
-  showModalOnTriggerClick([displayTransactionDetails]);
+  showModalOnTriggerClick([
+    {
+      trigger: ".viewBuyCoinsTranscationDetailsButton",
+      target: "#viewBuyCoinsTranscationDetailsModal",
+      actions: [...addCoins.actions],
+    },
+    {
+      trigger: ".viewSendCoinsTranscationDetailsButton",
+      target: "#viewSendCoinsTranscationDetailsModal",
+      actions: [...sendCoins.actions],
+    },
+    {
+      trigger: ".viewSendMoneyTranscationDetailsButton",
+      target: "#viewSendMoneyTranscationDetailsModal",
+      actions: [...sendMoney.actions],
+    },
+    {
+      trigger: ".viewReceiveCoinsTranscationDetailsButton",
+      target: "#viewReceiveCoinsTranscationDetailsModal",
+    },
+  ]);
 
   console.log(users);
 };
 
-getUsers();
+try {
+  getUsers();
+} catch (error) {
+  console.error("Error fetching users:", error);
+}

@@ -1422,12 +1422,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1493,12 +1493,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1564,12 +1564,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1635,12 +1635,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1706,12 +1706,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1777,12 +1777,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -1848,12 +1848,12 @@
                           <div
                             class="p-3 py-5 text-center text-[.65rem] md:text-sm flex justify-center items-center"
                           >
-                            <buton
+                            <button
                               class="viewTranscationDetailsButton flex items-center gap-1 px-3 md:px-5 rounded-3xl font-semibold py-[.2rem] w-max md:py-[.4rem] border-[2px] text-primary border-primary p-[0.4rem]"
                             >
                               <img src="/eye.svg" alt="eye icon" />
                               <span> View </span>
-                            </buton>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -4038,7 +4038,7 @@
                     Cancel
                   </span>
                   <span
-                    class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 cancelModalButton cursor-pointer sendAgainButton"
+                    class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 cancelModalButton cursor-pointer addCoinsCustomButton"
                   >
                     Send again
                   </span>
@@ -4717,6 +4717,252 @@
 
             <!-- END OF TEMPLATE FOR BUY COIN WITH MULTIPLE COIN OPTIONS -->
           </div>
+
+          <!-- Transaction details modals -->
+          <template id="viewReceiveCoinsTranscationDetailsModal">
+            <div class="w-screen max-w-full md:max-w-[550px] p-6">
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <p class="font-semibold showTransactionErrorButton">
+                  Transaction details
+                </p>
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+              <div class="py-6">
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction ID</span>
+                  <span id="transactionId"> TR1122233098 </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">date</span>
+                  <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction type</span>
+                  <div
+                    class="flex items-center justify-center font-bold gap-3 text-green-500"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      south_west
+                    </span>
+                    <span id="transactionType"> Receive Coins </span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Amount</span>
+                  <p><span id="transactionAmount"> -400</span> coins</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 py-2 mt-10">
+                <span
+                  class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                >
+                  Cancel
+                </span>
+                <span
+                  class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 cancelModalButton cursor-pointer"
+                >
+                  Receive Again
+                </span>
+              </div>
+            </div>
+          </template>
+
+          <template id="viewBuyCoinsTranscationDetailsModal">
+            <div class="w-screen max-w-full md:max-w-[550px] p-6">
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <p class="font-semibold showTransactionErrorButton">
+                  Transaction details
+                </p>
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+              <div class="py-6">
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction ID</span>
+                  <span id="transactionId"> TR1122233098 </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">date</span>
+                  <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction type</span>
+                  <div
+                    class="flex items-center justify-center font-bold gap-3 text-green-500"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      currency_exchange
+                    </span>
+                    <span id="transactionType"> Buy Coins </span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Amount</span>
+                  <p><span id="transactionAmount"> +40</span> coins</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 py-2 mt-10">
+                <span
+                  class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                >
+                  Cancel
+                </span>
+                <span
+                  class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 cancelModalButton cursor-pointer continueToPayment"
+                >
+                  Buy Again
+                </span>
+              </div>
+            </div>
+          </template>
+
+          <template id="viewSendCoinsTranscationDetailsModal">
+            <div class="w-screen max-w-full md:max-w-[550px] p-6">
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <p class="font-semibold showTransactionErrorButton">
+                  Transaction details
+                </p>
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+              <div class="py-6">
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction ID</span>
+                  <span id="transactionId"> TR1122233098 </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">date</span>
+                  <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction type</span>
+                  <div
+                    class="flex items-center justify-center font-bold gap-3 text-red-500"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      north_east
+                    </span>
+                    <span id="transactionType"> Send Coins </span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Amount</span>
+                  <p><span id="transactionAmount"> -400</span> coins</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 py-2 mt-10">
+                <span
+                  class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                >
+                  Cancel
+                </span>
+                <span
+                  class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 sendCoinsContinueToReviewTransaction cursor-pointer"
+                >
+                  Send Again
+                </span>
+              </div>
+            </div>
+          </template>
+
+          <template id="viewSendMoneyTranscationDetailsModal">
+            <div class="w-screen max-w-full md:max-w-[550px] p-6">
+              <div
+                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+              >
+                <span class="md:hidden w-20"></span>
+
+                <p class="font-semibold showTransactionErrorButton">
+                  Transaction details
+                </p>
+                <span
+                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                >
+                  <img src="/closeButton.svg" alt="close button" />
+                </span>
+              </div>
+
+              <div class="py-6">
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction ID</span>
+                  <span id="transactionId"> TR1122233098 </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">date</span>
+                  <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Transaction type</span>
+                  <div
+                    class="flex items-center justify-center font-bold gap-3 text-red-500"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      north_east
+                    </span>
+                    <span id="transactionType"> Send Money </span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between gap-6 py-3">
+                  <span class="text-gray-400">Amount</span>
+                  <p><span id="transactionAmount">-$200 </span></p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 py-2 mt-10">
+                <span
+                  class="p-2 hidden md:block text-white bg-gray-200 rounded-2xl w-full text-sm text-center cancelModalButton cursor-pointer"
+                >
+                  Cancel
+                </span>
+                <span
+                  class="text-white bg-primary rounded-2xl w-full text-sm text-center p-4 md:p-2 sendMoneyContinueToReviewTransaction cursor-pointer"
+                >
+                  Send Again
+                </span>
+              </div>
+            </div>
+          </template>
+          <!-- Transaction details modals -->
 
           <!-- Card And Accounts Modals -->
 
@@ -5617,6 +5863,7 @@
 
           <!-- End Of Card And Accounts Modals -->
         </div>
+
         <!-- END OF TEMPLATES FOR MODALS -->
       </main>
     </div>
