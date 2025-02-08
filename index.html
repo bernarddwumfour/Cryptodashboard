@@ -1914,15 +1914,15 @@
               <!-- TEMPLATE FOR BUY COIN CUSTOM INPUT MODAL ### -->
               <template id="buyCoinsCustomInput">
                 <div
-                  class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                  class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -1931,7 +1931,7 @@
                   <div class="overflow-x-scroll">
                     <div class="flex gap-2">
                       <div
-                        class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                        class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                         data-amount="50"
                       >
                         <div class="flex gap-2">
@@ -1953,7 +1953,7 @@
                       </div>
 
                       <div
-                        class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                        class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                         data-amount="100"
                       >
                         <div class="flex gap-2">
@@ -1975,7 +1975,7 @@
                       </div>
 
                       <div
-                        class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                        class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                         data-amount="500"
                       >
                         <div class="flex gap-2">
@@ -2011,7 +2011,7 @@
                   <div class="flex gap-6 py-4 pt-6 outline-none">
                     <input
                       type="number"
-                      class="w-full border border-gray-300 rounded-lg outline-none px-4"
+                      class="w-full border border-gray-300 rounded-lg outline-none p-2 md:p-3"
                       value="5"
                       id="moneyAmount"
                     />
@@ -2024,7 +2024,7 @@
                     </span>
                     <input
                       type="number"
-                      class="w-full border border-gray-300 rounded-lg outline-none px-4"
+                      class="w-full border border-gray-300 rounded-lg outline-none p-2 md:p-3"
                       id="coinAmount"
                       value="50"
                       readonly
@@ -2041,21 +2041,21 @@
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Card
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Paypal
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Money Wallet
                       </span>
@@ -2193,22 +2193,22 @@
               <!-- TEMPLATE FOR ADD COIN MODAL ###-->
               <template id="addCoinsModal">
                 <div
-                  class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                  class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
                   <div
-                    class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
+                    class="flex flex-col gap-2 md:gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-1 md:p-2 my-1 m:my-2 max-w-[130px]"
                   >
                     <div class="flex justify-start gap-2 items-center">
                       <span
@@ -2237,21 +2237,21 @@
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Card
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Paypal
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Money Wallet
                       </span>
@@ -2389,22 +2389,22 @@
               <!-- TEMPLATE FOR CHOOSE PAYEMENT METHOD ### -->
               <template id="choosePaymentMethod">
                 <div
-                  class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                  class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden block"></span>
                     <p class="font-semibold">Buy Coins</p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
                   <div
-                    class="flex flex-col gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-2 my-2 max-w-[170px]"
+                    class="flex flex-col gap-2 md:gap-4 border-[1px] bg-primary bg-opacity-10 border-primary rounded-md p-1 md:p-2 my-1 m:my-2 max-w-[130px]"
                   >
                     <div class="flex justify-start gap-2 items-center">
                       <span
@@ -2427,21 +2427,21 @@
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Card
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Paypal
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Money Wallet
                       </span>
@@ -2610,17 +2610,17 @@
             <div class="sendCoinsModals">
               <template id="sendCoinsSelectUserModal">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
                     <p class="font-semibold">Send Coins</p>
 
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -2798,24 +2798,24 @@
                   </div>
 
                   <div class="py-2">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1">Amount</span>
                       <input
                         type="text"
-                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="Coins"
                         id="coinAmount"
                       />
                     </div>
 
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <div class="py-2">
                         <span class="font-bold py-2">Message</span
                         ><span class="text-gray-400 px-2">(optional)</span>
                       </div>
                       <textarea
                         type="text"
-                        class="p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
                         placeholder="Type here..."
                         id="transactionMessage"
                       ></textarea>
@@ -2839,10 +2839,10 @@
 
               <template id="sendCoinsReviewTransaction">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -2850,7 +2850,7 @@
                       Review Transactions
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -2913,7 +2913,7 @@
               <template id="transactionDetailsModal">
                 <div class="w-screen max-w-full md:max-w-[550px] p-6">
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -2921,26 +2921,32 @@
                       Transaction details
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
                   <div class="py-6">
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">Transaction ID</span>
                       <span id="transactionId"> TR1122233098 </span>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">date</span>
                       <span id="transactionDate">
                         03, Dec 2023 | 01:15 pm
                       </span>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">Transaction type</span>
                       <span
                         id="transactionType"
@@ -2950,19 +2956,23 @@
                       </span>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">To</span>
                       <span> @Mickey </span>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">Amount</span>
                       <p><span id="transactionAmount"> -400</span> coins</p>
                     </div>
 
                     <div
                       id="transactionMessageContainer"
-                      class="flex justify-between gap-6 py-3 hidden"
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base hidden"
                     >
                       <span class="text-gray-400">Message</span>
                       <span id="transactionMessage">
@@ -2970,7 +2980,9 @@
                       </span>
                     </div>
 
-                    <div class="flex justify-between gap-6 py-3">
+                    <div
+                      class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                    >
                       <span class="text-gray-400">Status</span>
                       <div class="flex justify-center">
                         <div
@@ -3006,17 +3018,17 @@
             <div class="withdrawCoinsModals">
               <template id="withdrawCoinsEnterAmount">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
                     <p class="font-semibold">Withdraw Coins</p>
 
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -3038,31 +3050,31 @@
                   </div>
 
                   <div class="py-2">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1">Amount</span>
                       <div class="relative">
                         <input
                           type="number"
-                          class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                          class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                           placeholder="Coins"
                           id="coinAmount"
                         />
                         <span
-                          class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-2 rounded-md"
+                          class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-1 md:top-2 rounded-md"
                         >
                           Max
                         </span>
                       </div>
                     </div>
 
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <div class="py-2">
                         <span class="font-bold py-2">Money Conversion</span
                         ><span class="text-gray-400 px-2">(USD)</span>
                       </div>
                       <input
                         type="text"
-                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="$0.00"
                         id="moneyAmount"
                         readonly
@@ -3087,10 +3099,10 @@
 
               <template id="withdrawCoinsReviewTransaction">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -3098,7 +3110,7 @@
                       Review Transactions
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -3114,7 +3126,6 @@
                       type="text"
                       class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl coinAmountInputField"
                       value="400 coins"
-                      readonly
                     />
                     <img
                       src="/pencil.svg"
@@ -3144,17 +3155,17 @@
             <div class="withdrawMoneyModals">
               <template id="withdrawMoneyEnteramount">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
                     <p class="font-semibold">Withdraw Money</p>
 
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -3173,12 +3184,12 @@
                   </div>
 
                   <div class="py-2">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1">Amount</span>
                       <div class="relative">
                         <input
                           type="text"
-                          class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                          class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                           placeholder="Money amount"
                           id="moneyAmount"
                         />
@@ -3192,21 +3203,21 @@
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Card
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Paypal
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Mobile Money
                       </span>
@@ -3342,10 +3353,10 @@
 
               <template id="withdrawMoneyReviewTransaction">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -3353,13 +3364,13 @@
                       Review Transactions
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <p class="font-semibold py-3">Withdraw money to</p>
 
                     <div class="flex justify-between">
@@ -3384,7 +3395,6 @@
                       class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl moneyAmountInputField"
                       value=""
                       placeholder="USD"
-                      readonly
                     />
                     <img
                       src="/pencil.svg"
@@ -3412,17 +3422,17 @@
             <div class="sendMoneymodals">
               <template id="sendMoneySelectUserModal">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
                     <p class="font-semibold">Send Money</p>
 
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -3601,24 +3611,24 @@
                   </div>
 
                   <div class="py-2">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1">Amount</span>
                       <input
                         type="text"
-                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="Amount in dollars"
                         id="moneyAmount"
                       />
                     </div>
 
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <div class="py-2">
                         <span class="font-bold py-2">Message</span
                         ><span class="text-gray-400 px-2">(optional)</span>
                       </div>
                       <textarea
                         type="text"
-                        class="p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary h-24 resize-none block w-full border border-gray-300 rounded-md"
                         placeholder="Type here..."
                         id="transactionMessage"
                       ></textarea>
@@ -3641,10 +3651,10 @@
               </template>
               <template id="sendMoneyReviewTransaction">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -3652,7 +3662,7 @@
                       Review Transactions
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
@@ -3693,7 +3703,6 @@
                       class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl moneyAmountInputField"
                       value=""
                       placeholder="USD"
-                      readonly
                     />
                     <img
                       src="/pencil.svg"
@@ -3721,34 +3730,34 @@
             <div class="depositeMoneyModals">
               <template id="depositeMoneyEnterAmount">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
                     <p class="font-semibold">Deposit Money</p>
 
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
                   <div class="py-2">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1">Amount</span>
                       <div class="relative">
                         <input
                           type="text"
-                          class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                          class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                           placeholder="Amount in dollars"
                           id="moneyAmount"
                         />
                         <span
-                          class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-2 rounded-md"
+                          class="text-xs p-2 px-3 bg-gray-300 absolute right-2 top-1 md:top-2 rounded-md"
                         >
                           Max
                         </span>
@@ -3762,21 +3771,21 @@
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Card
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Paypal
                       </span>
                       <span
                         data-action="click->tabs#change"
                         data-tabs-target="tab"
-                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                        class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                       >
                         Mobile Money
                       </span>
@@ -3912,10 +3921,10 @@
 
               <template id="depositeMoneyReviewTransaction">
                 <div
-                  class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                  class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
                 >
                   <div
-                    class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                    class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                   >
                     <span class="md:hidden w-20"></span>
 
@@ -3923,13 +3932,13 @@
                       Review Transactions
                     </p>
                     <span
-                      class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                      class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                     >
                       <img src="/closeButton.svg" alt="close button" />
                     </span>
                   </div>
 
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <p class="font-semibold py-3">Add money from</p>
 
                     <div class="flex justify-between">
@@ -3954,7 +3963,6 @@
                       class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl moneyAmountInputField"
                       value=""
                       placeholder="USD"
-                      readonly
                     />
                     <img
                       src="/pencil.svg"
@@ -3985,7 +3993,7 @@
             <template id="displaytransactionDetailsModal">
               <div class="w-screen max-w-full md:max-w-[550px] p-6">
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -3993,24 +4001,30 @@
                     Transaction details
                   </p>
                   <span
-                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                   >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
                 </div>
 
                 <div class="py-6">
-                  <div class="flex justify-between gap-6 py-3">
+                  <div
+                    class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                  >
                     <span class="text-gray-400">Transaction ID</span>
                     <span id="transactionId"> TR1122233098 </span>
                   </div>
 
-                  <div class="flex justify-between gap-6 py-3">
+                  <div
+                    class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                  >
                     <span class="text-gray-400">date</span>
                     <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
                   </div>
 
-                  <div class="flex justify-between gap-6 py-3">
+                  <div
+                    class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                  >
                     <span class="text-gray-400">Transaction type</span>
                     <span
                       id="transactionType"
@@ -4020,12 +4034,16 @@
                     </span>
                   </div>
 
-                  <div class="flex justify-between gap-6 py-3">
+                  <div
+                    class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                  >
                     <span class="text-gray-400">To</span>
                     <span> @Mickey </span>
                   </div>
 
-                  <div class="flex justify-between gap-6 py-3">
+                  <div
+                    class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                  >
                     <span class="text-gray-400">Amount</span>
                     <p><span id="transactionAmount"> -400</span> coins</p>
                   </div>
@@ -4051,10 +4069,10 @@
             <!-- TEMPLATE FOR REVIEW TANSACTION MODAL -->
             <template id="reviewTransaction">
               <div
-                class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden block"></span>
                   <p class="font-semibold showTransactionErrorButton">
@@ -4089,7 +4107,6 @@
                     type="text"
                     class="p-2 w-full outline-none bg-gray-100 py-2 mb-4 rounded-xl moneyAmountInputField"
                     value="$5"
-                    readonly
                   />
                   <img
                     src="/pencil.svg"
@@ -4156,7 +4173,9 @@
             <!-- TEMPLATE FOR BUY COIN ERROR MODAL -->
 
             <template id="showTransactionErrorModal">
-              <div class="w-screen max-w-full sm:max-w-[550px] p-6 h-auto">
+              <div
+                class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-auto"
+              >
                 <img src="/error.svg" class="w-10 h-10" alt="error icon" />
                 <p class="text-md font-[500]">
                   ❌ Transaction Failed. Please check your details or try again.
@@ -4179,15 +4198,15 @@
 
             <template id="buyCoinsMultipleOptionsModal">
               <div
-                class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden block"></span>
                   <p class="font-semibold">Buy Coins</p>
                   <span
-                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                   >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
@@ -4196,7 +4215,7 @@
                 <div class="overflow-x-scroll">
                   <div class="flex gap-2">
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="50"
                     >
                       <div class="flex gap-2">
@@ -4218,7 +4237,7 @@
                     </div>
 
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="100"
                     >
                       <div class="flex gap-2">
@@ -4240,7 +4259,7 @@
                     </div>
 
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="500"
                     >
                       <div class="flex gap-2">
@@ -4282,21 +4301,21 @@
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Card
                     </span>
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Paypal
                     </span>
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Money Wallet
                     </span>
@@ -4436,15 +4455,15 @@
 
             <template id="payWithCardMultipleCoinOptionsModal">
               <div
-                class="w-screen max-w-full sm:max-w-[550px] p-6 h-[90vh] sm:h-auto"
+                class="w-screen max-w-full sm:max-w-[550px] p-4 md:p-6 h-[90vh] sm:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden block"></span>
                   <p class="font-semibold">Buy Coins</p>
                   <span
-                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                   >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
@@ -4453,7 +4472,7 @@
                 <div class="overflow-x-scroll">
                   <div class="flex gap-2">
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="50"
                     >
                       <div class="flex gap-2">
@@ -4475,7 +4494,7 @@
                     </div>
 
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="100"
                     >
                       <div class="flex gap-2">
@@ -4497,7 +4516,7 @@
                     </div>
 
                     <div
-                      class="flex flex-col gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-2 my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
+                      class="flex flex-col gap-2 md:gap-4 border-[1px] border-gray-200 hover:bg-primary hover:bg-opacity-10 hover:border-primary rounded-md p-1 md:p-2 my-1 md:my-2 max-w-[150px] w-full flex-none coinAmount addCoinsButton"
                       data-amount="500"
                     >
                       <div class="flex gap-2">
@@ -4539,21 +4558,21 @@
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Card
                     </span>
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Paypal
                     </span>
                     <span
                       data-action="click->tabs#change"
                       data-tabs-target="tab"
-                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-sm text-center rounded-md"
+                      class="p-1 border text-gray-300 w-full hover:bg-blue-600 cursor-pointer text-xs md:text-sm text-center rounded-md"
                     >
                       Money Wallet
                     </span>
@@ -4722,7 +4741,7 @@
           <template id="viewReceiveCoinsTranscationDetailsModal">
             <div class="w-screen max-w-full md:max-w-[550px] p-6">
               <div
-                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
               >
                 <span class="md:hidden w-20"></span>
 
@@ -4730,24 +4749,30 @@
                   Transaction details
                 </p>
                 <span
-                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                 >
                   <img src="/closeButton.svg" alt="close button" />
                 </span>
               </div>
 
               <div class="py-6">
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction ID</span>
                   <span id="transactionId"> TR1122233098 </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">date</span>
                   <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction type</span>
                   <div
                     class="flex items-center justify-center font-bold gap-3 text-green-500"
@@ -4759,7 +4784,9 @@
                   </div>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Amount</span>
                   <p><span id="transactionAmount"> -400</span> coins</p>
                 </div>
@@ -4783,7 +4810,7 @@
           <template id="viewBuyCoinsTranscationDetailsModal">
             <div class="w-screen max-w-full md:max-w-[550px] p-6">
               <div
-                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
               >
                 <span class="md:hidden w-20"></span>
 
@@ -4791,24 +4818,30 @@
                   Transaction details
                 </p>
                 <span
-                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                 >
                   <img src="/closeButton.svg" alt="close button" />
                 </span>
               </div>
 
               <div class="py-6">
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction ID</span>
                   <span id="transactionId"> TR1122233098 </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">date</span>
                   <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction type</span>
                   <div
                     class="flex items-center justify-center font-bold gap-3 text-green-500"
@@ -4820,7 +4853,9 @@
                   </div>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Amount</span>
                   <p><span id="transactionAmount"> +40</span> coins</p>
                 </div>
@@ -4844,7 +4879,7 @@
           <template id="viewSendCoinsTranscationDetailsModal">
             <div class="w-screen max-w-full md:max-w-[550px] p-6">
               <div
-                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
               >
                 <span class="md:hidden w-20"></span>
 
@@ -4852,24 +4887,30 @@
                   Transaction details
                 </p>
                 <span
-                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                 >
                   <img src="/closeButton.svg" alt="close button" />
                 </span>
               </div>
 
               <div class="py-6">
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction ID</span>
                   <span id="transactionId"> TR1122233098 </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">date</span>
                   <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction type</span>
                   <div
                     class="flex items-center justify-center font-bold gap-3 text-red-500"
@@ -4881,7 +4922,9 @@
                   </div>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Amount</span>
                   <p><span id="transactionAmount"> -400</span> coins</p>
                 </div>
@@ -4905,7 +4948,7 @@
           <template id="viewSendMoneyTranscationDetailsModal">
             <div class="w-screen max-w-full md:max-w-[550px] p-6">
               <div
-                class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
               >
                 <span class="md:hidden w-20"></span>
 
@@ -4913,24 +4956,30 @@
                   Transaction details
                 </p>
                 <span
-                  class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                  class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                 >
                   <img src="/closeButton.svg" alt="close button" />
                 </span>
               </div>
 
               <div class="py-6">
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction ID</span>
                   <span id="transactionId"> TR1122233098 </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">date</span>
                   <span id="transactionDate"> 03, Dec 2023 | 01:15 pm </span>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Transaction type</span>
                   <div
                     class="flex items-center justify-center font-bold gap-3 text-red-500"
@@ -4942,7 +4991,9 @@
                   </div>
                 </div>
 
-                <div class="flex justify-between gap-6 py-3">
+                <div
+                  class="flex justify-between gap-6 py-3 text-sm md:text-base"
+                >
                   <span class="text-gray-400">Amount</span>
                   <p><span id="transactionAmount">-$200 </span></p>
                 </div>
@@ -4969,64 +5020,64 @@
           <div class="cardsAndAccountsModals">
             <template id="addCardModal">
               <div
-                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
                   <p class="font-semibold">Add Card</p>
 
                   <span
-                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                   >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
                 </div>
 
                 <div class="py-2">
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <span class="font-bold block py-1 text-sm text-indigo-900"
                       >Card holders name</span
                     >
                     <input
                       type="text"
-                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg.Faith Moumo"
                     />
                   </div>
 
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <span class="font-bold block py-1 text-sm text-indigo-900"
                       >Card number</span
                     >
                     <input
                       type="text"
-                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg. 2299875019"
                     />
                   </div>
 
                   <div class="flex gap-4 py-3">
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1 text-sm text-indigo-900"
                         >Expiration date</span
                       >
                       <input
                         type="text"
-                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="eg 23/03/2025"
                       />
                     </div>
 
-                    <div class="pb-4">
+                    <div class="pb-2 md:pb-4">
                       <span class="font-bold block py-1 text-sm text-indigo-900"
                         >Cvv</span
                       >
                       <input
                         type="text"
-                        class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                        class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                         placeholder="eg 1542"
                       />
                     </div>
@@ -5061,10 +5112,10 @@
 
             <template id="selectBeneficiaryModal">
               <div
-                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
@@ -5370,17 +5421,17 @@
           <div class="cardsAndAccountsModals">
             <template id="addPaypalAccountModal">
               <div
-                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
                   <p class="font-semibold">Add Paypal Account</p>
 
                   <span
-                    class="w-8 h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
+                    class="w-6 h-6 md:w-8 md:h-8 closeModalButton md:border-[3px] md:border-gray-600 md:rounded-full flex justify-center items-center"
                   >
                     <img src="/closeButton.svg" alt="close button" />
                   </span>
@@ -5515,24 +5566,24 @@
                 </div>
 
                 <div class="py-2">
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <span class="font-bold block py-1 text-sm text-indigo-900"
                       >Paypal email address</span
                     >
                     <input
                       type="text"
-                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg.Faith Moumo"
                     />
                   </div>
 
-                  <div class="pb-4">
+                  <div class="pb-2 md:pb-4">
                     <span class="font-bold block py-1 text-sm text-indigo-900"
                       >Confirm paypal Email Address</span
                     >
                     <input
                       type="text"
-                      class="p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
+                      class="p-2 md:p-3 outline-none focus:border-primary block w-full border border-gray-300 rounded-md"
                       placeholder="eg. 2299875019"
                     />
                   </div>
@@ -5555,10 +5606,10 @@
 
             <template id="selectBeneficiaryModal">
               <div
-                class="w-screen max-w-full md:max-w-[550px] p-6 h-[90vh] md:h-auto"
+                class="w-screen max-w-full md:max-w-[550px] p-4 md:p-6 h-[90vh] md:h-auto"
               >
                 <div
-                  class="flex flex-row-reverse md:flex-row py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
+                  class="flex flex-row-reverse md:flex-row py-2 text-sm md:text-base md:py-3 items-center justify-between border-b-0 md:border-b mb-4 border-gray-300"
                 >
                   <span class="md:hidden w-20"></span>
 
