@@ -240,12 +240,12 @@ const showModalOnTriggerClick = (elements) => {
   });
 };
 
-// //Closing modal by clicking on backdrop
-// let backdrop = document.querySelector("#backdrop");
-// backdrop &&
-//   backdrop.addEventListener("click", () => {
-//     document.querySelector("#modal").classList.add("hidden");
-//   });
+//Closing modal by clicking on backdrop
+let backdrop = document.querySelector("#backdrop");
+backdrop &&
+  backdrop.addEventListener("click", () => {
+    document.querySelector("#modal").classList.add("hidden");
+  });
 
 window.onload = () => {
   showModalOnTriggerClick(elementsAndEvents);
