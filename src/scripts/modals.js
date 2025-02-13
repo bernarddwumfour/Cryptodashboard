@@ -30,10 +30,6 @@ let elementsAndEvents = [
     ],
     actions: [
       {
-        // trigger: ".payWithCardMultipleCoinOptionsButton",
-        // target: "#payWithCardMultipleCoinOptionsModal",
-        // actions: [
-        //   {
         trigger: ".continueToPayment",
         target: "#reviewTransaction",
         actions: [
@@ -61,6 +57,16 @@ let elementsAndEvents = [
         //     },
         //   ],
       },
+       //Add Credit card
+    {
+      trigger: ".addCardButton",
+      target: "#addCardModal",
+    },
+    //Add Paypal Account
+    {
+      trigger: ".addPaypalAccountButton",
+      target: "#addPaypalAccountModal",
+    },
     ],
   },
   addCoins,
