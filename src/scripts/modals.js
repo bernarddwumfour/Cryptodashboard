@@ -102,6 +102,32 @@ let elementsAndEvents = [
     target: "#addCardModal",
   },
 
+  //Transactiondetails for all transactions
+  {
+    trigger: ".viewTranscationDetailsButton1",
+    target: "#transactionDetailsModal1",
+  },
+  {
+    trigger: ".viewTranscationDetailsButton2",
+    target: "#transactionDetailsModal2",
+  },
+  {
+    trigger: ".viewTranscationDetailsButton3",
+    target: "#transactionDetailsModal3",
+  },
+  {
+    trigger: ".viewTranscationDetailsButton4",
+    target: "#transactionDetailsModal4",
+  },
+  {
+    trigger: ".viewTranscationDetailsButton5",
+    target: "#transactionDetailsModal5",
+  },
+  {
+    trigger: ".viewTranscationDetailsButton6",
+    target: "#transactionDetailsModal6",
+  },
+
   //Show transaction details and make a new transaction
   {
     trigger: ".viewBuyCoinsTranscationDetailsButton",
