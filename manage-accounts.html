@@ -6566,6 +6566,20 @@
             this.open = false;
           },
         }));
+
+        Alpine.data("selectCountry", () => ({
+          open: false,
+          Country: "",
+
+          toggle() {
+            this.open = !this.open;
+          },
+
+          setCountry(val) {
+            this.Country = val;
+            this.open = false;
+          },
+        }));
       });
 
       //Selecting Account To Edit Or Delete
